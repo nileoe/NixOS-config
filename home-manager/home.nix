@@ -14,8 +14,8 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-    # ./sh.nix
-    ./tmuxBanana.nix
+    ./sh.nix
+    ./tmux.nix
   ];
 
   nixpkgs = {
