@@ -14,7 +14,8 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-    ./sh.nix
+    # ./sh.nix
+    ./tmuxBanana.nix
   ];
 
   nixpkgs = {
@@ -51,7 +52,7 @@
     kitty
     sl
     firefox
-    tmux
+    # tmux # done through module
     htop
     git
     tree
@@ -64,8 +65,12 @@
     waybar
     cmatrix
     obsidian # electron marked unsafe?
-    # _1password-gui
-    # _1password
+    _1password-gui
+    _1password
+    microsoft-edge
+    vscode
+    xclip
+    xsel
   ];
 
   # Enable home-manager and git
