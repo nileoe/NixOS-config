@@ -43,11 +43,11 @@
 # Configure keymap in X11
  services.xserver = {
    enable = true;
-   displayManager.sddm.enable = true;
    desktopManager.plasma5.enable = true;
-   layout = "gb";
+						xkb.layout = "gb";
  };
-    services.xserver.libinput.enable = true;
+   services.displayManager.sddm.enable = true;
+    services.libinput.enable = true;
   time.timeZone = "Europe/London";
   nixpkgs = {
     # You can add overlays here

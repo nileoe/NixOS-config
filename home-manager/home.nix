@@ -14,7 +14,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-    # ./sh.nix
+    ./sh.nix
   ];
 
   nixpkgs = {
@@ -63,7 +63,7 @@
     speedcrunch
     waybar
     cmatrix
-    # obsidian # electron marked unsafe?
+    obsidian # electron marked unsafe?
     # _1password-gui
     # _1password
   ];
