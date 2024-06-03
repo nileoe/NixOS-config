@@ -37,8 +37,11 @@
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
-  sound.enable = true;
+ sound.enable = true;
  hardware.pulseaudio.enable = true;
+ # annoying stupid pop
+ boot.extraModprobeConfig = "options snd_hda_intel power_save=0";
+# sudo tee /etc/modprobe.d/snd-hda-intel.conf <<< "options snd_hda_intel power_save=0"
 
 # Configure keymap in X11
  services.xserver = {
@@ -90,6 +93,10 @@
 
   networking.hostName = "lix";
 networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+# environment.shells = with pkgs; [zsh ] ;  # prlbably not ?
+# users.defaultUserShell = pkgs.zsh; # see if necessary
+# programs.zsh.enable = true;
 
   users.users.nileoe = {
     isNormalUser = true;

@@ -49,7 +49,9 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     neovim
+    cider
     kitty
+    fzf
     sl
     firefox
     # tmux # done through module
