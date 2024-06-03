@@ -5,6 +5,7 @@
   lib,
   config,
   pkgs,
+  userSettings,
   ...
 }: {
   # You can import other home-manager modules here
@@ -22,6 +23,7 @@
     ./zoxide.nix
     ./zsh.nix
   ];
+
 
   nixpkgs = {
     # You can add overlays here

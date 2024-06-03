@@ -19,7 +19,6 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    ./sh.nix
     # import shell binds so that they're available with sudo
 
   ];
