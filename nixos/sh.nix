@@ -1,6 +1,7 @@
 { config, pkgs, ...}:
 let 
 shellAliases = {
+pute="echo skjfdlksdjflkjdslfkjsdlfkjlsdkjflsdklkjflkj";
 	ll = "ls -l";
 	v = "nvim";
 	cl = "clear";
