@@ -17,6 +17,7 @@
     ./tmux.nix
     ./kitty.nix
     ./speedcrunch.nix
+    ./zsh.nix
     # ./hyprland.nix
   ];
 
