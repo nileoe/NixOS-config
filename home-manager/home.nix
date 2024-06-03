@@ -13,12 +13,13 @@
     # inputs.nix-colors.homeManagerModule
 
     # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
-    ./tmux.nix
-    ./kitty.nix
-    ./speedcrunch.nix
-    ./zsh.nix
     # ./hyprland.nix
+    ./kitty.nix
+    # ./nvim.nix
+    ./speedcrunch.nix
+    ./tmux.nix
+    ./zoxide.nix
+    ./zsh.nix
   ];
 
   nixpkgs = {
@@ -76,9 +77,8 @@
     xclip
     xsel
     wl-clipboard
-	zapzap
-	whatsapp-for-linux
-    zoxide
+zapzap
+whatsapp-for-linux
   ];
 
   # Enable home-manager and git

@@ -52,7 +52,14 @@
    desktopManager.plasma5.enable = true;
 	xkb.layout = "gb";
  };
+ fonts.packages = with pkgs; [
+# jetbrains-mono
+nerdfonts
+ ];
  environment.systemPackages = [
+ ];
+ environment.pathsToLink = [
+ 	"/share/zsh" # to get completion for system packages (e.g. systemd)
  ];
    services.displayManager.sddm.enable = true;
     services.libinput.enable = true;

@@ -1,8 +1,8 @@
 { config, pkgs, ...}:
 {
 	programs.zsh = {
-# already enabled from higher up
-enable = true;
+		# already enabled from higher up
+		enable = true;
 		enableCompletion = true;
 		autosuggestion.enable = true;
 		syntaxHighlighting.enable = true;
@@ -20,6 +20,9 @@ enable = true;
 			file = "p10k.zsh";
 		}
 		];
-
+		 initExtra = ''
+			bindkey '^o' autosuggest-accept
+		 '';
+		# 	source ~/nix-config/home-manager/p10k-config/p10k.zsh
 	};
 }
