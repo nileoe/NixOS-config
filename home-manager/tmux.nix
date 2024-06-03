@@ -59,7 +59,7 @@ in
 			{
 				plugin = tmuxPlugins.continuum;
 				extraConfig = ''
-					# set -g @continuum-restore 'on'
+					set -g @continuum-restore 'on'
 					set -g @continuum-save-interval '1' # minutes (default 15)
 					'';
 			}
@@ -76,6 +76,7 @@ in
 		# set-option -g status-position bottom
 		bind '"' split-window -v -c "#{pane_current_path}"
 		bind '%' split-window -h -c "#{pane_current_path}"
+		# bind "C-q" contiinuum save or something && kill-session
 		'';
 
 	};

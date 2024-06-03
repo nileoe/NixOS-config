@@ -15,6 +15,8 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ./tmux.nix
+    ./kitty.nix
+    # ./hyprland.nix
   ];
 
   nixpkgs = {
@@ -49,7 +51,7 @@
   home.packages = with pkgs; [
     neovim
     cider
-    kitty
+    # kitty
     fzf
     sl
     firefox
@@ -72,6 +74,8 @@
     vscode
     xclip
     xsel
+    wl-clipboard
+    zoxide
   ];
 
   # Enable home-manager and git

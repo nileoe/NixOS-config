@@ -1,7 +1,6 @@
 { config, pkgs, ...}:
 let 
 shellAliases = {
-pute="echo skjfdlksdjflkjdslfkjsdlfkjlsdkjflsdklkjflkj";
 	ll = "ls -l";
 	v = "nvim";
 	cl = "clear";
@@ -30,7 +29,7 @@ in
 		inherit shellAliases;
 	};
 	programs.bash =  {
-		enable = true;
+		# enable = true;
 		inherit shellAliases;
 	};
 }
