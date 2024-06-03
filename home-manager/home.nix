@@ -16,6 +16,7 @@
     # ./hyprland.nix
     ./kitty.nix
     # ./nvim.nix
+    ./sh.nix
     ./speedcrunch.nix
     ./tmux.nix
     ./zoxide.nix

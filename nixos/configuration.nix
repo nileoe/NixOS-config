@@ -106,9 +106,10 @@ nerdfonts
   networking.hostName = "lix";
 networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
-# environment.shells = with pkgs; [zsh ] ;  # prlbably not ?
+ environment.shells = with pkgs; [zsh ] ;  # prlbably not ?
  users.defaultUserShell = pkgs.zsh; # see if necessary
  programs.zsh.enable = true;
+
 
   users.users.nileoe = {
     isNormalUser = true;
