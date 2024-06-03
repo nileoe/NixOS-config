@@ -68,7 +68,7 @@
     librewolf
     waybar
     cmatrix
-    obsidian # electron marked unsafe?
+    obsidian
     _1password-gui
     _1password
     microsoft-edge
@@ -76,6 +76,8 @@
     xclip
     xsel
     wl-clipboard
+	zapzap
+	whatsapp-for-linux
     zoxide
   ];
 

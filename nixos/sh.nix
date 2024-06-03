@@ -19,8 +19,8 @@ shellAliases = {
 	cp = "cp -i";
 	mv = "mv -i";
 	rm = "rm -i";
-	hoho = "echo 'update home configuration command is: home-manager switch --flake .#nileoe@lix'";
-	nini = "echo 'update system configuration command is: sudo nixos-rebuild switch --flake .#lix'";
+	hswitch= "cd ~/nix-config && home-manager switch --flake .#nileoe@lix";
+	nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#lix";
 };
 in
 {

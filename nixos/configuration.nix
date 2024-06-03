@@ -50,8 +50,10 @@
  services.xserver = {
    enable = true;
    desktopManager.plasma5.enable = true;
-						xkb.layout = "gb";
+	xkb.layout = "gb";
  };
+ environment.systemPackages = [
+ ];
    services.displayManager.sddm.enable = true;
     services.libinput.enable = true;
   time.timeZone = "Europe/London";
