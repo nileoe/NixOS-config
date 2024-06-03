@@ -16,6 +16,7 @@
     # ./nvim.nix
     ./tmux.nix
     ./kitty.nix
+    ./speedcrunch.nix
     # ./hyprland.nix
   ];
 
@@ -64,7 +65,6 @@
     scarab
     # haskellPackages.battlenet
     librewolf
-    speedcrunch
     waybar
     cmatrix
     obsidian # electron marked unsafe?
