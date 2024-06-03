@@ -6,6 +6,7 @@
   config,
   pkgs,
   userSettings,
+  systemSettings,
   ...
 }: {
   # You can import other home-manager modules here
@@ -14,14 +15,14 @@
     # inputs.nix-colors.homeManagerModule
 
     # You can also split up your configuration and import pieces of it here:
-    # ./hyprland.nix
-    ./kitty.nix
-    # ./nvim.nix
-    ./sh.nix
-    ./speedcrunch.nix
-    ./tmux.nix
-    ./zoxide.nix
-    ./zsh.nix
+    # ./homeModules/hyprland.nix
+    ./homeModules/kitty.nix
+    # ./homeModules/nvim.nix
+    ./homeModules/sh.nix
+    ./homeModules/speedcrunch.nix
+    ./homeModules/tmux.nix
+    ./homeModules/zoxide.nix
+    ./homeModules/zsh.nix
   ];
 
 

@@ -5,6 +5,8 @@
   lib,
   config,
   pkgs,
+  userSettings,
+  systemSettings,
   ...
 }:
 {
@@ -110,9 +112,9 @@ networking.networkmanager.enable = true;  # Easiest to use and most distros use 
  programs.zsh.enable = true;
 
 
-  users.users.nileoe = {
+  users.users.${userSettings.username} = {
     isNormalUser = true;
-    description = "Lino Perdrix";
+    description = userSettings.fullName;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
       openssh.authorizedKeys.keys = [];

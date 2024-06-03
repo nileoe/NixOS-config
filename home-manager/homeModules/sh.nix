@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings, ...}:
+{ config, pkgs, userSettings, systemSettings, ...}:
 let 
 shellAliases = {
 ##### Basic commands / simple navigation
@@ -19,7 +19,7 @@ shellAliases = {
 	rm = "rm -i";
 	v = "nvim";
 	gho = "Hyprland";
-	bougie = "echo '${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} ${userSettings.fruit} !!!!!!!!!!!!!!!!!!!!!!!!!!!'";
+	bougie = "echo 'hello ${userSettings.username} from ${systemSettings.hostname}!'";
 
 ##### zoxide
 		cd = "z";
