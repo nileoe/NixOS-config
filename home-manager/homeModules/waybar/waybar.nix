@@ -5,7 +5,7 @@
 		# settings = {};
 		style = ./tokyonight-night-style.css;
 	};
-	home.file.".config/waybar/config.jsonc".source = if systemSettings.computerType == "laptop"
+	home.file.".config/waybar/config.jsonc".source = if systemSettings.monitorType == "laptop"
 		then ./laptop-config.jsonc
 		else ./desktop-config.jsonc;
 }

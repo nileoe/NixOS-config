@@ -17,6 +17,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ./homeModules/hypr/hyprland.nix
+    ./homeModules/fuzzel.nix
     ./homeModules/kitty.nix
     # ./homeModules/nvim.nix
     ./homeModules/sh.nix
