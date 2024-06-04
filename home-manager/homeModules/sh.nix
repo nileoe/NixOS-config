@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings, systemSettings, ...}:
+{ config, pkgs, systemSettings, ...}:
 let 
 shellAliases = {
 ##### Basic commands / simple navigation
@@ -19,7 +19,6 @@ shellAliases = {
 	rm = "rm -i";
 	v = "nvim";
 	gho = "Hyprland";
-	bougie = "echo 'hello ${userSettings.username} from ${systemSettings.hostname}!'";
 
 ##### zoxide
 		cd = "z";
@@ -37,8 +36,8 @@ shellAliases = {
 		dispods = "bluetoothctl disconnect 3C:4D:BE:89:38:4D";
 
 ##### Git perso
-		dpull="cd ~/docs && git pull --rebase && cd ~";
-		dpush="cd /home/nil_/docs && git add * ; git commit -m 'lix commit ($(date))' && git push"; # fix this for fun someday, use hostname
+		dpull = "cd ~/docs && git pull --rebase && cd ~";
+		dpush = "cd /home/nil_/docs && git add * ; git commit -m '${systemSettings.hostname} commit ($(date))' && git push";
 
 ##### Coding shortcuts
 		py = "python3";

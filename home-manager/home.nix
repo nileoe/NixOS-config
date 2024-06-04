@@ -7,6 +7,7 @@
   pkgs,
   userSettings,
   systemSettings,
+  sessionSettings,
   ...
 }: {
   # You can import other home-manager modules here
@@ -15,7 +16,7 @@
     # inputs.nix-colors.homeManagerModule
 
     # You can also split up your configuration and import pieces of it here:
-    # ./homeModules/hyprland.nix
+    ./homeModules/hypr/hyprland.nix
     ./homeModules/kitty.nix
     # ./homeModules/nvim.nix
     ./homeModules/sh.nix

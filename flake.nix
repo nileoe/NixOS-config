@@ -19,6 +19,7 @@
     inherit (self) outputs;
     userSettings = (import ./settings.nix).userSettings;
     systemSettings = (import ./settings.nix).systemSettings;
+    sessionSettings = (import ./settings.nix).sessionSettings;
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -36,7 +37,7 @@
       # "nileoe@lix" = home-manager.lib.homeManagerConfiguration {
       "${userSettings.username}@${systemSettings.hostname}" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs; inherit userSettings; inherit systemSettings;};
+        extraSpecialArgs = {inherit inputs outputs; inherit userSettings; inherit systemSettings; inherit sessionSettings;};
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
       };
