@@ -16,7 +16,6 @@
 	'';
 	};
 
-	# always sourcing the desktop config for now
 	home.file.".config/hypr/binds.conf".source = ./binds.conf;
 	home.file.".config/hypr/graphics.conf".source = ./graphics.conf;
 	home.file.".config/hypr/startup.conf".source = ./startup.conf;

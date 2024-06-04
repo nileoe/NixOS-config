@@ -17,7 +17,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ./homeModules/hypr/hyprland.nix
-    ./homeModules/fuzzel.nix
+    ./homeModules/fuzzel/fuzzel.nix
     ./homeModules/kitty.nix
     # ./homeModules/nvim.nix
     ./homeModules/sh.nix
@@ -44,7 +44,6 @@
     ];
     # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
@@ -52,29 +51,26 @@
   };
 
   home = {
-    username = "nileoe"; # TODO use variables for these 2 lines
-    homeDirectory = "/home/nileoe";
+    username = userSettings.username;
+    homeDirectory = "/home/${userSettings.username}";
   };
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
     neovim
     cider
-    # kitty
     fzf
     sl
     firefox
     neofetch
     cinnamon.nemo-with-extensions
     rofi
-    # tmux # done through module
     htop
     git
     tree
     bat
     steam
     scarab
-    # haskellPackages.battlenet
     killall
     librewolf
     cmatrix
@@ -83,14 +79,11 @@
     _1password
     microsoft-edge
     vscode
-    # xclip
-    # xsel
     wl-clipboard
-zapzap
-whatsapp-for-linux
+	zapzap
+	whatsapp-for-linux
   ];
 
-  # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
