@@ -69,10 +69,11 @@ in
 
 		# The code inside extraConfig is ran after the declared options, which
 		# can be useful if some code / plugin is dependent on something else.
+        # bind S display "Hi you this is a test!"
 		extraConfig = ''
 		set-option -g renumber-windows
 		# unbind-key f
-		# bind-key -r f run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"
+		bind-key -r f run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"
 		# set-option -g status-position bottom
 		bind '"' split-window -v -c "#{pane_current_path}"
 		bind '%' split-window -h -c "#{pane_current_path}"

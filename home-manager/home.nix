@@ -15,17 +15,17 @@
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModule
 
-    # You can also split up your configuration and import pieces of it here:
-    ./modules/hypr/hyprland.nix
-    ./modules/fuzzel/fuzzel.nix
-    ./modules/kitty.nix
-    ./modules/nvimModule/nvim.nix
-    ./modules/sh.nix
-    ./modules/speedcrunch.nix
-    ./modules/waybar/waybar.nix
-    ./modules/tmux.nix
-    ./modules/zoxide.nix
-    ./modules/zsh.nix
+# You can also split up your configuration and import pieces of it here:
+      ./modules/hypr/hyprland.nix
+          ./modules/fuzzel/fuzzel.nix
+          ./modules/kitty.nix
+          ./modules/nvimModule/nvim.nix
+          ./modules/sh.nix
+          ./modules/speedcrunch.nix
+          ./modules/waybar/waybar.nix
+          ./modules/tmux.nix
+          ./modules/zoxide.nix
+          ./modules/zsh.nix
   ];
 
 
@@ -61,8 +61,10 @@
   clang
     libgcc
     cider
+    cargo
     discord
     neovim
+    nodejs_22
     pamixer
     playerctl
     fzf
@@ -71,6 +73,7 @@
     neofetch
     cinnamon.nemo-with-extensions
     rofi
+    python3
     htop
     git
     tree
@@ -87,8 +90,10 @@
     remnote
     vscode
     wl-clipboard
-	zapzap
 	whatsapp-for-linux
+    zip
+    unzip
+	zapzap
   ];
 
   programs.home-manager.enable = true;

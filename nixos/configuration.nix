@@ -60,12 +60,24 @@ programs.hyprland.enable = true;
  fonts.packages = with pkgs; [
 	nerdfonts
  ];
- environment.systemPackages = [
- ];
+
+environment.systemPackages = [(
+  pkgs.catppuccin-sddm.override {
+    flavor = "mocha";
+    font  = "Noto Sans";
+    fontSize = "9";
+    background = "${./wallpaper.png}";
+    loginBackground = true;
+  }
+)];
+services.displayManager.sddm = {
+  enable = true;
+  theme = "catppuccin-mocha";
+};
+
  environment.pathsToLink = [
  	"/share/zsh" # to get completion for system packages (e.g. systemd)
  ];
-   services.displayManager.sddm.enable = true;
    services.displayManager.sddm.wayland.enable = true;
     services.libinput.enable = true;
   time.timeZone = sessionSettings.timeZone;

@@ -12,7 +12,7 @@
 	};
 	systemSettings = {
 		hostname = "lix";
-		keyboard = "fullSize"; # fullSize | laptop
+		keyboard = "laptop"; # fullSize | laptop
 		monitorType = "laptop"; # desktop | laptop
 		};
 }
