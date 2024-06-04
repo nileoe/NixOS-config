@@ -21,7 +21,7 @@
 	home.file.".config/hypr/startup.conf".source = ./startup.conf;
 	home.file.".config/hypr/windowRules.conf".source = ./windowRules.conf;
 	home.file.".config/hypr/dev-specific/monitor.conf".source = if systemSettings.monitorType == "desktop" then ./dev-specific/monitor-1440p144hz.conf else ./dev-specific/monitor-asusLaptop.conf;
-	home.file.".config/hypr/dev-specific/dev-specific_binds.conf".source = if systemSettings.keyboard == "desktop" then ./dev-specific/binds-fullSize-specific.conf else ./dev-specific/binds-laptop-specific.conf;
+	home.file.".config/hypr/dev-specific/dev-specific_binds.conf".source = if systemSettings.keyboard == "fullSize" then ./dev-specific/binds-fullSize-specific.conf else ./dev-specific/binds-laptop-specific.conf;
 
 	# services.hypridle.enable = true; # try it some time!
 	# programs.hyprlock.enable = true; # try it some time!

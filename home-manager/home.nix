@@ -19,7 +19,7 @@
     ./homeModules/hypr/hyprland.nix
     ./homeModules/fuzzel/fuzzel.nix
     ./homeModules/kitty.nix
-    # ./homeModules/nvim.nix
+    ./homeModules/nvimModule/nvim.nix
     ./homeModules/sh.nix
     ./homeModules/speedcrunch.nix
     ./homeModules/waybar/waybar.nix
@@ -57,9 +57,12 @@
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
+  brightnessctl
     cider
     discord
     neovim
+    pamixer
+    playerctl
     fzf
     sl
     firefox
