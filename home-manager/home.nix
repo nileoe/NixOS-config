@@ -57,8 +57,9 @@
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
-    neovim
     cider
+    discord
+    neovim
     fzf
     sl
     firefox
@@ -78,6 +79,7 @@
     _1password-gui
     _1password
     microsoft-edge
+    remnote
     vscode
     wl-clipboard
 	zapzap
