@@ -37,7 +37,7 @@ shellAliases = {
 
 ##### Git perso
 		dpull = "cd ~/docs && git pull --rebase && cd ~";
-		dpush = "cd /home/nil_/docs && git add * ; git commit -m '${systemSettings.hostname} commit ($(date))' && git push";
+		dpush = "cd ~/docs && git add * ; git commit -m '${systemSettings.hostname} commit ($(date))' && git push";
 
 ##### Coding shortcuts
 		py = "python3";

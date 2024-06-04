@@ -7,6 +7,7 @@
   pkgs,
   userSettings,
   systemSettings,
+  sessionSettings,
   ...
 }:
 {
@@ -47,15 +48,17 @@
  boot.extraModprobeConfig = "options snd_hda_intel power_save=0";
 # sudo tee /etc/modprobe.d/snd-hda-intel.conf <<< "options snd_hda_intel power_save=0"
 
+programs.hyprland.enable = true;
+
+
 # Configure keymap in X11
- services.xserver = {
-   enable = true;
-   desktopManager.plasma5.enable = true;
-	xkb.layout = "gb";
- };
+#  services.xserver = {
+#    enable = true;
+#    desktopManager.plasma5.enable = true;
+# 	xkb.layout = "gb";
+#  };
  fonts.packages = with pkgs; [
-# jetbrains-mono
-nerdfonts
+	nerdfonts
  ];
  environment.systemPackages = [
  ];
@@ -63,8 +66,9 @@ nerdfonts
  	"/share/zsh" # to get completion for system packages (e.g. systemd)
  ];
    services.displayManager.sddm.enable = true;
+   services.displayManager.sddm.wayland.enable = true;
     services.libinput.enable = true;
-  time.timeZone = "Europe/London";
+  time.timeZone = sessionSettings.timeZone;
   nixpkgs = {
     # You can add overlays here
     overlays = [

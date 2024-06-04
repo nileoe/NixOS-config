@@ -21,6 +21,7 @@
     # ./homeModules/nvim.nix
     ./homeModules/sh.nix
     ./homeModules/speedcrunch.nix
+    ./homeModules/waybar/waybar.nix
     ./homeModules/tmux.nix
     ./homeModules/zoxide.nix
     ./homeModules/zsh.nix
@@ -50,12 +51,11 @@
   };
 
   home = {
-    username = "nileoe";
+    username = "nileoe"; # TODO use variables for these 2 lines
     homeDirectory = "/home/nileoe";
   };
 
   # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
   home.packages = with pkgs; [
     neovim
     cider
@@ -63,6 +63,9 @@
     fzf
     sl
     firefox
+    neofetch
+    cinnamon.nemo-with-extensions
+    rofi
     # tmux # done through module
     htop
     git
@@ -71,16 +74,16 @@
     steam
     scarab
     # haskellPackages.battlenet
+    killall
     librewolf
-    waybar
     cmatrix
     obsidian
     _1password-gui
     _1password
     microsoft-edge
     vscode
-    xclip
-    xsel
+    # xclip
+    # xsel
     wl-clipboard
 zapzap
 whatsapp-for-linux

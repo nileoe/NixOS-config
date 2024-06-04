@@ -4,6 +4,7 @@
 			isDark = true;
 			name = "tokyonight-night";
 		};
+		timeZone = "Europe/London";
 	};
 	userSettings = {
 		username = "nileoe";
