@@ -16,16 +16,16 @@
     # inputs.nix-colors.homeManagerModule
 
     # You can also split up your configuration and import pieces of it here:
-    ./homeModules/hypr/hyprland.nix
-    ./homeModules/fuzzel/fuzzel.nix
-    ./homeModules/kitty.nix
-    ./homeModules/nvimModule/nvim.nix
-    ./homeModules/sh.nix
-    ./homeModules/speedcrunch.nix
-    ./homeModules/waybar/waybar.nix
-    ./homeModules/tmux.nix
-    ./homeModules/zoxide.nix
-    ./homeModules/zsh.nix
+    ./modules/hypr/hyprland.nix
+    ./modules/fuzzel/fuzzel.nix
+    ./modules/kitty.nix
+    ./modules/nvimModule/nvim.nix
+    ./modules/sh.nix
+    ./modules/speedcrunch.nix
+    ./modules/waybar/waybar.nix
+    ./modules/tmux.nix
+    ./modules/zoxide.nix
+    ./modules/zsh.nix
   ];
 
 
@@ -58,6 +58,8 @@
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
   brightnessctl
+  clang
+    libgcc
     cider
     discord
     neovim
