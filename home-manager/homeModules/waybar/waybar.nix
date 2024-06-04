@@ -1,11 +1,11 @@
-{ config, pkgs, ...}:
+{ config, pkgs, systemSettings, ...}:
 {
 	programs.waybar = {
 		enable = true;
-		# settings = {
-		# mainBar = {}
-		# };
+		# settings = {};
 		style = ./tokyonight-night-style.css;
 	};
-	home.file.".config/waybar/config.jsonc".source = ./desktop-config.jsonc;
+	home.file.".config/waybar/config.jsonc".source = if systemSettings.computerType == "laptop"
+		then ./laptop-config.jsonc
+		else ./desktop-config.jsonc;
 }
