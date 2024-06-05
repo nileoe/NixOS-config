@@ -26,7 +26,6 @@
           ./modules/waybar/waybar.nix
           ./modules/tmux.nix
           ./modules/zoxide.nix
-          ./modules/zsh.nix
   ];
 
 
@@ -68,12 +67,10 @@
     nodejs_22
     pamixer
     playerctl
-    fzf
     localsend
     sl
     firefox
     neofetch
-    cinnamon.nemo-with-extensions
     rofi
     python3
     htop
@@ -82,13 +79,18 @@
     bat
     steam
     scarab
+    grimblast
     killall
     librewolf
+    libnotify
     cmatrix
     obsidian
     _1password-gui
     _1password
     microsoft-edge
+    fira-mono
+    speedtest-cli
+    speedtest-rs
     remnote
     vscode
     wl-clipboard
@@ -96,6 +98,11 @@
     zip
     unzip
 	zapzap
+    # file managers
+    cinnamon.nemo-with-extensions
+    kdePackages.dolphin
+    kdePackages.dolphin-plugins
+    pcmanfm
     # PDF readers
     zathura
     kdePackages.okular

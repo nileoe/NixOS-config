@@ -20,6 +20,7 @@ in {
     services.displayManager.sddm.theme = "tokyo-night-sddm"; environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
 # You can import other NixOS modules here
     imports = [
+    ./sound-bluetooth-configuration.nix
 # If you want to use modules from other flakes (such as nixos-hardware):
 # inputs.hardware.nixosModules.common-cpu-amd
 # inputs.hardware.nixosModules.common-ssd
@@ -47,11 +48,7 @@ in {
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
- sound.enable = true;
- hardware.pulseaudio.enable = true;
- # annoying stupid pop
- boot.extraModprobeConfig = "options snd_hda_intel power_save=0";
-# sudo tee /etc/modprobe.d/snd-hda-intel.conf <<< "options snd_hda_intel power_save=0"
+
 
 programs.hyprland.enable = true;
 
@@ -131,7 +128,6 @@ networking.networkmanager.enable = true;  # Easiest to use and most distros use 
  environment.shells = with pkgs; [zsh ] ;  # prlbably not ?
  users.defaultUserShell = pkgs.zsh; # see if necessary
  programs.zsh.enable = true;
-
 
   users.users.${userSettings.username} = {
     isNormalUser = true;

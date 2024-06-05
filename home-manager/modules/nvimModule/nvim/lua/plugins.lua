@@ -508,6 +508,7 @@ dependencies = {
   "savq/melange-nvim",
   "projekt0n/github-nvim-theme",
   "ellisonleao/gruvbox.nvim",
+  "shaunsingh/nord.nvim",
 })
 
 local set_theme = function()

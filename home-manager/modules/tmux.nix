@@ -19,8 +19,8 @@ in
 
  	 	plugins = with pkgs; [
  	 		tmuxPlugins.sensible
-  	 		tmuxPlugins.gruvbox
-            # tmuxPlugins.nord
+  	 		# tmuxPlugins.gruvbox
+            tmuxPlugins.nord
             # tmuxPlugins.catppuccin
 		#	{
 			# plugin = tmuxPlugins.catppuccin;
@@ -72,10 +72,11 @@ in
 
 		# The code inside extraConfig is ran after the declared options, which
 		# can be useful if some code / plugin is dependent on something else.
-        # bind S display "Hi you this is a test!"
 		extraConfig = ''
+        bind o display "It's all gonna be ok"
         bind S command-prompt -p "New Session:" "new-session -A -s '%%'"
         bind K confirm kill-session
+        bind r source-file ~/.config/tmux/tmux.conf
 		set-option -g renumber-windows
 		# unbind-key f
 		bind-key -r f run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"
@@ -83,6 +84,13 @@ in
 		bind '"' split-window -v -c "#{pane_current_path}"
 		bind '%' split-window -h -c "#{pane_current_path}"
 		# bind "C-q" contiinuum save or something && kill-session
+
+        # thanks internet, makes it so that C-j/k work in fzf in tmux
+         not_tmux='`echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"` || `echo "#{pane_current_command}" | grep -iqE "(^|\/)fzf"`'
+         bind-key -n C-h if-shell "$not_tmux" "send-keys C-h" "select-pane -L"
+         bind-key -n C-j if-shell "$not_tmux" "send-keys C-j" "select-pane -D"
+         bind-key -n C-k if-shell "$not_tmux" "send-keys C-k" "select-pane -U"
+         bind-key -n C-l if-shell "$not_tmux" "send-keys C-l" "select-pane -R"
 		'';
 
 	};
