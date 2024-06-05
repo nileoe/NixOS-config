@@ -1,3 +1,4 @@
+# mostly copy-paste from https://nixos.wiki/wiki/PipeWire (as of june 2024)
 { config, lib, pkgs, ... }:
 {
     sound.enable = true;
@@ -12,7 +13,14 @@
         jack.enable = true;
     };
 
-    hardware.pulseaudio.enable = true;
+    environment.systemPackages = with pkgs; [
+        # more tools available (listed on the page with url on line 1)
+        bluez
+        pavucontrol
+        helvum
+    ];
+
+    hardware.pulseaudio.enable = false; # mutually exclusive with pipewire
 
 # annoying stupid pop
     boot.extraModprobeConfig = "options snd_hda_intel power_save=0";

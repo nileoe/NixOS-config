@@ -63,7 +63,6 @@ programs.hyprland.enable = true;
 	nerdfonts
  ];
 
-
 # environment.systemPackages = [(
 #   pkgs.catppuccin-sddm.override {
 #     flavor = "mocha";
