@@ -11,7 +11,7 @@
         ...
 }:
 let
-tokyo-night-sddm = pkgs.libsForQt5.callPackage ./ssdm-tokyonight-night/default.nix { };
+tokyo-night-sddm = pkgs.libsForQt5.callPackage ./modules/ssdm-tokyonight-night/default.nix { };
 in {
     services.displayManager.sddm = {
         enable = true;
@@ -29,8 +29,7 @@ in {
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    # import shell binds so that they're available with sudo
-
+    ./modules/libreoffice.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
