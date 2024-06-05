@@ -19,6 +19,7 @@
       ./modules/hypr/hyprland.nix
           ./modules/fuzzel/fuzzel.nix
           ./modules/kitty.nix
+          ./modules/libreoffice.nix
           ./modules/nvimModule/nvim.nix
           ./modules/sh.nix
           ./modules/speedcrunch.nix
@@ -68,6 +69,7 @@
     pamixer
     playerctl
     fzf
+    localsend
     sl
     firefox
     neofetch
@@ -94,6 +96,12 @@
     zip
     unzip
 	zapzap
+    # PDF readers
+    zathura
+    kdePackages.okular
+    mate.atril
+    mupdf
+    feh
   ];
 
   programs.home-manager.enable = true;

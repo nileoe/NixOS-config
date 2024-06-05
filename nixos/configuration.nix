@@ -1,21 +1,28 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
-  inputs,
-  lib,
-  config,
-  pkgs,
-  userSettings,
-  systemSettings,
-  sessionSettings,
-  ...
+    inputs,
+        lib,
+        config,
+        pkgs,
+        userSettings,
+        systemSettings,
+        sessionSettings,
+        ...
 }:
-{
-  # You can import other NixOS modules here
-  imports = [
-    # If you want to use modules from other flakes (such as nixos-hardware):
-    # inputs.hardware.nixosModules.common-cpu-amd
-    # inputs.hardware.nixosModules.common-ssd
+let
+tokyo-night-sddm = pkgs.libsForQt5.callPackage ./ssdm-tokyonight-night/default.nix { };
+in {
+    services.displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
+    };
+    services.displayManager.sddm.theme = "tokyo-night-sddm"; environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
+# You can import other NixOS modules here
+    imports = [
+# If you want to use modules from other flakes (such as nixos-hardware):
+# inputs.hardware.nixosModules.common-cpu-amd
+# inputs.hardware.nixosModules.common-ssd
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
@@ -61,9 +68,6 @@ programs.hyprland.enable = true;
 	nerdfonts
  ];
 
- let
-     tokyo-night-sddm = pkgs.libsForQt5.callPackage ./ssdm-tokyonight-night/default.nix { };
- in { services.xserver.displayManager.sddm.theme = "tokyo-night-sddm"; environment.systemPackages = with pkgs; [ tokyo-night-sddm ]; }
 
 # environment.systemPackages = [(
 #   pkgs.catppuccin-sddm.override {
@@ -82,8 +86,6 @@ programs.hyprland.enable = true;
  environment.pathsToLink = [
  	"/share/zsh" # to get completion for system packages (e.g. systemd)
  ];
-   services.displayManager.sddm.enable = true;
-   services.displayManager.sddm.wayland.enable = true;
     services.libinput.enable = true;
   time.timeZone = sessionSettings.timeZone;
   nixpkgs = {

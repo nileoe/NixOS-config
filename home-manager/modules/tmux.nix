@@ -19,7 +19,9 @@ in
 
  	 	plugins = with pkgs; [
  	 		tmuxPlugins.sensible
- 	 		tmuxPlugins.gruvbox
+  	 		tmuxPlugins.gruvbox
+            # tmuxPlugins.nord
+            # tmuxPlugins.catppuccin
 		#	{
 			# plugin = tmuxPlugins.catppuccin;
 		# 	extraConfig = ''
@@ -47,6 +49,7 @@ in
 		# 	set -g @catppuccin_status_connect_separator "yes"
 		# 	'';
 		# 	}
+ 	 		tmuxPlugins.better-mouse-mode
  	 		tmuxPlugins.jump
  	 		tmuxPlugins.vim-tmux-navigator
  	 		tmuxPlugins.mode-indicator
@@ -54,13 +57,13 @@ in
 			tmuxPlugins.yank # y and Y
  			{
  				plugin = tmuxPlugins.resurrect;
- 				extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+ 				# extraConfig = "set -g @resurrect-strategy-nvim 'session'";
  			}
 			{
 				plugin = tmuxPlugins.continuum;
 				extraConfig = ''
 					set -g @continuum-restore 'on'
-					set -g @continuum-save-interval '1' # minutes (default 15)
+					set -g @continuum-save-interval '5' # minutes (default 15)
 					'';
 			}
  		];
@@ -71,6 +74,8 @@ in
 		# can be useful if some code / plugin is dependent on something else.
         # bind S display "Hi you this is a test!"
 		extraConfig = ''
+        bind S command-prompt -p "New Session:" "new-session -A -s '%%'"
+        bind K confirm kill-session
 		set-option -g renumber-windows
 		# unbind-key f
 		bind-key -r f run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"

@@ -58,8 +58,8 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.local/scripts/tmux-sessi
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Cursed
-vim.keymap.set({ "n", "v" }, "h", "<nop>")
-vim.keymap.set({ "n", "v" }, "l", "<nop>")
+-- vim.keymap.set({ "n", "v" }, "h", "<nop>")
+-- vim.keymap.set({ "n", "v" }, "l", "<nop>")
 
 -- Miscellaneous
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Toggle [Z]enMode" });

@@ -30,7 +30,12 @@
 			function rpc() { # copies provided file's absolute path in clipboard (needs wl-copy)
 			    realpath "$1" | wl-copy
 			}
-		 '';
-		# 	source ~/nix-config/home-manager/p10k-config/p10k.zsh
-	};
+
+            if [ -n "''${commands[fzf-share]}" ]; then
+                source "$(fzf-share)/key-bindings.zsh"
+                source "$(fzf-share)/completion.zsh"
+            fi
+        '';
+# 	source ~/nix-config/home-manager/p10k-config/p10k.zsh
+    };
 }
