@@ -26,6 +26,7 @@ in {
     imports = [
         ./modules/sound-bluetooth-configuration.nix
         ./modules/steam.nix
+        ./modules/hyprlandAdditionalPackages.nix
 # If you want to use modules from other flakes (such as nixos-hardware):
 # inputs.hardware.nixosModules.common-cpu-amd
 # inputs.hardware.nixosModules.common-ssd
