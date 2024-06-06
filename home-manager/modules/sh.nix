@@ -17,6 +17,9 @@ shellAliases = {
     rm = "rm -i";
     v = "nvim";
     gho = "Hyprland";
+    wlc = "wl-copy";
+    wlp = "wl-paste";
+    cw = "change_wallpaper";
 
 ##### Navigation and fzbvvbvbbvvv
     cd = "z"; # zzzzzzzoxide
