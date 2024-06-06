@@ -1,4 +1,4 @@
-{ config, pkgs, systemSettings, ...}:
+{ config, pkgs, systemSettings, userSettings, ...}:
 let 
 shellAliases = {
 ##### Basic commands / simple navigation
@@ -23,6 +23,7 @@ shellAliases = {
     ".2" = "cd ../../";
     ".3" = "cd ../../..";
     fzv = "nvim $(fzf --reverse)";
+    fi="fzv";
     fzb = "fzf --reverse --preview 'bat --style=numbers --color=always {}'";
     fzvb = "nvim $(fzb)";
     fzbv = "fzvb";
@@ -90,6 +91,10 @@ programs = {
 			function rpc() { # copies provided file's absolute path in clipboard (needs wl-copy)
 			    realpath "$1" | wl-copy
 			}
+
+
+            export PATH=$PATH:/home/${userSettings.username}/scripts/
+
 
 #             if [ -n "''${commands[fzf-share]}" ]; then
 #                 source "$(fzf-share)/key-bindings.zsh"

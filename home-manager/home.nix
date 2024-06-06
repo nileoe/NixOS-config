@@ -17,6 +17,7 @@
 
 # You can also split up your configuration and import pieces of it here:
         ./modules/hypr/hyprland.nix
+        ./modules/additionalBluetoothConfig.nix
         ./modules/fuzzel/fuzzel.nix
         ./modules/kitty.nix
         ./modules/libreoffice.nix

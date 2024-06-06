@@ -21,6 +21,11 @@
     ];
 
     hardware.pulseaudio.enable = false; # mutually exclusive with pipewire
+    hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = true;
+    };
+    services.blueman.enable = true;
 
 # annoying stupid pop
     boot.extraModprobeConfig = "options snd_hda_intel power_save=0";

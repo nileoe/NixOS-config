@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-#
-# initializing wallpaper daemon
-swww init &
 
-# setting wallpaper
-swww img ~/Pictures/wallpapers/fancy_moon_paint.jpg &
+swww-daemon &
+swww img /home/nileoe/Pictures/wallpapers/dreamy_blue_moon.png &
 
 nm-applet --indicator &
 
