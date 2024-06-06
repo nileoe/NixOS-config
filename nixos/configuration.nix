@@ -17,10 +17,15 @@ in {
         enable = true;
         wayland.enable = true;
     };
-    services.displayManager.sddm.theme = "tokyo-night-sddm"; environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
+    services.displayManager.sddm.theme = "tokyo-night-sddm";
+    environment.systemPackages = with pkgs; [
+        tokyo-night-sddm
+        steam-run
+    ];
 # You can import other NixOS modules here
     imports = [
-    ./modules/sound-bluetooth-configuration.nix
+        ./modules/sound-bluetooth-configuration.nix
+        ./modules/steam.nix
 # If you want to use modules from other flakes (such as nixos-hardware):
 # inputs.hardware.nixosModules.common-cpu-amd
 # inputs.hardware.nixosModules.common-ssd
