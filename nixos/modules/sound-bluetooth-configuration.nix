@@ -24,7 +24,7 @@
     hardware.bluetooth = {
         enable = true;
         powerOnBoot = true;
-        General.Experimental = true; # supposedely to show airpods battery?
+        # General.Experimental = true; # supposedely to show airpods battery?
     };
     services.blueman.enable = true;
 

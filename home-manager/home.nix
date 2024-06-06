@@ -78,7 +78,6 @@
             git
             tree
             bat
-            steam
             scarab
             grimblast
             killall
