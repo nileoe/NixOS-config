@@ -20,7 +20,7 @@ in {
     services.displayManager.sddm.theme = "tokyo-night-sddm"; environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
 # You can import other NixOS modules here
     imports = [
-    ./sound-bluetooth-configuration.nix
+    ./modules/sound-bluetooth-configuration.nix
 # If you want to use modules from other flakes (such as nixos-hardware):
 # inputs.hardware.nixosModules.common-cpu-amd
 # inputs.hardware.nixosModules.common-ssd
