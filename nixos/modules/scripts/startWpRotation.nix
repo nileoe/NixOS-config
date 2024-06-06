@@ -1,5 +1,5 @@
 {pkgs}:
-pkgs.writeShellScriptBin "launch_wallpapers_rotation" ''
+pkgs.writeShellScriptBin "startWpRotation" ''
 if [[ $# -lt 1 ]] || [[ ! -d $1   ]]; then
 	echo "Usage:
 	$0 <dir containing images>"

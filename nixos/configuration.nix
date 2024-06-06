@@ -22,6 +22,7 @@ in {
         tokyo-night-sddm
         steam-run
         (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
+        (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
     ];
 # You can import other NixOS modules here
     imports = [

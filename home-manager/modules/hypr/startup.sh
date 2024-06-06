@@ -9,4 +9,4 @@ waybar &
 
 mako &
 
-/home/nileoe/scripts/bash_wallpaper_change.sh&
+launchWpRotation /home/nileoe/Pictures/wallpapers/ &
