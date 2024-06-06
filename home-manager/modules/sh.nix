@@ -2,7 +2,8 @@
 let 
 shellAliases = {
 ##### Basic commands / simple navigation
-    cat = "bat -p --theme 'Visual Studio Dark+'";
+    cat = "bat -p --theme 'Nord'";
+    catt = "bat -p --theme 'Nord'";
     cl = "clear";
     ll = "ls -l";
     o = "exit";
@@ -38,8 +39,9 @@ shellAliases = {
 
 ##### Miscellaneous
     airpods = "dispods; bluetoothctl connect 3C:4D:BE:89:38:4D";
-    airpodso = "airpods && o";
+    airpodso = "(airpods &) && o";
     dispods = "bluetoothctl disconnect 3C:4D:BE:89:38:4D";
+    dispodso = "(dispods &) && o";
 
 ##### Git perso
     dpull = "cd ~/docs && git pull --rebase && cd ~";

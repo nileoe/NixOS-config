@@ -102,6 +102,8 @@
             swww
             alacritty
             networkmanagerapplet
+            lolcat
+            cowsay
 # file managers
             cinnamon.nemo-with-extensions
             kdePackages.dolphin

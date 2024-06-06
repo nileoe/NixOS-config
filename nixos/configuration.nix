@@ -21,7 +21,7 @@ in {
     environment.systemPackages = with pkgs; [
         tokyo-night-sddm
         steam-run
-        (import ./modules/scripts/testScript.nix {inherit pkgs; })
+        (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
     ];
 # You can import other NixOS modules here
     imports = [
