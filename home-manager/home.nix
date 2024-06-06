@@ -79,6 +79,7 @@
             tree
             bat
             scarab
+            python312Packages.simplenote
             grimblast
             killall
             librewolf

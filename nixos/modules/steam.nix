@@ -5,4 +5,5 @@
         remotePlay.openFirewall = true;
         dedicatedServer.openFirewall = true;
     };
+    # pkgs.protonup-qt
 }
