@@ -20,6 +20,7 @@
         ./modules/additionalBluetoothConfig.nix
         ./modules/fuzzel/fuzzel.nix
         ./modules/kitty.nix
+        ./modules/sql.nix
         ./modules/libreoffice.nix
         ./modules/mako.nix
         ./modules/nvimModule/nvim.nix
@@ -84,7 +85,6 @@
             grimblast
             killall
             librewolf
-            libnotify
             cmatrix
             obsidian
             _1password-gui
