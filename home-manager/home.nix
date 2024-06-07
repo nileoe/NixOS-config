@@ -21,6 +21,7 @@
         ./modules/fuzzel/fuzzel.nix
         ./modules/kitty.nix
         ./modules/libreoffice.nix
+        ./modules/mako.nix
         ./modules/nvimModule/nvim.nix
         ./modules/sh.nix
         ./modules/speedcrunch.nix

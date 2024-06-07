@@ -24,7 +24,6 @@ in {
         (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
     ];
-# You can import other NixOS modules here
     imports = [
         ./modules/sound-bluetooth-configuration.nix
         ./modules/steam.nix
@@ -39,6 +38,13 @@ in {
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
+
+# TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables (check safety concerns somewhere and then uncomment)
+  # programs.nix-ld = {
+  #   enable = true;
+  #   libraries = with pkgs ; [
+  #   ];
+  # };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

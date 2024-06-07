@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 {
   home.packages = with pkgs; [
-    libreoffice-qt
+    libreoffice
     # hunspell
     # hunspellDictsChromium.en-gb
     # hunspellDictsChromium.fr_FR

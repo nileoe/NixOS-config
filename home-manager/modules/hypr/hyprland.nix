@@ -26,9 +26,6 @@
 # services.hypridle.enable = true; # try it some time!
 # programs.hyprlock.enable = true; # try it some time!
 
-    services.mako = {
-        enable = true;
-    };
 
     xdg.portal = {
         enable = true;
