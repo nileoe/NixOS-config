@@ -69,6 +69,12 @@ programs.hyprland.enable = true;
 #  };
  fonts.packages = with pkgs; [
 	nerdfonts
+    noto-fonts
+    noto-fonts-color-emoji
+    corefonts
+    garamond-libre
+    helvetica-neue-lt-std
+    vistafonts
  ];
 
 # environment.systemPackages = [(
