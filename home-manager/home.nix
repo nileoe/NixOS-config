@@ -70,6 +70,7 @@
             pamixer
             playerctl
             localsend
+            github-desktop
             sl
             firefox
             neofetch
