@@ -71,6 +71,10 @@
             playerctl
             localsend
             github-desktop
+            rustc
+            dbus
+            acpi
+            eww
             sl
             firefox
             neofetch

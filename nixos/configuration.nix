@@ -31,6 +31,7 @@ in {
         ./modules/steam.nix
         ./modules/hyprlandAdditionalPackages.nix
         ./modules/sql.nix
+        ./modules/cron.nix
 # If you want to use modules from other flakes (such as nixos-hardware):
 # inputs.hardware.nixosModules.common-cpu-amd
 # inputs.hardware.nixosModules.common-ssd
@@ -66,16 +67,8 @@ in {
     LC_TIME = "en_GB.UTF-8";
   };
 
-
 programs.hyprland.enable = true;
 
-
-# Configure keymap in X11
-#  services.xserver = {
-#    enable = true;
-#    desktopManager.plasma5.enable = true;
-# 	xkb.layout = "gb";
-#  };
  fonts.packages = with pkgs; [
 	nerdfonts
     noto-fonts
