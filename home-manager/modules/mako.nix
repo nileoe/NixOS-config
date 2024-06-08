@@ -11,6 +11,6 @@
             ignoreTimeout = true;
         backgroundColor = "#c3e88d";
         textColor = "#1f2335"; # tokyonight
-        borderRadius = 15;
+        borderRadius = 10;
     };
 }
