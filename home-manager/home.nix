@@ -29,24 +29,10 @@
         ./modules/tmux.nix
         ./modules/zoxide.nix
         ./modules/graphical-file-managers.nix
-        #./modules/gtk.nix
+        ./modules/gtk.nix
 
         inputs.catppuccin.homeManagerModules.catppuccin
     ];
-  gtk = {
-    iconTheme = {
-        name = "Adwaita";
-        package = pkgs.gnome.adwaita-icon-theme;
-    };
-    enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "latte";
-      accent = "sky";
-      size = "standard";
-      tweaks = [ "normal" ];
-    };
-  };
 
 
 
@@ -146,9 +132,9 @@
     programs.home-manager.enable = true;
     programs.git.enable = true;
 
-# Nicely reload system units when changing configs
+    # Nicely reload system units when changing configs
     systemd.user.startServices = "sd-switch";
 
-# https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     home.stateVersion = "24.05";
 }
