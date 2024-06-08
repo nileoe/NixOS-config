@@ -10,9 +10,9 @@
             source = ~/.config/hypr/windowRules.conf
             source = ~/.config/hypr/binds.conf
             source = ~/.config/hypr/graphics.conf
-            windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
-            exec-once = dbus-update-activation-environment --systemd --all debug:disable_logs = false
-            exec-once = bash ~/.config/hypr/startup.sh
+            exec-once = swww-daemon &
+            exec-once = startWpRotation ${../../../data/wallpapers/selected} &
+            exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
                                                               '';
     };
 

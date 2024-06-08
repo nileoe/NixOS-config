@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-swww-daemon &
-
-startWpRotation ${../../../data/wallpapers/selected} &
+exec-once = dbus-update-activation-environment --systemd --all debug:disable_logs = false
 
 nm-applet --indicator &
 
