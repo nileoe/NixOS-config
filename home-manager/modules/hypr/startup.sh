@@ -2,7 +2,7 @@
 
 swww-daemon &
 
-startWpRotation /home/nileoe/Pictures/wallpapers/ &
+startWpRotation ${../../../data/wallpapers/selected} &
 
 nm-applet --indicator &
 

@@ -6,7 +6,8 @@ export SWWW_TRANSITION_FPS=60
 export SWWW_TRANSITION_STEP=2
 
 
-WPDIR="/home/nileoe/Pictures/wallpapers"
+WPDIR=${../../../data/wallpapers/selected}
+echo ""found wpdir: $WPDIR"
 
 read -r wp < <(find $WPDIR -type f \
     | while read -r wp; do

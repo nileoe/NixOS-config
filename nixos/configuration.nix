@@ -25,6 +25,7 @@ in {
         (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWallpaper.nix {inherit pkgs; })
         (import ./modules/scripts/changeWallpaper.nix {inherit pkgs; })
+        (import ./modules/scripts/batteryNotify.nix {inherit pkgs; })
     ];
     imports = [
         ./modules/sound-bluetooth-configuration.nix
