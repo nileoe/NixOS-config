@@ -23,6 +23,8 @@ in {
         steam-run
         (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
+        (import ./modules/scripts/toggleWallpaper.nix {inherit pkgs; })
+        (import ./modules/scripts/changeWallpaper.nix {inherit pkgs; })
     ];
     imports = [
         ./modules/sound-bluetooth-configuration.nix

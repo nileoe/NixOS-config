@@ -1,16 +1,17 @@
 {pkgs}:
-pkgs.writeShellScriptBin "startWpRotation" ''
+pkgs.writeShellScriptBin "changeWallpaper" ''
 
 # Edit below to control the images transition
 export SWWW_TRANSITION_FPS=60
 export SWWW_TRANSITION_STEP=2
 
 
-	find "/home/nileoe/Pictures/wallpapers/" -type f \
-		| while read -r img; do
-			echo "$((RANDOM % 1000)):$img"
-		done \
-		| sort -n | cut -d':' -f2- \
-		| read -r img
-			swww img "$img"
+WPDIR="/home/nileoe/Pictures/wallpapers"
+
+read -r wp < <(find $WPDIR -type f \
+    | while read -r wp; do
+    echo "$((RANDOM % 1000)):$wp"
+done \
+    | sort -n | cut -d':' -f2-)
+swww img "$wp"
 ''
