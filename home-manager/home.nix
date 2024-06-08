@@ -28,6 +28,7 @@
         ./modules/waybar/waybar.nix
         ./modules/tmux.nix
         ./modules/zoxide.nix
+        ./modules/graphical-file-managers.nix
     ];
 
 
@@ -110,7 +111,6 @@
             lolcat
             cowsay
 # file managers
-            cinnamon.nemo-with-extensions
             kdePackages.dolphin
             kdePackages.dolphin-plugins
             pcmanfm
