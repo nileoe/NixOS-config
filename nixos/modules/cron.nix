@@ -3,7 +3,7 @@
     services.cron = {
         enable = true;
         systemCronJobs = [
-            "*/1 * * * *      root    date >> /tmp/cron.log"
+            "*/1 * * * *      root    batteryNotify
         ];
     };
 }
