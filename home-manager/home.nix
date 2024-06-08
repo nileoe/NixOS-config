@@ -29,6 +29,7 @@
         ./modules/tmux.nix
         ./modules/zoxide.nix
         ./modules/graphical-file-managers.nix
+        ./modules/gtk.nix
     ];
 
 
