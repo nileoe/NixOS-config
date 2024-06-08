@@ -41,21 +41,22 @@
                     "gtk"
                 ];
             };
-            pantheon = {
-                default = [
-                    "pantheon"
-                        "gtk"
-                ];
-                "org.freedesktop.impl.portal.Secret" = [
-                    "gnome-keyring"
-                ];
-            };
-            x-cinnamon = {
-                default = [
-                    "xapp"
-                        "gtk"
-                ];
-            };
+        pantheon = {
+            default = [
+                "pantheon"
+                    "gtk"
+            ];
+            "org.freedesktop.impl.portal.Secret" = [
+                "gnome-keyring"
+            ];
+        };
+        x-cinnamon = {
+            default = [
+                "xapp"
+                    "gtk"
+            ];
         };
     };
+    };
+    home.packages = [pkgs.xdg-desktop-portal-xapp];
 }

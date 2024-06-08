@@ -2,13 +2,13 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
     inputs,
-        lib,
-        config,
-        pkgs,
-        userSettings,
-        systemSettings,
-        sessionSettings,
-        ...
+    lib,
+    config,
+    pkgs,
+    userSettings,
+    systemSettings,
+    sessionSettings,
+    ...
 }:
 let
 tokyo-night-sddm = pkgs.libsForQt5.callPackage ./modules/ssdm-tokyonight-night/default.nix { };
@@ -69,6 +69,8 @@ in {
   };
 
 programs.hyprland.enable = true;
+
+gtk.iconCache.enable = true;
 
  fonts.packages = with pkgs; [
 	nerdfonts

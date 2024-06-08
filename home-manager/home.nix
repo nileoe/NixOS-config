@@ -2,13 +2,13 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
     inputs,
-        lib,
-        config,
-        pkgs,
-        userSettings,
-        systemSettings,
-        sessionSettings,
-        ...
+    lib,
+    config,
+    pkgs,
+    userSettings,
+    systemSettings,
+    sessionSettings,
+    ...
 }: {
 # You can import other home-manager modules here
     imports = [
@@ -29,8 +29,25 @@
         ./modules/tmux.nix
         ./modules/zoxide.nix
         ./modules/graphical-file-managers.nix
-        ./modules/gtk.nix
+        #./modules/gtk.nix
+
+        inputs.catppuccin.homeManagerModules.catppuccin
     ];
+  gtk = {
+    iconTheme = {
+        name = "Adwaita";
+        package = pkgs.gnome.adwaita-icon-theme;
+    };
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "latte";
+      accent = "sky";
+      size = "standard";
+      tweaks = [ "normal" ];
+    };
+  };
+
 
 
     nixpkgs = {
@@ -62,66 +79,69 @@
 # Add stuff for your user as you see fit:
     home.packages = with pkgs; [
         brightnessctl
-            clang
-            libgcc
-            cider
-            cargo
-            discord
-            neovim
-            nodejs_22
-            pamixer
-            playerctl
-            localsend
-            github-desktop
-            rustc
-            dbus
-            acpi
-            eww
-            sl
-            firefox
-            neofetch
-            rofi
-            python3
-            htop
-            git
-            tree
-            bat
-            scarab
-            python312Packages.simplenote
-            grimblast
-            killall
-            librewolf
-            cmatrix
-            obsidian
-            _1password-gui
-            _1password
-            microsoft-edge
-            fira-mono
-            speedtest-cli
-            speedtest-rs
-            remnote
-            vscode
-            wl-clipboard
-            whatsapp-for-linux
-            zip
-            unzip
-            zapzap
-            swww
-            alacritty
-            networkmanagerapplet
-            lolcat
-            cowsay
+        # gnome.adwaita-icon-theme
+        clang
+        libgcc
+        cider
+        cargo
+        discord
+        neovim
+        nodejs_22
+        pamixer
+        playerctl
+        localsend
+        github-desktop
+        rustc
+        dbus
+        acpi
+        eww
+        sl
+        firefox
+        neofetch
+        rofi
+        python3
+        htop
+        git
+        tree
+        bat
+        scarab
+        python312Packages.simplenote
+        grimblast
+        killall
+        librewolf
+        cmatrix
+        obsidian
+        _1password-gui
+        _1password
+        microsoft-edge
+        fira-mono
+        speedtest-cli
+        speedtest-rs
+        remnote
+        vscode
+        wl-clipboard
+        whatsapp-for-linux
+        zip
+        unzip
+        zapzap
+        swww
+        alacritty
+        networkmanagerapplet
+        lolcat
+        cowsay
 # file managers
-            kdePackages.dolphin
-            kdePackages.dolphin-plugins
-            pcmanfm
+        kdePackages.dolphin
+        kdePackages.dolphin-plugins
+        pcmanfm
+        gnome.nautilus
+        cinnamon.nemo-with-extensions
 # PDF readers
-            zathura
-            kdePackages.okular
-            mate.atril
-            mupdf
-            feh
-            ];
+        zathura
+        kdePackages.okular
+        mate.atril
+        mupdf
+        feh
+        ];
 
     programs.home-manager.enable = true;
     programs.git.enable = true;

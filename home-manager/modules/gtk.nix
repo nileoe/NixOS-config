@@ -1,8 +1,10 @@
-{config, pkgs, ...}:
+{config, pkgs, inputs, ...}:
 {
-    home.packages = with pkgs; [
-    ];
-    gtk = {
-        enable = false;
-    };
+    # imports = [inputs];
+    # home.packages = with pkgs; [
+    # ];
+    # gtk = {
+    #     enable = true;
+    #     iconTheme.name = "Adwaita";
+    # };
 }
