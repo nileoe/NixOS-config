@@ -30,6 +30,7 @@
         ./modules/zoxide.nix
         ./modules/graphical-file-managers.nix
         ./modules/gtk.nix
+        ./modules/git.nix
 
         inputs.catppuccin.homeManagerModules.catppuccin
     ];
@@ -98,8 +99,7 @@
         obsidian
         _1password-gui
         _1password
-#        microsoft-edge
-#        fira-mono
+        # microsoft-edge
         speedtest-cli
         speedtest-rs
         remnote
@@ -129,11 +129,6 @@
         ];
 
     programs.home-manager.enable = true;
-    programs.git = {
-        enable = true;
-        userName = "nileoe";
-        userEmail = "linoperdrix@gmail.com";
-    };
 
     # Nicely reload system units when changing configs
     systemd.user.startServices = "sd-switch";
