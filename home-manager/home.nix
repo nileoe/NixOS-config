@@ -22,7 +22,7 @@
         ./modules/kitty.nix
         ./modules/libreoffice.nix
         ./modules/mako.nix
-        ./modules/nvimModule/nvim.nix
+        # ./modules/nvimModule/nvim.nix
         ./modules/sh.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
@@ -72,12 +72,11 @@
         cider
         cargo
         discord
-        neovim
+        # neovim
         nodejs_22
         pamixer
         playerctl
         localsend
-        github-desktop
         rustc
         dbus
         acpi
@@ -113,6 +112,7 @@
         alacritty
         networkmanagerapplet
         lolcat
+        vim
         cowsay
 # file managers
         kdePackages.dolphin
