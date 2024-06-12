@@ -16,6 +16,7 @@ shellAliases = {
     mv = "mv -i";
     rm = "rm -i";
     v = "nvim";
+    v. = "nvim .";
     gho = "Hyprland";
     wlc = "wl-copy";
     wlp = "wl-paste";
