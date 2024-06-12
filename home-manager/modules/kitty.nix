@@ -5,9 +5,11 @@
 programs.kitty = {
 	enable = true;
 	theme = "Tokyo Night";
-
 	font = {
 		name = "JetBrainsMonoNerdFont";
 	};
+    settings = {
+        enable_audio_bell = "no";
+    };
 };
 }

@@ -65,56 +65,70 @@
 
 # Add stuff for your user as you see fit:
     home.packages = with pkgs; [
-        brightnessctl
         # gnome.adwaita-icon-theme
+        localsend
+        _1password-gui
+        _1password
+        swww
+        networkmanagerapplet
+        alacritty
+# System helpers
+        eww
+        pamixer
+        dbus
+        pulseaudioFull
+        qpwgraph
+# Social
+        whatsapp-for-linux
+        # discord
+        # discord-screenaudio
+        vesktop
+# Gaming
+        prismlauncher
+        scarab
+# Browsers
+        microsoft-edge
+        librewolf
+        firefox
+        chromium
+        google-chrome
+# Note taking and office suite
+        obsidian
+        remnote
+        anki
+# coding
+        neovim
+        vscode
+# programming languages
+        nodejs_22
         clang
         libgcc
-        cider
-        cargo
-        discord
-        # neovim
-        nodejs_22
-        pamixer
-        playerctl
-        localsend
         rustc
-        dbus
-        acpi
-        eww
-        sl
-        firefox
-        neofetch
-        rofi
         python3
+        go
+        cargo
+# CLI tools
+        speedtest-rs
+        neofetch
+        gh
+        acpi
+        cmatrix
+        sl
+        lolcat
+        cowsay
+        grimblast
+        playerctl
         htop
         tree
         bat
-        scarab
-        python312Packages.simplenote
-        grimblast
         killall
-        librewolf
-        cmatrix
-        obsidian
-        _1password-gui
-        _1password
-        # microsoft-edge
         speedtest-cli
-        speedtest-rs
-        remnote
-        vscode
         wl-clipboard
-        whatsapp-for-linux
         zip
         unzip
-        zapzap
-        swww
-        alacritty
-        networkmanagerapplet
-        lolcat
-        vim
-        cowsay
-# file managers
+        brightnessctl
+        unixtools.xxd
+# File managers
         kdePackages.dolphin
         kdePackages.dolphin-plugins
         pcmanfm
@@ -126,6 +140,11 @@
         mate.atril
         mupdf
         feh
+# Music
+        cider
+        reaper
+        musescore
+        audacity
         ];
 
     programs.home-manager.enable = true;

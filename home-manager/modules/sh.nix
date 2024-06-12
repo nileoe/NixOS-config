@@ -3,7 +3,7 @@ let
 shellAliases = {
 ##### Basic commands / simple navigation
     cat = "bat -p --theme 'Nord'";
-    catt = "bat -p --theme 'Nord'";
+    catt = "bat --theme 'Nord'";
     cl = "clear";
     ll = "ls -l";
     o = "exit";
@@ -98,7 +98,7 @@ programs = {
 			}
 
 
-            export PATH=$PATH:/home/${userSettings.username}/scripts/
+            export PATH=$PATH:$HOME/go/bin
 
 
 #             if [ -n "''${commands[fzf-share]}" ]; then

@@ -10,7 +10,7 @@
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         catppuccin.url = "github:catppuccin/nix";
 # swww because they say so on their README page
-        # inputs.swww.url = "github:LGFae/swww";
+# inputs.swww.url = "github:LGFae/swww";
     };
 
     outputs = {

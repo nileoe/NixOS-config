@@ -9,7 +9,7 @@
         enable = true;
         defaultTimeout = 10000; # in miliseconds
             ignoreTimeout = true;
-        backgroundColor = "#c3e88d";
+        backgroundColor = "#b4befe"; # catpuccin mocha lavender = highlight color
         textColor = "#1f2335"; # tokyonight
         borderRadius = 10;
     };
