@@ -15,7 +15,6 @@ shellAliases = {
     cp = "cp -i";
     mv = "mv -i";
     rm = "rm -i";
-    gho = "Hyprland";
     wlc = "wl-copy";
     wlp = "wl-paste";
     cw = "change_wallpaper";
@@ -36,10 +35,11 @@ shellAliases = {
     tma = "tmux attach || (echo 'No current session: creating new') && sleep 0.5 && tm";
 
 ##### NixOS
-    hswitch= "cd ~/nix-config && home-manager switch --flake .#nileoe@lix";
-    nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#lix";
+    hswitch= "cd ~/nix-config && home-manager switch --flake .#${userSettings.username}@${systemSettings.hostname}";
+    nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#${systemSettings.hostname}";
 
 ##### Miscellaneous
+# replace / remove as needed
     airpods = "dispods; bluetoothctl connect 3C:4D:BE:89:38:4D";
     airpodso = "(airpods &) && o";
     dispods = "bluetoothctl disconnect 3C:4D:BE:89:38:4D";
@@ -47,7 +47,7 @@ shellAliases = {
 
 ##### Git perso
     dpull = "cd ~/docs && git pull --rebase && cd ~";
-    dpush = "cd ~/docs && git add * ; git commit -m '${systemSettings.hostname} commit ($(date))' && git push";
+    dpush = "cd ~/docs && git add * ; git commit -m '${systemSettings.hostname} commit' && git push";
 
 ##### Coding shortcuts
     py = "python3";
@@ -63,63 +63,56 @@ shellAliases = {
 };
 in
 {
-programs = {
+    programs = {
 
-    zsh =  {
-        enable = true;
-        inherit shellAliases;
-		enableCompletion = true;
-		autosuggestion.enable = true;
-		syntaxHighlighting.enable = true;
-		history.size = 10000;
+        zsh =  {
+            enable = true;
+            inherit shellAliases;
+            enableCompletion = true;
+            autosuggestion.enable = true;
+            syntaxHighlighting.enable = true;
+            history.size = 10000;
 
-		plugins = [
-		{
-			name = "powerlevel10k";
-			src = pkgs.zsh-powerlevel10k;
-			file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-		}
-		{
-			name = "powerlevel10k-config";
-			src = ./p10k-config;
-			file = "p10k.zsh";
-		}
-		];
-		 initExtra = ''
-			bindkey '^o' autosuggest-accept
-			function mkcd() { # creates a directory and cd into it in a single command.
-			    mkdir "$1"
-			    cd "$1"
-			}
+            plugins = [
+            {
+                name = "powerlevel10k";
+                src = pkgs.zsh-powerlevel10k;
+                file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+            }
+            {
+                name = "powerlevel10k-config";
+                src = ./p10k-config;
+                file = "p10k.zsh";
+            }
+            ];
+            initExtra = ''
+                bindkey '^o' autosuggest-accept
+                function mkcd() { # creates a directory and cd into it in a single command.
+                    mkdir "$1"
+                        cd "$1"
+                }
 
-			function rpc() { # copies provided file's absolute path in clipboard (needs wl-copy)
-			    realpath "$1" | wl-copy
-			}
-
-            function v() {
-               nvim "$1" || nvim . 
+            function rpc() { # copies provided file's absolute path in clipboard (needs wl-copy)
+                realpath "$1" | wl-copy
             }
 
+            function v() {
+                nvim "$1" || nvim . 
+            }
 
             export PATH=$PATH:$HOME/go/bin
 
-
-#             if [ -n "''${commands[fzf-share]}" ]; then
-#                 source "$(fzf-share)/key-bindings.zsh"
-#                 source "$(fzf-share)/completion.zsh"
-#             fi
-            '';
-# 	source ~/nix-config/home-manager/p10k-config/p10k.zsh
+                '';
+        };
+        bash =  {
+            enable = true;
+            inherit shellAliases;
+        };
+        fzf = {
+            enable = true;
+            enableZshIntegration = true;
+            enableBashIntegration = true;
+            tmux.enableShellIntegration = true;
+        };
     };
-    bash =  {
-# enable = true;
-        inherit shellAliases;
-    };
-    fzf = {
-        enable = true;
-        enableZshIntegration = true;
-        enableBashIntegration = true;
-        tmux.enableShellIntegration = true;
-    };
-};
 }

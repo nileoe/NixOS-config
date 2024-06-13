@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 {
-	xdg.configFile.nvim.source = ./nvim; # worked (kinda)
+	xdg.configFile.nvim.source = ./nvim;
 }
-# fix with https://discourse.nixos.org/t/neovim-config-read-only/35109/11 mkOufOfSToreSmLink comment
-# REMOVED DIRECTORY: intially the standard nvim directory (containing init.lua and everything else) was in the nvimModule directory
-# made it its separate repo in ~/.config/nvim instead (managed separately)
+# Neovim config is NOT managed by nix: this module is NOT loaded (would be for a fully declarative Neovim configuration).
+# REMOVED DIRECTORY: intially the standard ./nvim directory (containing init.lua and everything else) was in the nvimModule directory.
+# made it its separate repo in ~/.config/nvim instead (managed separately).

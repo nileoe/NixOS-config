@@ -1,5 +1,4 @@
-# This is your system's configuration file.
-# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
+# credit to https://github.com/Misterio77/nix-starter-configs for the base structure
 {
     inputs,
     lib,
@@ -34,18 +33,14 @@ in {
         ./modules/hyprlandAdditionalPackages.nix
         ./modules/sql.nix
         ./modules/cron.nix
-# If you want to use modules from other flakes (such as nixos-hardware):
-# inputs.hardware.nixosModules.common-cpu-amd
-# inputs.hardware.nixosModules.common-ssd
+        # If you want to use modules from other flakes (such as nixos-hardware):
+        # inputs.hardware.nixosModules.common-cpu-amd
+        # inputs.hardware.nixosModules.common-ssd
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
-
-    # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
 
-# TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables (check safety concerns somewhere and then uncomment)
+# TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
   # programs.nix-ld = {
   #   enable = true;
   #   libraries = with pkgs ; [
@@ -57,7 +52,7 @@ in {
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = true; # uncomment for no dual-boot
   
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {

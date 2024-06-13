@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, userSettings, ...}:
 {
     home.packages = with pkgs; [
         github-desktop
@@ -7,8 +7,8 @@
 
     programs.git = {
         enable = true;
-        userName = "nileoe";
-        userEmail = "linoperdrix@gmail.com";
+        userName = userSettings.username;
+        userEmail =  userSettings.email;
         extraConfig = {
             init.defaultBranch = "main";
             core.editor = "nvim";

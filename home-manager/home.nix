@@ -1,3 +1,4 @@
+# credit to https://github.com/Misterio77/nix-starter-configs for the base structure
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
@@ -22,13 +23,12 @@
         ./modules/kitty.nix
         ./modules/libreoffice.nix
         ./modules/mako.nix
-        # ./modules/nvimModule/nvim.nix
+        # ./modules/nvimModule/nvim.nix # for declarative Neovim configuration (unused)
         ./modules/sh.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
         ./modules/tmux.nix
         ./modules/zoxide.nix
-        ./modules/graphical-file-managers.nix
         ./modules/gtk.nix
         ./modules/git.nix
 

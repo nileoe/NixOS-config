@@ -1,18 +1,23 @@
+# to be used as device-specific global variables
+# to use: rename this file as settings.nix (will be ignored by git) and use / add as you wish
 {
 	sessionSettings = {
 		theme = {
 			isDark = true;
-			name = "tokyonight-night";
+			name = "";
 		};
-		timeZone = "Europe/London";
+		timeZone = "";
 	};
 	userSettings = {
-		username = "nileoe";
-		fullName = "Lino Perdrix";
+		username = "";
+		fullName = "";
+		email = ""; # used by git and such
 	};
 	systemSettings = {
-		hostname = "lix";
-		keyboard = "fullSize"; # fullSize | laptop
-		monitorType = "desktop"; # desktop | laptop
+		hostname = "";
+        # so the same config can be use for laptop and desktop. Change the following
+        # fields to dictate which settings (e.g. in hyprland, waybar etc.) should be used (minor differences).
+		keyboard = ""; # fullSize | laptop
+		monitorType = ""; # desktop | laptop
 		};
 }

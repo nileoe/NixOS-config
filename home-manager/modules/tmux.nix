@@ -1,9 +1,6 @@
 # more complex config: seel
 # https://haseebmajid.dev/posts/2023-07-10-setting-up-tmux-with-nix-home-manager/
 { config, pkgs, ...}:
-let
-theme = "poire";
-in
 {
 	programs.tmux = {
 		enable = true;
@@ -11,7 +8,7 @@ in
 		prefix = "C-Space";
 		clock24 = true;
 		sensibleOnTop = true; # sensible defaults can be overriden in extraCongig
-		keyMode = "vi"; # ???????????????
+		keyMode = "vi";
 		baseIndex = 1;
 		historyLimit = 10000;
 
@@ -19,39 +16,14 @@ in
 
  	 	plugins = with pkgs; [
  	 		tmuxPlugins.sensible
+
+            # available themes (comment the tokyonight theme lines in extraconfig to use one)
   	 		# tmuxPlugins.gruvbox
             # tmuxPlugins.nord
             # tmuxPlugins.catppuccin
-            # tmuxPlugins.rose-pine # doesn't work?
             # tmuxPlugins.power-theme
             # tmuxPlugins.onedark-theme # very nice
-		#	{
-			# plugin = tmuxPlugins.catppuccin;
-		# 	extraConfig = ''
-		# 	# catppuccin config https://github.com/catppuccin/tmux?tab=readme-ov-file#configuration-examples
-		# 	# see https://github.com/tmux/tmux/wiki/Formats
-		# 	# https://man.openbsd.org/tmux.1#FORMATS
 
-		# 	set -g @catppuccin_window_left_separator "█"
-		# 	set -g @catppuccin_window_right_separator "    " # space between windows in bar
-		# 	set -g @catppuccin_window_number_position "left"
-		# 	set -g @catppuccin_window_middle_separator "█ "
-
-		# 	set -g @catppuccin_window_current_fill "number"
-		# 	set -g @catppuccin_window_current_text "#W"
-		# 	set -g @catppuccin_window_default_fill "number"
-		# 	set -g @catppuccin_window_default_text "#W"
-		# 	# set -g @catppuccin_window_current_text "#W : #{pane_current_path}"
-
-		# 	set -g @catppuccin_status_modules_right "session date_time"
-
-		# 	# catppuccin status
-		# 	set -g @catppuccin_status_left_separator  "█"
-		# 	set -g @catppuccin_status_right_separator "█"
-		# 	set -g @catppuccin_status_fill "all"
-		# 	set -g @catppuccin_status_connect_separator "yes"
-		# 	'';
-		# 	}
  	 		tmuxPlugins.better-mouse-mode
  	 		tmuxPlugins.jump
  	 		tmuxPlugins.vim-tmux-navigator
@@ -71,7 +43,7 @@ in
 			}
  		];
 	
-	# source-file '/home/nil_/.config/tmux/semi_straight_catppuccin.conf'
+        # source-file '/home/nil_/.config/tmux/semi_straight_catppuccin.conf'
 
 		# The code inside extraConfig is ran after the declared options, which
 		# can be useful if some code / plugin is dependent on something else.
@@ -88,15 +60,7 @@ in
 		bind '%' split-window -h -c "#{pane_current_path}"
 		# bind "C-q" contiinuum save or something && kill-session
 
-        # thanks internet, makes it so that C-j/k work in fzf in tmux
-         not_tmux='`echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"` || `echo "#{pane_current_command}" | grep -iqE "(^|\/)fzf"`'
-         bind-key -n C-h if-shell "$not_tmux" "send-keys C-h" "select-pane -L"
-         bind-key -n C-j if-shell "$not_tmux" "send-keys C-j" "select-pane -D"
-         bind-key -n C-k if-shell "$not_tmux" "send-keys C-k" "select-pane -U"
-         bind-key -n C-l if-shell "$not_tmux" "send-keys C-l" "select-pane -R"
-
-
-        # TokyoNight colors for Tmux
+        # TokyoNight colors for Tmux (not in home-manager as of yet)
 
          set -g mode-style "fg=#7aa2f7,bg=#3b4261"
 
