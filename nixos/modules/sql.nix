@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, userSettings, ...}:
 {
     services.mysql = {
         enable = true;
@@ -6,6 +6,6 @@
     };
     services.librenms = {
         database.host = "localhost";
-        database.username = "nileoe";
+        database.username = userSettings.username;
     };
 }

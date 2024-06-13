@@ -25,6 +25,7 @@
         ./modules/mako.nix
         # ./modules/nvimModule/nvim.nix # for declarative Neovim configuration (unused)
         ./modules/sh.nix
+        ./modules/steam.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
         ./modules/tmux.nix
@@ -50,10 +51,11 @@
 #   });
 # })
         ];
+
 # Configure your nixpkgs instance
         config = {
             allowUnfree = true;
-# Workaround for https://github.com/nix-community/home-manager/issues/2942
+        # Workaround for https://github.com/nix-community/home-manager/issues/2942
             allowUnfreePredicate = _: true;
         };
     };
@@ -65,7 +67,7 @@
 
 # Add stuff for your user as you see fit:
     home.packages = with pkgs; [
-        # gnome.adwaita-icon-theme
+    # feel free to add/remove/comment
         localsend
         _1password-gui
         _1password
@@ -81,24 +83,23 @@
 # Social
         whatsapp-for-linux
         # discord
-        # discord-screenaudio
-        vesktop
+        vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
 # Gaming
-        prismlauncher
-        scarab
+        prismlauncher # aka FOSS minecraft launcher
+        scarab        # Hollow Knight mod manager
 # Browsers
         microsoft-edge
         librewolf
         firefox
         chromium
         google-chrome
-# Note taking and office suite
+# Note taking
         obsidian
         remnote
         anki
 # coding
         neovim
-        vscode
+        # vscode # :)
 # programming languages
         nodejs_22
         clang
@@ -115,7 +116,6 @@
         cmatrix
         sl
         lolcat
-        cowsay
         grimblast
         playerctl
         htop
@@ -134,12 +134,12 @@
         pcmanfm
         gnome.nautilus
         cinnamon.nemo-with-extensions
-# PDF readers
+# PDF/Image readers
         zathura
         kdePackages.okular
         mate.atril
         mupdf
-        feh
+        # feh
 # Music
         cider
         reaper

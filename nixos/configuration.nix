@@ -29,7 +29,7 @@ in {
     ];
     imports = [
         ./modules/sound-bluetooth-configuration.nix
-        ./modules/steam.nix
+        # ./modules/steam.nix
         ./modules/hyprlandAdditionalPackages.nix
         ./modules/sql.nix
         ./modules/cron.nix
