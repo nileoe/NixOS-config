@@ -25,7 +25,6 @@
         ./modules/mako.nix
         # ./modules/nvimModule/nvim.nix # for declarative Neovim configuration (unused)
         ./modules/sh.nix
-        ./modules/steam.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
         ./modules/tmux.nix
