@@ -15,8 +15,6 @@ shellAliases = {
     cp = "cp -i";
     mv = "mv -i";
     rm = "rm -i";
-    v = "nvim";
-    v. = "nvim .";
     gho = "Hyprland";
     wlc = "wl-copy";
     wlp = "wl-paste";
@@ -97,6 +95,10 @@ programs = {
 			function rpc() { # copies provided file's absolute path in clipboard (needs wl-copy)
 			    realpath "$1" | wl-copy
 			}
+
+            function v() {
+               nvim "$1" || nvim . 
+            }
 
 
             export PATH=$PATH:$HOME/go/bin
