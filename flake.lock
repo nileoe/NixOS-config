@@ -18,13 +18,13 @@
     "dev_specific_config": {
       "flake": false,
       "locked": {
-        "lastModified": 0,
-        "narHash": "sha256-n07cs2+DUnhusN/pXkuZMYD1PZssmikVTaFC9TBb/5E=",
-        "path": "./",
+        "lastModified": 1,
+        "narHash": "sha256-5Tm5/pIOHI7x9foStqArCtwQzBWpdJ0GVc1o6w3gWl0=",
+        "path": "./dev-specific/",
         "type": "path"
       },
       "original": {
-        "path": "./",
+        "path": "./dev-specific/",
         "type": "path"
       }
     },
