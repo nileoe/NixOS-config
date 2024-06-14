@@ -24,13 +24,13 @@
         ...
     } @ inputs: let
     inherit (self) outputs;
-    # userSettings = (import ./settings.nix).userSettings;
-    # systemSettings = (import ./settings.nix).systemSettings;
-    # sessionSettings = (import ./settings.nix).sessionSettings;
-    settings = import "${inputs.dev_specific_config}/settings.nix";
-    userSettings = settings.userSettings;
-    systemSettings = settings.systemSettings;
-    sessionSettings = settings.sessionSettings;
+    userSettings = (import /etc/nixos/settings.nix).userSettings;
+    systemSettings = (import /etc/nixos/settings.nix).systemSettings;
+    sessionSettings = (import /etc/nixos/settings.nix).sessionSettings;
+    # settings = import "${inputs.dev_specific_config}/settings.nix";
+    # userSettings = settings.userSettings;
+    # systemSettings = settings.systemSettings;
+    # sessionSettings = settings.sessionSettings;
     # hardwareConfiguration = import "${inputs.dev_specific_config}/hardwareConfiguration.nix"; # does not work for some reason
     in {
     # rest of the flake configuration

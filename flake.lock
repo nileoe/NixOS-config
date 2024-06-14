@@ -15,19 +15,6 @@
         "type": "github"
       }
     },
-    "dev_specific_config": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-YQ/t9xHUjfpxXFr08G7IDP6zr09iZi4Ypk/4WDivUks=",
-        "path": "./device-specific/",
-        "type": "path"
-      },
-      "original": {
-        "path": "./device-specific/",
-        "type": "path"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -68,7 +55,6 @@
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
-        "dev_specific_config": "dev_specific_config",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
