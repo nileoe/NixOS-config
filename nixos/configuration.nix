@@ -7,6 +7,7 @@
     userSettings,
     systemSettings,
     sessionSettings,
+    hardware-configuration,
     ...
 }:
 let
@@ -37,7 +38,7 @@ in {
         # inputs.hardware.nixosModules.common-cpu-amd
         # inputs.hardware.nixosModules.common-ssd
 
-    ./hardware-configuration.nix
+    hardware-configuration;
   ];
 
 # TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
