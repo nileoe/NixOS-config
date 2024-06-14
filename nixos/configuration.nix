@@ -29,6 +29,7 @@ in {
         (import ./modules/scripts/tmux-sessionizer.nix {inherit pkgs; })
     ];
     imports = [
+        hardware-configuration
         ./modules/sound-bluetooth-configuration.nix
         # ./modules/steam.nix
         ./modules/hyprlandAdditionalPackages.nix
@@ -37,8 +38,6 @@ in {
         # If you want to use modules from other flakes (such as nixos-hardware):
         # inputs.hardware.nixosModules.common-cpu-amd
         # inputs.hardware.nixosModules.common-ssd
-
-        hardware-configuration
   ];
   # rest of the config
 
