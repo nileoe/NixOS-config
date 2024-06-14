@@ -14,10 +14,6 @@
             url = "path:./device-specific/";
             flake = false;
         };
-        hardware_config = {
-            url = "path:./nixos/";
-            flake = false;
-        };
 
     };
 
@@ -35,7 +31,7 @@
     userSettings = settings.userSettings;
     systemSettings = settings.systemSettings;
     sessionSettings = settings.sessionSettings;
-    hardware-configuration = import "${inputs.hardware_config}/hardware-configuration.nix";
+    # hardware-configuration = import "${inputs.dev_specific_config}/hardware-configuration.nix"; # does not work for some reason
     in {
     # rest of the flake configuration
 # NixOS configuration entrypoint
