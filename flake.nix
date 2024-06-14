@@ -31,14 +31,14 @@
     userSettings = settings.userSettings;
     systemSettings = settings.systemSettings;
     sessionSettings = settings.sessionSettings;
-    # hardware-configuration = import "${inputs.dev_specific_config}/hardware-configuration.nix"; # does not work for some reason
+    hardwareConfiguration = import "${inputs.dev_specific_config}/hardware-configuration.nix"; # does not work for some reason
     in {
     # rest of the flake configuration
 # NixOS configuration entrypoint
 # Available through 'nixos-rebuild --flake .#your-hostname'
         nixosConfigurations = {
             lix = nixpkgs.lib.nixosSystem {
-                specialArgs = {inherit inputs outputs; inherit hardware-configuration; inherit systemSettings; inherit userSettings; inherit sessionSettings;};
+                specialArgs = {inherit inputs outputs; inherit hardwareConfiguration inherit systemSettings; inherit userSettings; inherit sessionSettings;}; 
 # > Our main nixos configuration file <
                 modules = [./nixos/configuration.nix];
             };

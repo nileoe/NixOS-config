@@ -1,2 +1,2 @@
 /device-specific/settings.nix
-/nixos/hardware-configuration.nix
+/device-specific/hardware-configuration.nix
