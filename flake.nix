@@ -1,5 +1,5 @@
 {
-    description = "Your new nix config";
+    description = "lixing";
 
     inputs = {
 # Nixpkgs
@@ -26,10 +26,12 @@
     # userSettings = (import ./settings.nix).userSettings;
     # systemSettings = (import ./settings.nix).systemSettings;
     # sessionSettings = (import ./settings.nix).sessionSettings;
-    userSettings = "${inputs.dev_specific_config}/settings.nix.userSettings";
-    systemSettings = "${inputs.dev_specific_config}/settings.nix.systemSettings";
-    sessionSettings = "${inputs.dev_specific_config}/settings.nix.sessionSettings";
+    settings = import "${inputs.dev_specific_config}/settings.nix";
+    userSettings = settings.userSettings;
+    systemSettings = settings.systemSettings;
+    sessionSettings = settings.sessionSettings;
     in {
+    # rest of the flake configuration
 # NixOS configuration entrypoint
 # Available through 'nixos-rebuild --flake .#your-hostname'
         nixosConfigurations = {
