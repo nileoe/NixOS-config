@@ -19,12 +19,12 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-5Tm5/pIOHI7x9foStqArCtwQzBWpdJ0GVc1o6w3gWl0=",
-        "path": "./dev-specific/",
+        "narHash": "sha256-YQ/t9xHUjfpxXFr08G7IDP6zr09iZi4Ypk/4WDivUks=",
+        "path": "./device-specific/",
         "type": "path"
       },
       "original": {
-        "path": "./dev-specific/",
+        "path": "./device-specific/",
         "type": "path"
       }
     },

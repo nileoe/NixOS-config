@@ -38,7 +38,7 @@ in {
         # inputs.hardware.nixosModules.common-cpu-amd
         # inputs.hardware.nixosModules.common-ssd
 
-    hardware-configuration;
+    hardware-configuration
   ];
 
 # TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
