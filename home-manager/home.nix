@@ -108,6 +108,7 @@
         go
         cargo
 # CLI tools
+        eza
         speedtest-rs
         neofetch
         gh
