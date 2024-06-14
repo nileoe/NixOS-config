@@ -11,7 +11,7 @@
         catppuccin.url = "github:catppuccin/nix";
 
         dev_specific_config = {
-            url = "path:./";
+            url = "path:./dev-specific/";
             flake = false;
         };
     };
