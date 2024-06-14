@@ -37,7 +37,10 @@ in {
         # If you want to use modules from other flakes (such as nixos-hardware):
         # inputs.hardware.nixosModules.common-cpu-amd
         # inputs.hardware.nixosModules.common-ssd
+
+        hardware-configuration
   ];
+  # rest of the config
 
 # TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
   # programs.nix-ld = {
