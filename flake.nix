@@ -9,8 +9,11 @@
         home-manager.url = "github:nix-community/home-manager/release-24.05";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         catppuccin.url = "github:catppuccin/nix";
-# swww because they say so on their README page
-# inputs.swww.url = "github:LGFae/swww";
+
+        dev_specific_config = {
+            url = "path:./";
+            flake = false;
+        };
     };
 
     outputs = {
@@ -20,9 +23,12 @@
         ...
     } @ inputs: let
     inherit (self) outputs;
-    userSettings = (import ./settings.nix).userSettings;
-    systemSettings = (import ./settings.nix).systemSettings;
-    sessionSettings = (import ./settings.nix).sessionSettings;
+    # userSettings = (import ./settings.nix).userSettings;
+    # systemSettings = (import ./settings.nix).systemSettings;
+    # sessionSettings = (import ./settings.nix).sessionSettings;
+    userSettings = "${inputs.dev_specific_config}/settings.nix.userSettings";
+    systemSettings = "${inputs.dev_specific_config}/settings.nix.systemSettings";
+    sessionSettings = "${inputs.dev_specific_config}/settings.nix.sessionSettings";
     in {
 # NixOS configuration entrypoint
 # Available through 'nixos-rebuild --flake .#your-hostname'
