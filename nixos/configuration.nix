@@ -4,7 +4,7 @@
     lib,
     config,
     pkgs,
-    hardwareConfiguration,
+    # hardwareConfiguration,
     userSettings,
     systemSettings,
     sessionSettings,
@@ -29,8 +29,8 @@ in {
         (import ./modules/scripts/tmux-sessionizer.nix {inherit pkgs; })
     ];
     imports = [
-        hardwareConfiguration # does not work (even uncommenting the relevant definition in flake.nix)
-        # /etc/nixos/hardware-configuration.nix
+        # hardwareConfiguration # does not work (even uncommenting the relevant definition in flake.nix)
+        /etc/nixos/hardware-configuration.nix
         ./modules/sound-bluetooth-configuration.nix
         # ./modules/steam.nix
         ./modules/hyprlandAdditionalPackages.nix

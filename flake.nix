@@ -10,10 +10,10 @@
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         catppuccin.url = "github:catppuccin/nix";
 
-        dev_specific_config = {
-            url = "path:./device-specific/";
-            flake = false;
-        };
+        # dev_specific_config = {
+        #     url = "path:./device-specific/";
+        #     flake = false;
+        # };
 
     };
 
@@ -31,14 +31,14 @@
     userSettings = settings.userSettings;
     systemSettings = settings.systemSettings;
     sessionSettings = settings.sessionSettings;
-    hardwareConfiguration = import "${inputs.dev_specific_config}/hardware-configuration.nix"; # does not work for some reason
+    # hardwareConfiguration = import "${inputs.dev_specific_config}/hardwareConfiguration.nix"; # does not work for some reason
     in {
     # rest of the flake configuration
 # NixOS configuration entrypoint
 # Available through 'nixos-rebuild --flake .#your-hostname'
         nixosConfigurations = {
             lix = nixpkgs.lib.nixosSystem {
-                specialArgs = {inherit inputs outputs; inherit hardwareConfiguration; inherit systemSettings; inherit userSettings; inherit sessionSettings;}; 
+                specialArgs = {inherit inputs outputs; inherit systemSettings; inherit userSettings; inherit sessionSettings;}; # inherit hardwareConfiguration; 
 # > Our main nixos configuration file <
                 modules = [./nixos/configuration.nix];
             };
