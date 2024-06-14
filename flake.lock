@@ -28,19 +28,6 @@
         "type": "path"
       }
     },
-    "hardware_config": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-o2lOCU3mRQb8C0ICqw7IEZQLYWWmm+N+c9brY+wslEA=",
-        "path": "./nixos/",
-        "type": "path"
-      },
-      "original": {
-        "path": "./nixos/",
-        "type": "path"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -82,7 +69,6 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "dev_specific_config": "dev_specific_config",
-        "hardware_config": "hardware_config",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }

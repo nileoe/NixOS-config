@@ -38,7 +38,7 @@
 # Available through 'nixos-rebuild --flake .#your-hostname'
         nixosConfigurations = {
             lix = nixpkgs.lib.nixosSystem {
-                specialArgs = {inherit inputs outputs; inherit hardwareConfiguration inherit systemSettings; inherit userSettings; inherit sessionSettings;}; 
+                specialArgs = {inherit inputs outputs; inherit hardwareConfiguration; inherit systemSettings; inherit userSettings; inherit sessionSettings;}; 
 # > Our main nixos configuration file <
                 modules = [./nixos/configuration.nix];
             };
