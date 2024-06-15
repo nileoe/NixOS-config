@@ -5,10 +5,9 @@ shellAliases = {
     cat = "bat -p --theme 'Nord'";
     catt = "bat --theme 'Nord'";
     cl = "clear";
-    ll = "ls -l";
     o = "exit";
     ":q" = "exit";
-    tl = "tree -L";
+    # tl = "tree -L";# TODO remove if eza is kept
     gf = "fg";
     g = "grep --colour=auto";
     gi = "grep -i --colour=auto";
@@ -18,6 +17,12 @@ shellAliases = {
     wlc = "wl-copy";
     wlp = "wl-paste";
     cw = "change_wallpaper";
+
+    ##### RIP ls
+    ls = "eza";
+    ll = "ls -l";
+    tl = "eza --tree --level"; # expects a number as depth level
+    tre = "eza -T";
 
 ##### Navigation and fzbvvbvbbvvv
     cd = "z"; # zzzzzzzoxide
