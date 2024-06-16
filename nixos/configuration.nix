@@ -55,6 +55,7 @@ in {
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.useOSProber = true; # uncomment for no dual-boot
+  boot.supportedFilesystems = [ "ntfs" ];
   
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {

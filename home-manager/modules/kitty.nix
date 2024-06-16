@@ -9,7 +9,7 @@
             name = sessionSettings.monospaceFont;
         };
         settings = {
-            enable_audio_bell = "no"; # please
+            enable_audio_bell = "no"; # for the love of everything that is holy
         };
     };
 }
