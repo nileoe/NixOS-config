@@ -21,6 +21,7 @@ shellAliases = {
     ##### RIP ls
     ls = "eza";
     ll = "ls -l";
+    la = "ls -a";
     tl = "eza --tree --level"; # expects a number as depth level
     tre = "eza -T";
 

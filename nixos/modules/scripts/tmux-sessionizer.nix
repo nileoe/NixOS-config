@@ -3,7 +3,7 @@ pkgs.writeShellScriptBin "tmux-sessionizer" ''
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/docs ~/docs/coding/rust/ ~/docs/coding/node ~/.config/ ~/docs/coding/ ~/nix-config/ ~/nix-config/home-manager/ ~/nix-config/home-manager/modules/ -mindepth 1 -maxdepth 1 -type d | fzf) # add more paths as necessary fuck yes biach CONTROL FFFFFFF LIKE FIND 
+    selected=$(find ~/docs ~/docs/coding/rust/ ~/docs/coding/node ~/.config/ ~/docs/coding/ ~/Desktop/ ~/nix-config/ ~/nix-config/home-manager/ ~/nix-config/home-manager/modules/ -mindepth 1 -maxdepth 1 -type d | fzf) # add more paths as necessary fuck yes biach CONTROL FFFFFFF LIKE FIND 
 fi
 
 if [[ -z $selected ]]; then
