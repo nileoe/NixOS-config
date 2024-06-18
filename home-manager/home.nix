@@ -27,7 +27,8 @@
         ./modules/sh.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
-        ./modules/tmux.nix
+        # ./modules/tmux.nix
+        ./modules/zellij.nix
         ./modules/zoxide.nix
         ./modules/gtk.nix
         ./modules/git.nix
@@ -79,6 +80,8 @@
         dbus
         pulseaudioFull
         qpwgraph
+        exfat
+        gptfdisk
 # Social
         whatsapp-for-linux
         # discord

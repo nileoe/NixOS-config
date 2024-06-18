@@ -21,6 +21,7 @@ in {
     environment.systemPackages = with pkgs; [
         tokyo-night-sddm
         steam-run
+        ntfs3g
         (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWallpaper.nix {inherit pkgs; })
