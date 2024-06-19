@@ -1,6 +1,6 @@
 { config, pkgs, ...}:
 {
-    programs.zellig = {
+    programs.zellij = {
         enable = true;
         enableZshIntegration = true;
         enableBashIntegration = true;

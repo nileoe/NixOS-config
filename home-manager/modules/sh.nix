@@ -41,8 +41,8 @@ shellAliases = {
     tma = "tmux attach || (echo 'No current session: creating new') && sleep 0.5 && tm";
 
 ##### NixOS
-    hswitch= "cd ~/nix-config && home-manager switch --flake .#${userSettings.username}@${systemSettings.hostname} --impure";
-    nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#${systemSettings.hostname} --impure";
+    hswitch= "cd ~/nix-config && home-manager switch --flake .#${userSettings.username}@${systemSettings.hostname} --impure && notify-send 'home-manager switch complete.'";
+    nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#${systemSettings.hostname} --impure && notify-send 'nixos-rebuilt switch complete'";
 
 ##### Miscellaneous
 # replace / remove as needed

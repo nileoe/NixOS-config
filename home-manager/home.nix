@@ -27,7 +27,7 @@
         ./modules/sh.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
-        # ./modules/tmux.nix
+        ./modules/tmux.nix
         ./modules/zellij.nix
         ./modules/zoxide.nix
         ./modules/gtk.nix
@@ -84,7 +84,7 @@
         gptfdisk
 # Social
         whatsapp-for-linux
-        # discord
+        discord
         vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
 # Gaming
         prismlauncher # aka FOSS minecraft launcher
@@ -102,7 +102,7 @@
 # coding
         neovim
         # vscode # :)
-# programming languages
+# programming languages and frameworks
         nodejs_22
         clang
         libgcc
@@ -110,6 +110,7 @@
         python3
         go
         cargo
+        cargo-tauri
 # CLI tools
         eza
         speedtest-rs
