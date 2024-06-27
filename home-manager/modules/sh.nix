@@ -31,7 +31,7 @@ shellAliases = {
     ".2" = "cd ../../";
     ".3" = "cd ../../..";
     fzv = "nvim $(fzf --reverse)";
-    fi="fzv";
+    # "fi"="fzv";
     fzb = "fzf --reverse --preview 'bat --style=numbers --color=always {}'";
     fzvb = "nvim $(fzb)";
     fzbv = "fzvb";
