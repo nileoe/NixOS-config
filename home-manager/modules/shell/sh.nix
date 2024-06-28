@@ -106,13 +106,10 @@ in
                 nvim "$1" || nvim . 
             }
 
+            source ${./zellij-zsh-completion.sh}
+
             export PATH=$PATH:$HOME/go/bin
             export EDITOR="nvim"
-
-            function something() {
-                echo "yayyyyyyyyyyyyy <3"
-            }
-
                 '';
         };
         bash =  {
