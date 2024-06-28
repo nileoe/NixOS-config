@@ -107,6 +107,11 @@ in
             }
 
             export PATH=$PATH:$HOME/go/bin
+            export EDITOR="nvim"
+
+            function something() {
+                echo "yayyyyyyyyyyyyy <3"
+            }
 
                 '';
         };

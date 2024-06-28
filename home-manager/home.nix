@@ -24,11 +24,11 @@
         ./modules/libreoffice.nix
         ./modules/mako.nix
         # ./modules/nvimModule/nvim.nix # for declarative Neovim configuration (unused)
-        ./modules/sh.nix
+        ./modules/shell/sh.nix
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
-        ./modules/tmux.nix
-        # ./modules/zellij.nix
+        # ./modules/tmux.nix
+        ./modules/zellij.nix
         ./modules/zoxide.nix
         ./modules/gtk.nix
         ./modules/git.nix
@@ -89,6 +89,7 @@
 # Gaming
         prismlauncher # aka FOSS minecraft launcher
         scarab        # Hollow Knight mod manager
+        sssnake
 # Browsers
         microsoft-edge
         librewolf
@@ -113,6 +114,7 @@
         cargo
         cargo-tauri
 # CLI tools
+        kooha
         eza
         speedtest-rs
         neofetch
