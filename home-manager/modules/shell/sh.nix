@@ -106,7 +106,7 @@ in
                 nvim "$1" || nvim . 
             }
 
-            source ${./zellij-zsh-completion.sh}
+            source ${./zellij-basic-completion.zsh}
 
             export PATH=$PATH:$HOME/go/bin
             export EDITOR="nvim"
