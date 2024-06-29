@@ -22,6 +22,11 @@ in {
         tokyo-night-sddm
         steam-run
         ntfs3g
+        openssl
+        atkmm
+        librsvg
+        haskellPackages.webkit2gtk3-javascriptcore
+        ocamlPackages.lablgtk3-rsvg2
         (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
         (import ./modules/scripts/toggleWallpaper.nix {inherit pkgs; })
@@ -84,20 +89,6 @@ gtk.iconCache.enable = true;
     helvetica-neue-lt-std
     vistafonts
  ];
-
-# environment.systemPackages = [(
-#   pkgs.catppuccin-sddm.override {
-#     flavor = "mocha";
-#     font  = "Noto Sans";
-#     fontSize = "9";
-#     background = "${./wallpaper.png}";
-#     loginBackground = true;
-#   }
-# )];
-# services.displayManager.sddm = {
-#   enable = true;
-#   theme = "catppuccin-mocha";
-# };
 
  environment.pathsToLink = [
  	"/share/zsh" # to get completion for system packages (e.g. systemd)

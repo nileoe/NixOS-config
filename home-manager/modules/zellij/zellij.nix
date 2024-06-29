@@ -6,6 +6,7 @@
         enableBashIntegration = true;
 
         settings = {
+            import ./zellij_config.nix
         };
     };
 }

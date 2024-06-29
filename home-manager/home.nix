@@ -90,6 +90,7 @@
         prismlauncher # aka FOSS minecraft launcher
         scarab        # Hollow Knight mod manager
         sssnake
+        # slipstream    # FTL mod manager
 # Browsers
         microsoft-edge
         librewolf
@@ -115,6 +116,7 @@
         cargo-tauri
 # CLI tools
         kooha
+        wget
         eza
         speedtest-rs
         neofetch
@@ -134,7 +136,9 @@
         zip
         unzip
         brightnessctl
+        file
         unixtools.xxd
+        pkg-config
 # File managers
         kdePackages.dolphin
         kdePackages.dolphin-plugins
