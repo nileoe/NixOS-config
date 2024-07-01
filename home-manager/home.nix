@@ -28,7 +28,7 @@
         ./modules/speedcrunch.nix
         ./modules/waybar/waybar.nix
         # ./modules/tmux.nix
-        ./modules/zellij.nix
+        ./modules/zellij/zellij.nix
         ./modules/zoxide.nix
         ./modules/gtk.nix
         ./modules/git.nix
@@ -101,6 +101,7 @@
         obsidian
         remnote
         anki
+        zegrapher
 # coding
         neovim
         vscode # :)
