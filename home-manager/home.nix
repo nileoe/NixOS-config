@@ -140,6 +140,7 @@
         file
         unixtools.xxd
         pkg-config
+        glib
 # File managers
         kdePackages.dolphin
         kdePackages.dolphin-plugins
