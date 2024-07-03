@@ -10,6 +10,7 @@
             source = ~/.config/hypr/windowRules.conf
             source = ~/.config/hypr/binds.conf
             source = ~/.config/hypr/graphics.conf
+            source = ~/.config/hypr/animations.conf
             exec-once = swww-daemon &
             exec-once = startWpRotation ${../../../data/wallpapers/selected} &
             exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
@@ -18,6 +19,7 @@
 
     home.file.".config/hypr/binds.conf".source = ./binds.conf;
     home.file.".config/hypr/graphics.conf".source = ./graphics.conf;
+    home.file.".config/hypr/animations.conf".source = ./animations.conf;
     home.file.".config/hypr/startup.sh".source = ./startup.sh;
     home.file.".config/hypr/windowRules.conf".source = ./windowRules.conf;
     home.file.".config/hypr/dev-specific/monitor.conf".source = if systemSettings.monitorType == "desktop" then ./dev-specific/monitor-1440p144hz.conf else ./dev-specific/monitor-asusLaptop.conf;
