@@ -66,6 +66,8 @@ shellAliases = {
     rt="clear && cargo test";
 
     no="cl && node *.js";
+
+    mdb="mariadb -u lino -p";
 };
 in
 {

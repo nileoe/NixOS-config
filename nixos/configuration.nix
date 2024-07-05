@@ -33,6 +33,9 @@ in {
         (import ./modules/scripts/changeWallpaper.nix {inherit pkgs; })
         (import ./modules/scripts/batteryNotify.nix {inherit pkgs; })
         (import ./modules/scripts/tmux-sessionizer.nix {inherit pkgs; })
+
+# tmp
+        apacheHttpd
     ];
     imports = [
         # hardwareConfiguration # does not work when .gitignoring (even uncommenting the relevant definition in flake.nix)
@@ -161,6 +164,7 @@ networking.networkmanager.enable = true;  # Easiest to use and most distros use 
       PasswordAuthentication = false;
     };
   };
+  services.nginx.package = pkgs.nginxStable.override { openssl = pkgs.libressl; };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
