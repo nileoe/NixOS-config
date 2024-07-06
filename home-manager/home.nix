@@ -115,6 +115,7 @@
         go
         cargo
         cargo-tauri
+        jdk
 # CLI tools
         kooha
         wget
