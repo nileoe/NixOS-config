@@ -36,10 +36,6 @@ shellAliases = {
     fzvb = "nvim $(fzb)";
     fzbv = "fzvb";
 
-##### Tmux
-    tm = "tmux";
-    tma = "tmux attach || (echo 'No current session: creating new') && sleep 0.5 && tm";
-
 ##### NixOS
     hswitch= "cd ~/nix-config && home-manager switch --flake .#${userSettings.username}@${systemSettings.hostname} --impure && notify-send 'home-manager switch complete.'";
     nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#${systemSettings.hostname} --impure && notify-send 'nixos-rebuilt switch complete'";
@@ -51,9 +47,9 @@ shellAliases = {
     dispods = "bluetoothctl disconnect 3C:4D:BE:89:38:4D";
     dispodso = "(dispods &) && o";
 
-##### Git perso
+##### Git perso, remove as needed
     dpull = "cd ~/docs && git pull --rebase && cd ~";
-    dpush = "cd ~/docs && git add * ; git commit -m '${systemSettings.hostname} commit' && git push";
+    dpush = "cd ~/docs && git add * ; git commit -m '${systemSettings.hostname} (${systemSettings.monitorType}) commit' && git push";
 
 ##### Coding shortcuts
     py = "python3";
