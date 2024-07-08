@@ -116,7 +116,7 @@
         cargo
         cargo-tauri
         jdk
-        octave
+        octaveFull
 # CLI tools
         kooha
         wget
