@@ -21,12 +21,12 @@ in {
     environment.systemPackages = with pkgs; [
         tokyo-night-sddm
             steam-run
-            ntfs3g
-            openssl
-            atkmm
-            librsvg
-            haskellPackages.webkit2gtk3-javascriptcore
-            ocamlPackages.lablgtk3-rsvg2
+            # ntfs3g
+            # openssl
+            # atkmm
+            # librsvg
+            # haskellPackages.webkit2gtk3-javascriptcore
+            # ocamlPackages.lablgtk3-rsvg2
             (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
             (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
             (import ./modules/scripts/toggleWallpaper.nix {inherit pkgs; })
@@ -84,12 +84,12 @@ in {
 
     fonts.packages = with pkgs; [
         nerdfonts
-            noto-fonts
-            noto-fonts-color-emoji
-            corefonts
-            garamond-libre
-            helvetica-neue-lt-std
-            vistafonts
+        noto-fonts
+        noto-fonts-color-emoji
+        corefonts
+        garamond-libre
+        helvetica-neue-lt-std
+        vistafonts
     ];
 
     environment.pathsToLink = [

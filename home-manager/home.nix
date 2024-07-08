@@ -114,7 +114,6 @@
         python3
         go
         cargo
-        cargo-tauri
         jdk
         octaveFull
 # CLI tools
