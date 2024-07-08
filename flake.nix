@@ -2,10 +2,10 @@
     description = "lixing";
 
     inputs = {
-# Nixpkgs
+        # Nixpkgs
         nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 
-# Home manager
+        # Home manager
         home-manager.url = "github:nix-community/home-manager/release-24.05";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         catppuccin.url = "github:catppuccin/nix";
@@ -34,26 +34,26 @@
     # hardwareConfiguration = import "${inputs.dev_specific_config}/hardwareConfiguration.nix"; # does not work for some reason
     in {
     # rest of the flake configuration
-# NixOS configuration entrypoint
-# Available through 'nixos-rebuild --flake .#your-hostname'
+    # NixOS configuration entrypoint
+    # Available through 'nixos-rebuild --flake .#your-hostname'
         nixosConfigurations = {
             lix = nixpkgs.lib.nixosSystem {
                 specialArgs = {inherit inputs outputs; inherit systemSettings; inherit userSettings; inherit sessionSettings;}; # inherit hardwareConfiguration; 
-# > Our main nixos configuration file <
+                # > Our main nixos configuration file <
                 modules = [./nixos/configuration.nix];
             };
         };
 
-# Standalone home-manager configuration entrypoint
-# Available through 'home-manager --flake .#your-username@your-hostname'
+        # Standalone home-manager configuration entrypoint
+        # Available through 'home-manager --flake .#your-username@your-hostname'
         homeConfigurations = {
-# "nileoe@lix" = home-manager.lib.homeManagerConfiguration {
-    "${userSettings.username}@${systemSettings.hostname}" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-            extraSpecialArgs = {inherit inputs outputs; inherit userSettings; inherit systemSettings; inherit sessionSettings;};
-# > Our main home-manager configuration file <
-        modules = [./home-manager/home.nix];
+        # "nileoe@lix" = home-manager.lib.homeManagerConfiguration {
+            "${userSettings.username}@${systemSettings.hostname}" = home-manager.lib.homeManagerConfiguration {
+                pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+                    extraSpecialArgs = {inherit inputs outputs; inherit userSettings; inherit systemSettings; inherit sessionSettings;};
+                # > Our main home-manager configuration file <
+                modules = [./home-manager/home.nix];
+            };
+        };
     };
-};
-};
 }
