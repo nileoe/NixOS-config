@@ -114,6 +114,7 @@
         python3
         go
         cargo
+        rustup
         jdk
         octaveFull
 # CLI tools
