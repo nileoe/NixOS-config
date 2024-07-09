@@ -97,6 +97,7 @@
         firefox
         chromium
         google-chrome
+        tridactyl-native
 # Note taking
         obsidian
         remnote
@@ -114,7 +115,7 @@
         python3
         go
         cargo
-        rustup
+        rustc
         jdk
         octaveFull
 # CLI tools
