@@ -51,11 +51,8 @@ in {
     # rest of the config
 
     # TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
-    programs.nix-ld = {
-      enable = true;
-      libraries = with pkgs ; [
-      ];
-    };
+    programs.nix-ld.enable = true;
+    programs.nix-ld.package = pkgs.nix-ld-rs;
 
     # boot.loader.systemd-boot.enable = true;
     # boot.loader.efi.canTouchEfiVariables = true;
