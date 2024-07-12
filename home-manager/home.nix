@@ -97,7 +97,7 @@
         firefox
         chromium
         google-chrome
-        tridactyl-native
+       # tridactyl-native
 # Note taking
         obsidian
         remnote
