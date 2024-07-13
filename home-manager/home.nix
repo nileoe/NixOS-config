@@ -103,6 +103,7 @@
         remnote
         anki
         zegrapher
+        iotas
 # coding
         neovim
         vscode # :)
@@ -150,11 +151,12 @@
         pcmanfm
         gnome.nautilus
         cinnamon.nemo-with-extensions
-# PDF/Image readers
+# PDF/Image readers / graphic tools
         zathura
         kdePackages.okular
         mate.atril
         mupdf
+        eyedropper
         # feh
 # Music
         cider
