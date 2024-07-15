@@ -8,4 +8,4 @@ waybar &
 
 mako &
 
-exec-once = hypridle
+# exec-once = hypridle
