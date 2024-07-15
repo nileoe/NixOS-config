@@ -120,6 +120,7 @@
         jdk
         octaveFull
 # CLI tools
+        wev
         kooha
         wget
         eza
