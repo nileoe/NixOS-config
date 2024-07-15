@@ -9,8 +9,8 @@ shellAliases = {
     ":q" = "exit";
     # tl = "tree -L";# TODO remove if eza is kept
     gf = "fg";
-    g = "grep --colour=auto";
-    gi = "grep -i --colour=auto";
+    gr = "grep --colour=auto";
+    gri = "grep -i --colour=auto";
     cp = "cp -i";
     mv = "mv -i";
     rm = "rm -i";
@@ -52,6 +52,8 @@ shellAliases = {
     dpush = "cd ~/docs && git add * ; git commit -m '${systemSettings.hostname} (${systemSettings.monitorType}) commit' && git push";
 
 ##### Coding shortcuts
+    g = "git";
+    G = "g";
     py = "python3";
     p="clear && python3 *.py";
 
