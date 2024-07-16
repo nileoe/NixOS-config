@@ -110,6 +110,7 @@
         neovide
 # programming languages and frameworks
         nodejs_22
+        php
         clang
         libgcc
         rustc
