@@ -7,6 +7,7 @@
 
         settings = {
         };
-            # ./zellij_config.nix 
     };
+
+	home.file.".config/zellij/config.kdl".source = ./config.kdl;
 }
