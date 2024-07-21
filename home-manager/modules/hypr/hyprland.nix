@@ -1,5 +1,11 @@
 { config, pkgs, sessionSettings, systemSettings, ...}:
 {
+    home.packages = with pkgs; [
+        xdg-desktop-portal-xapp
+        # hypridle
+        # hyprlock
+    ];
+
     wayland.windowManager.hyprland = {
         enable = true; # done from configuration.nix
             systemd.variables = ["--all"]; # try disabling: so that programs can be run outside of terminal (system needs to import environment)
@@ -20,6 +26,9 @@
     home.file.".config/hypr/graphics.conf".source = ./graphics.conf;
     home.file.".config/hypr/startup.sh".source = ./startup.sh;
     home.file.".config/hypr/windowRules.conf".source = ./windowRules.conf;
+    # home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
+    # home.file.".config/hypr/hyprlockWallpaper.png".source = ./hyprlockWallpaper.png;
+    # home.file.".config/hypr/hypridle.conf".source = ./hypridle.conf;
     home.file.".config/hypr/dev-specific/monitor.conf".source = if systemSettings.monitorType == "desktop" then ./dev-specific/monitor-1440p144hz.conf else ./dev-specific/monitor-asusLaptop.conf;
     home.file.".config/hypr/dev-specific/dev-specific_binds.conf".source = if systemSettings.keyboard == "fullSize" then ./dev-specific/binds-fullSize-specific.conf else ./dev-specific/binds-laptop-specific.conf;
 
@@ -58,5 +67,4 @@
         };
     };
     };
-    home.packages = [pkgs.xdg-desktop-portal-xapp];
 }

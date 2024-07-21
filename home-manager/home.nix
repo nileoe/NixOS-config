@@ -67,101 +67,110 @@
 
 # Add stuff for your user as you see fit:
     home.packages = with pkgs; [
-    # feel free to add/remove/comment
+# feel free to add/remove/comment
         localsend
-        _1password-gui
-        _1password
-        swww
-        networkmanagerapplet
-        alacritty
+            _1password-gui
+            _1password
+            swww
+            networkmanagerapplet
+            alacritty
 # System helpers
-        eww
-        pamixer
-        dbus
-        pulseaudioFull
-        qpwgraph
-        exfat
-        gptfdisk
+            eww
+            pamixer
+            dbus
+            pulseaudioFull
+            qpwgraph
+            exfat
+            gptfdisk
 # Social
-        whatsapp-for-linux
-        # discord
-        vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
+            whatsapp-for-linux
+# discord
+            vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
 # Gaming
-        prismlauncher # aka FOSS minecraft launcher
-        scarab        # Hollow Knight mod manager
-        sssnake
-        # slipstream    # FTL mod manager
+            prismlauncher # aka FOSS minecraft launcher
+            scarab        # Hollow Knight mod manager
+            sssnake
+# slipstream    # FTL mod manager
 # Browsers
-        microsoft-edge
-        librewolf
-        firefox
-        chromium
-        google-chrome
-       # tridactyl-native
+            microsoft-edge
+            librewolf
+            firefox
+            chromium
+            google-chrome
+# tridactyl-native
 # Note taking
-        obsidian
-        remnote
-        anki
-        zegrapher
+            obsidian
+            remnote
+            anki
+            zegrapher
+            iotas
 # coding
-        neovim
-        vscode # :)
-        neovide
+            neovim
+            vscode # :)
+            neovide
 # programming languages and frameworks
-        nodejs_22
-        clang
-        libgcc
-        rustc
-        python3
-        go
-        cargo
-        rustc
-        jdk
-        octaveFull
+            nodejs_22
+            php
+            clang
+            libgcc
+            rustc
+            python3
+            go
+            cargo
+            rustc
+            jdk
+            octaveFull
 # CLI tools
-        kooha
-        wget
-        eza
-        speedtest-rs
-        neofetch
-        gh
-        acpi
-        cmatrix
-        sl
-        lolcat
-        grimblast
-        playerctl
-        htop
-        tree
-        bat
-        killall
-        speedtest-cli
-        wl-clipboard
-        zip
-        unzip
-        brightnessctl
-        file
-        unixtools.xxd
-        pkg-config
-        glib
+            wev
+            kooha
+            wget
+            eza
+            speedtest-rs
+            neofetch
+            gh
+            acpi
+            ffmpeg
+            cmatrix
+            sl
+            lolcat
+            playerctl
+            htop
+            tree
+            bat
+            killall
+            speedtest-cli
+            wl-clipboard
+            zip
+            unzip
+            brightnessctl
+            file
+            unixtools.xxd
+            pkg-config
+            glib
 # File managers
-        kdePackages.dolphin
-        kdePackages.dolphin-plugins
-        pcmanfm
-        gnome.nautilus
-        cinnamon.nemo-with-extensions
-# PDF/Image readers
-        zathura
-        kdePackages.okular
-        mate.atril
-        mupdf
-        # feh
-# Music
-        cider
-        reaper
-        musescore
-        audacity
-        ];
+            kdePackages.dolphin
+            kdePackages.dolphin-plugins
+            pcmanfm
+            gnome.nautilus
+            cinnamon.nemo-with-extensions
+# PDF/Image readers / graphic tools
+            zathura
+            kdePackages.okular
+            mate.atril
+            mupdf
+            eyedropper
+# feh
+# Video and music
+            grimblast
+            obs-studio
+            wayfarer
+            vlc
+            haruna
+            cider
+            reaper
+            musescore
+            audacity
+            ];
 
     programs.home-manager.enable = true;
 

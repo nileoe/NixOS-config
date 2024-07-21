@@ -7,3 +7,5 @@ nm-applet --indicator &
 waybar &
 
 mako &
+
+# exec-once = hypridle

@@ -51,11 +51,8 @@ in {
     # rest of the config
 
     # TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
-    # programs.nix-ld = {
-    #   enable = true;
-    #   libraries = with pkgs ; [
-    #   ];
-    # };
+    programs.nix-ld.enable = true;
+    programs.nix-ld.package = pkgs.nix-ld-rs;
 
     # boot.loader.systemd-boot.enable = true;
     # boot.loader.efi.canTouchEfiVariables = true;
@@ -128,8 +125,8 @@ in {
             # Workaround for https://github.com/NixOS/nix/issues/9574
             nix-path = config.nix.nixPath;
         };
-        # Opinionated: disable channels
-        channel.enable = false;
+        # Opinionated: disable channels?
+        channel.enable = true;
 
         # Opinionated: make flake registry and nix path match flake inputs
         registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
@@ -157,13 +154,15 @@ in {
         enable = true;
         settings = {
             # Opinionated: forbid root login through SSH.
-            PermitRootLogin = "no";
+            # PermitRootLogin = "no";
+            PermitRootLogin = "yes";
             # Opinionated: use keys only.
             # Remove if you want to SSH using passwords
-            PasswordAuthentication = false;
+            # PasswordAuthentication = false;
+            PasswordAuthentication = true;
         };
     };
-    services.nginx.package = pkgs.nginxStable.override { openssl = pkgs.libressl; };
+    # services.nginx.package = pkgs.nginxStable.override { openssl = pkgs.libressl; };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05";
