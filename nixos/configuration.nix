@@ -133,7 +133,7 @@ in {
         nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     };
 
-    networking.hostName = "lix";
+    networking.hostName = systemSettings.hostname;
     networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
         environment.shells = with pkgs; [zsh ] ;  # prlbably not ?

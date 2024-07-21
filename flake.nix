@@ -37,7 +37,7 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
         nixosConfigurations = {
-            lix = nixpkgs.lib.nixosSystem {
+            "${systemSettings.hostname}" = nixpkgs.lib.nixosSystem {
                 specialArgs = {inherit inputs outputs; inherit systemSettings; inherit userSettings; inherit sessionSettings;}; # inherit hardwareConfiguration; 
                 # > Our main nixos configuration file <
                 modules = [./nixos/configuration.nix];
