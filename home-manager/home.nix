@@ -84,10 +84,11 @@
             gptfdisk
 # Social
             whatsapp-for-linux
-# discord
+	    zoom-us
+	    # teams # discontinued?
             vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
 # Gaming
-            prismlauncher # aka FOSS minecraft launcher
+            prismlauncher # FOSS minecraft launcher
             scarab        # Hollow Knight mod manager
             sssnake
 # slipstream    # FTL mod manager

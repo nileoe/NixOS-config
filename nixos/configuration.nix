@@ -145,7 +145,10 @@ in {
         description = userSettings.fullName;
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [];
-        openssh.authorizedKeys.keys = [];
+        openssh.authorizedKeys.keys = [
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE45hFpfH254v9XVkL5kVuYaOh97CGciGu558K6YKpKN nileoe@clara"
+            # TODO put this in settings
+        ];
     };
 
     services.openssh = {
