@@ -66,6 +66,8 @@ shellAliases = {
     no="cl && node *.js";
 
     mdb="mariadb -u lino -p";
+    ##### temp
+    clicker = "sudo /home/nileoe/.cargo/bin/theclicker -l 274 --no-grab";
 };
 in
 {

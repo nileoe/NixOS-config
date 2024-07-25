@@ -45,7 +45,7 @@
 # neovim-nightly-overlay.overlays.default
 
 # Or define it inline, for example:
-# (final: prev: {
+# (final: mprev: {
 #   hi = final.hello.overrideAttrs (oldAttrs: {
 #     patches = [ ./change-hello-to-hi.patch ];
 #   });
@@ -107,8 +107,8 @@
             iotas
 # coding
             neovim
-            vscode # :)
             neovide
+            vscode # :)
 # programming languages and frameworks
             nodejs_22
             php
@@ -160,6 +160,7 @@
             mate.atril
             mupdf
             eyedropper
+	    drawio
 # feh
 # Video and music
             grimblast
