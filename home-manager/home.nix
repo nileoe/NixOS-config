@@ -121,6 +121,8 @@
             rustc
             jdk
             octaveFull
+	    lua
+	    luajitPackages.luarocks-nix
 # CLI tools
             wev
             kooha
@@ -138,6 +140,7 @@
             htop
             tree
             bat
+	    ripgrep
             killall
             speedtest-cli
             wl-clipboard
