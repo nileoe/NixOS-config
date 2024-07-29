@@ -86,7 +86,8 @@
             whatsapp-for-linux
 	    zoom-us
 	    # teams # discontinued?
-            vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
+            # vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
+	    discord
 # Gaming
             prismlauncher # FOSS minecraft launcher
             scarab        # Hollow Knight mod manager
