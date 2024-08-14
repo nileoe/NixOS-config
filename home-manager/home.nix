@@ -127,6 +127,7 @@
 	    lua
 	    luajitPackages.luarocks-nix
 # CLI tools
+	    jq
             wev
             kooha
             wget

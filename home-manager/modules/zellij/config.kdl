@@ -122,10 +122,10 @@ keybinds clear-defaults=true {
         bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
     }
-    // renametab {
-    //     // bind "Ctrl c" { SwitchToMode "Normal"; }
-    //     bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
-    // }
+    renametab {
+        bind "Ctrl c" { SwitchToMode "Normal"; }
+        bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
+    }
     // renamepane {
     //     // bind "Ctrl c" { SwitchToMode "Normal"; }
     //     bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
@@ -238,9 +238,7 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
     }
-    shared_except "normal" "locked" "tmux" { // in all standard specialised modes
-    }
-    shared_except "normal" "entersearch" "scroll"  {
+    shared_except "normal" "entersearch" "scroll" "renametab"  {
         bind "Enter" "Esc" "Ctrl c" "q" { SwitchToMode "Normal"; }
     }
     // shared_except "pane" "locked" {
