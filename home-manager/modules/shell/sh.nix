@@ -28,9 +28,11 @@ shellAliases = {
 ##### Navigation and fzbvvbvbbvvv
     cd = "z"; # zzzzzzzoxide
     ".1" = "cd ..";
-    ".2" = "cd ../../";
-    ".3" = "cd ../../..";
-    fzv = "nvim $(fzf --reverse)";
+    ".2" = ".1 && cd ..";
+    ".3" = ".2 && cd ..";
+    ".4" = ".3 && cd ..";
+    ".5" = ".4 && cd ..";
+    # fzv = "nvim $(fzf --reverse)";
     # "fi"="fzv";
     fzb = "fzf --reverse --preview 'bat --style=numbers --color=always {}'";
     fzvb = "nvim $(fzb)";

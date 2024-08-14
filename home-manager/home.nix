@@ -83,6 +83,7 @@
             exfat
             gptfdisk
 # Social
+	    caprine-bin
             whatsapp-for-linux
 	    zoom-us
 	    # teams # discontinued?
@@ -99,7 +100,6 @@
             firefox
             chromium
             google-chrome
-# tridactyl-native
 # Note taking
             obsidian
             remnote
@@ -110,7 +110,9 @@
             neovim
             neovide
             vscode # :)
+	    wezterm
 # programming languages and frameworks
+	    putty
             nodejs_22
             php
             clang
@@ -153,6 +155,7 @@
             pkg-config
             glib
 # File managers
+	    yazi
             kdePackages.dolphin
             kdePackages.dolphin-plugins
             pcmanfm
