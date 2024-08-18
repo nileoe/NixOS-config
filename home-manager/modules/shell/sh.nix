@@ -44,9 +44,9 @@ shellAliases = {
 
 ##### Miscellaneous
 # replace / remove as needed
-    airpods = "dispods; bluetoothctl connect 3C:4D:BE:89:38:4D";
+    airpods = "dispods; bluetoothctl connect 3C:4D:BE:89:38:4D && clear";
     airpodso = "(airpods &) && o";
-    dispods = "bluetoothctl disconnect 3C:4D:BE:89:38:4D";
+    dispods = "bluetoothctl disconnect 3C:4D:BE:89:38:4D && clear";
     dispodso = "(dispods &) && o";
 
 ##### Git perso, remove as needed

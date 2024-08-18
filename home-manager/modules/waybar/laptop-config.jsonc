@@ -120,7 +120,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 🔌",
+        "format-charging": "{capacity}% ⌁",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -143,8 +143,8 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}", // remove the microphone 100% thing
+        "format-bluetooth-muted": "🔇 {icon} {format_source}",
+        "format-muted": "🔇 {format_source}", // remove the microphone 100% thing
        // "format-source": "{volume}% ",
         "format-source": "",
         "format-source-muted": "",
