@@ -27,7 +27,7 @@
              "8": "8",
              "9": "9",
              "10": "10",
-             "urgent": "",
+             // "urgent": "",
              "focused": "",
              "default": ""
          }
@@ -120,7 +120,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 🔌",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
