@@ -126,6 +126,7 @@
             octaveFull
 	    lua
 	    luajitPackages.luarocks-nix
+	    typescript
 # CLI tools
 	    lsof
 	    jq

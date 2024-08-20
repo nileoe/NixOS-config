@@ -12,7 +12,7 @@
 
             extraConfig = ''
             source = ~/.config/hypr/dev-specific/monitor.conf
-            source = ~/.config/hypr/dev-specific/dev-specific_binds.conf
+            source = ~/.config/hypr/dev-specific/monitor-desktop.conf
             source = ~/.config/hypr/windowRules.conf
             source = ~/.config/hypr/binds.conf
             source = ~/.config/hypr/graphics.conf
@@ -30,7 +30,7 @@
     # home.file.".config/hypr/hyprlockWallpaper.png".source = ./hyprlockWallpaper.png;
     # home.file.".config/hypr/hypridle.conf".source = ./hypridle.conf;
     home.file.".config/hypr/dev-specific/monitor.conf".source = if systemSettings.monitorType == "desktop" then ./dev-specific/monitor-1440p144hz.conf else ./dev-specific/monitor-asusLaptop.conf;
-    home.file.".config/hypr/dev-specific/dev-specific_binds.conf".source = if systemSettings.keyboard == "fullSize" then ./dev-specific/binds-fullSize-specific.conf else ./dev-specific/binds-laptop-specific.conf;
+    home.file.".config/hypr/dev-specific/monitor-desktop.conf".source = if systemSettings.keyboard == "fullSize" then ./dev-specific/binds-fullSize-specific.conf else ./dev-specific/binds-laptop-specific.conf;
 
 # services.hypridle.enable = true; # try it some time!
 # programs.hyprlock.enable = true; # try it some time!
