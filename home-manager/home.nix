@@ -93,6 +93,7 @@
             prismlauncher # FOSS minecraft launcher
             scarab        # Hollow Knight mod manager
             sssnake
+	    lutris
 # slipstream    # FTL mod manager
 # Browsers
             microsoft-edge
