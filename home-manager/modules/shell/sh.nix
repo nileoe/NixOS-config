@@ -24,6 +24,7 @@ shellAliases = {
     la = "ls -a";
     tl = "eza --tree --level"; # expects a number as depth level
     tre = "eza -T";
+    sl = "sl -e"; # :)
 
 ##### Navigation and fzbvvbvbbvvv
     cd = "z"; # zzzzzzzoxide

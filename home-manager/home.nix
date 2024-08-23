@@ -94,6 +94,7 @@
             scarab        # Hollow Knight mod manager
             sssnake
 	    lutris
+	    kmonad
 # slipstream    # FTL mod manager
 # Browsers
             microsoft-edge
