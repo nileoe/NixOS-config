@@ -130,6 +130,8 @@
 	    luajitPackages.luarocks-nix
 	    typescript
 # CLI tools
+	    yt-dlp
+	    evtest
 	    lsof
 	    jq
             wev
