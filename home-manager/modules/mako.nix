@@ -16,5 +16,7 @@
         backgroundColor = "#2B2A33";
         textColor = "#FBFBFE";
         borderRadius = 0;
+	borderSize = 3;
+	borderColor = "#FBFBFE";
     };
 }
