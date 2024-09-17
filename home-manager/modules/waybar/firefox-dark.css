@@ -1,5 +1,5 @@
 /* from waayway originally */
-@define-color base   #1e1e2e;
+@define-color base   #1E1D24;
 @define-color mantle #181825;
 @define-color crust  #11111b;
 
@@ -15,6 +15,8 @@
 @define-color overlay1 #7f849c;
 @define-color overlay2 #9399b2;
 
+@define-color accentcolor #B4BEFE;
+
 @define-color blue      #89b4fa;
 @define-color lightBlue #4974ba;
 @define-color lavender  #b4befe;
@@ -22,6 +24,7 @@
 @define-color sky       #89dceb;
 @define-color teal      #94e2d5;
 @define-color green     #a6e3a1;
+@define-color green2    #9ECE6A;
 @define-color yellow    #f9e2af;
 @define-color peach     #fab387;
 @define-color maroon    #eba0ac;
@@ -43,8 +46,7 @@ window#waybar {
 }
 
 window#waybar {
-  /* background: @base; */
-  background: #1a1b26;
+  background: @base;
   color: @text;
 }
 #custom-right-arrow-workspace {
@@ -92,15 +94,15 @@ window#waybar {
   margin: 1px 0px;
   /* border-radius: 3px; */
   border-radius: 1px;
-  background-color: @surface0;
-  transition: all 0.2s ease-in-out;
-  /* transform: skew(25deg); */
-  color: #33ccff;
+  /* background-color: @surface0; */
+  background-color: @base;
+  /* color: #33ccff; */
+  color: @text;
 }
 
 #workspaces button.active {
   /* background-color: @blue; */
-  background-color: @lightBlue;
+  background-color: @green2;
   color: @surface0;
 }
 
