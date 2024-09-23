@@ -175,7 +175,7 @@
             mupdf
             eyedropper
 	    drawio
-# feh
+	    # feh
 # Video and music
             grimblast
             obs-studio
@@ -186,6 +186,8 @@
             reaper
             musescore
             audacity
+# Others
+	    virtualbox
             ];
 
     programs.home-manager.enable = true;
