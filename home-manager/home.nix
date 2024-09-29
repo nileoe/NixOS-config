@@ -187,7 +187,6 @@
             musescore
             audacity
 # Others
-	    virtualbox
             ];
 
     programs.home-manager.enable = true;

@@ -50,7 +50,7 @@ in {
     ];
     # rest of the config
 
-    # TO ENABLE APPIMAGES AND SUCH generic dynamically linked executables
+    # TO ENABLE APPIMAGES and other such generic dynamically linked executables
     programs.nix-ld.enable = true;
     programs.nix-ld.package = pkgs.nix-ld-rs;
 
@@ -88,6 +88,9 @@ in {
         helvetica-neue-lt-std
         vistafonts
     ];
+    virtualisation.virtualbox.host.enable = true;
+    # virtualisation.virtualbox.host.enableExtensionPack = true;
+    users.extraGroups.vboxusers.members = [ "nileoe"];
 
     environment.pathsToLink = [
         "/share/zsh" # to get completion for system packages (e.g. systemd)
@@ -140,10 +143,11 @@ in {
         users.defaultUserShell = pkgs.zsh; # see if necessary
         programs.zsh.enable = true;
 
-    users.users.${userSettings.username} = {
+    # users.users.${userSettings.username} = {
+    users.users.nileoe = {
         isNormalUser = true;
         description = userSettings.fullName;
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "virtualbox" ];
         packages = with pkgs; [];
         openssh.authorizedKeys.keys = [
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE45hFpfH254v9XVkL5kVuYaOh97CGciGu558K6YKpKN nileoe@clara"
