@@ -90,7 +90,7 @@ in {
     ];
     virtualisation.virtualbox.host.enable = true;
     # virtualisation.virtualbox.host.enableExtensionPack = true;
-    users.extraGroups.vboxusers.members = [ "nileoe"];
+    users.extraGroups.vboxusers.members = [ "virtualbox"];
 
     environment.pathsToLink = [
         "/share/zsh" # to get completion for system packages (e.g. systemd)

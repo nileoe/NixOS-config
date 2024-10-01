@@ -162,6 +162,7 @@
             pkg-config
             glib
 # File managers
+virtualbox
 	    yazi
             kdePackages.dolphin
             kdePackages.dolphin-plugins
