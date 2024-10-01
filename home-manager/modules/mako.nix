@@ -15,8 +15,8 @@
 	# firefox dark theme-ish
         backgroundColor = "#2B2A33";
         textColor = "#FBFBFE";
-        borderRadius = 0;
-	borderSize = 3;
+        borderRadius = 2;
+	borderSize = 1;
 	borderColor = "#FBFBFE";
     };
 }

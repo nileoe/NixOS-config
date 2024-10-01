@@ -169,6 +169,7 @@ virtualbox
             pcmanfm
             gnome.nautilus
             cinnamon.nemo-with-extensions
+	    torrential
 # PDF/Image readers / graphic tools
             zathura
             kdePackages.okular
