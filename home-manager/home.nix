@@ -111,8 +111,10 @@
 # coding
             neovim
             neovide
-            vscode # :)
+            vscode
 	    wezterm
+	    netbeans
+	    jetbrains.idea-ultimate
 # programming languages and frameworks
 	    putty
             nodejs_22

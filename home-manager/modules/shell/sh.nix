@@ -17,6 +17,7 @@ shellAliases = {
     wlc = "wl-copy";
     wlp = "wl-paste";
     cw = "change_wallpaper";
+    open = "xdg-open";
 
     ##### RIP ls
     ls = "eza";
