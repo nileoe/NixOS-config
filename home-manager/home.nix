@@ -128,6 +128,7 @@
             rustc
             jdk
             octaveFull
+	    maven
 	    lua
 	    luajitPackages.luarocks-nix
 	    typescript
