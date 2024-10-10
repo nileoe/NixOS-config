@@ -67,6 +67,8 @@
 
 # Add stuff for your user as you see fit:
     home.packages = with pkgs; [
+    # SUPR testing
+    warp
 # feel free to add/remove/comment
         localsend
             _1password-gui
