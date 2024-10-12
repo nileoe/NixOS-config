@@ -188,7 +188,7 @@ virtualbox
             obs-studio
             wayfarer
             vlc
-            haruna
+            # haruna
             cider
             reaper
             musescore
