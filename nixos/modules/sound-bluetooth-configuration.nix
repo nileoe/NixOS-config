@@ -1,7 +1,7 @@
 # mostly copy-paste from https://nixos.wiki/wiki/PipeWire (as of june 2024)
 { config, lib, pkgs, ... }:
 {
-    sound.enable = true;
+    # sound.enable = true; # apparently should be removed
 # rtkit is optional but recommended
     security.rtkit.enable = true;
     services.pipewire = {

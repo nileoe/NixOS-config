@@ -4,9 +4,7 @@
 {
     programs.kitty = {
         enable = true;
-        theme = "Tokyo Night";
-        # theme = "Rosé Pine";
-        # theme = "Night Owl";
+	themeFile = "tokyo_night_night";
         font = {
             name = sessionSettings.monospaceFont;
         };
