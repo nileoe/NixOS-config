@@ -33,7 +33,7 @@
         ./modules/gtk.nix
         ./modules/git.nix
 
-        inputs.catppuccin.homeManagerModules.catppuccin
+        # inputs.catppuccin.homeManagerModules.catppuccin
     ];
 
 

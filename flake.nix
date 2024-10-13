@@ -11,7 +11,7 @@
         # home-manager.url = "github:nix-community/home-manager/release-24.05";
         home-manager.url = "github:nix-community/home-manager/";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
-        catppuccin.url = "github:catppuccin/nix";
+        # catppuccin.url = "github:catppuccin/nix";
 
         # dev_specific_config = {
         #     url = "path:./device-specific/";
