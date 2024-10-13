@@ -1,0 +1,2 @@
+hswitch='cd ~/nix-config && home-manager switch --flake .#nileoe@lix --impure && notify-send '\''home-manager switch complete.'\'
+nswitch='cd ~/nix-config && sudo nixos-rebuild switch --flake .#lix --impure && notify-send '\''nixos-rebuilt switch complete'\'

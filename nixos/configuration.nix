@@ -76,7 +76,6 @@ in {
     };
 
     programs.hyprland.enable = true;
-
     gtk.iconCache.enable = true;
 
     fonts.packages = with pkgs; [
