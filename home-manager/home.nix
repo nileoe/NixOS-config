@@ -194,6 +194,7 @@ virtualbox
             musescore
             audacity
 # Others
+	    nwg-look
             ];
 
     programs.home-manager.enable = true;

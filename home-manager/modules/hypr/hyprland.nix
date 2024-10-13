@@ -19,6 +19,7 @@
             exec-once = swww-daemon &
             exec-once = startWpRotation ${../../../data/wallpapers/selected} &
             exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
+            # exec-once = hyprctl setcursor Vanilla-DMZ 24
                                                               '';
     };
 
