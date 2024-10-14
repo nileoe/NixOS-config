@@ -44,6 +44,8 @@ shellAliases = {
  #   hswitch= "cd ~/nix-config && home-manager switch --flake .#${userSettings.username}@${userSettings.hostname} --impure && notify-send 'home-manager switch complete.'";
  #   nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#${userSettings.hostname} --impure && notify-send 'nixos-rebuilt switch complete'";
     switch = "cd ~/nixos/ && sudo nixos-rebuild switch --impure --flake .#${userSettings.hostname} && notify-send 'NixOS' 'Switch complete'";
+    switcho = "switch && o";
+    switchcd = "switch && cd && cl";
     gho = "Hyprland";
 
 
