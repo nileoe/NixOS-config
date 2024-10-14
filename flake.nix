@@ -17,7 +17,7 @@
   {
 
     nixosConfigurations = {
-      lix = nixpkgs.lib.nixosSystem { # hostname
+      ${userSettings.hostname} = nixpkgs.lib.nixosSystem { # hostname
         system = "x86_64-linux";
         specialArgs = { inherit inputs userSettings; };
         modules = [
