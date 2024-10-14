@@ -21,20 +21,12 @@ in {
     environment.systemPackages = with pkgs; [
         tokyo-night-sddm
             steam-run
-            # ntfs3g
-            # openssl
-            # atkmm
-            # librsvg
-            # haskellPackages.webkit2gtk3-javascriptcore
-            # ocamlPackages.lablgtk3-rsvg2
             (import ./modules/scripts/startWpRotation.nix {inherit pkgs; })
             (import ./modules/scripts/toggleWaybar.nix {inherit pkgs; })
             (import ./modules/scripts/toggleWallpaper.nix {inherit pkgs; })
             (import ./modules/scripts/changeWallpaper.nix {inherit pkgs; })
             (import ./modules/scripts/batteryNotify.nix {inherit pkgs; })
             (import ./modules/scripts/tmux-sessionizer.nix {inherit pkgs; })
-
-            # tmp
     ];
     imports = [
         # hardwareConfiguration # does not work when .gitignoring (even uncommenting the relevant definition in flake.nix)
@@ -76,7 +68,7 @@ in {
     };
 
     programs.hyprland.enable = true;
-    gtk.iconCache.enable = true;
+    gtk.iconCache.enable = true; ##################################### CHECK
 
     fonts.packages = with pkgs; [
         nerdfonts
@@ -87,12 +79,12 @@ in {
         helvetica-neue-lt-std
         vistafonts
     ];
-    virtualisation.virtualbox.host.enable = true;
+    virtualisation.virtualbox.host.enable = true; ################################ CHECK
     # virtualisation.virtualbox.host.enableExtensionPack = true;
     users.extraGroups.vboxusers.members = [ "virtualbox"];
 
     environment.pathsToLink = [
-        "/share/zsh" # to get completion for system packages (e.g. systemd)
+        "/share/zsh" # to get completion for system packages (e.g. systemd) ################################ CHECK
     ];
     services.libinput.enable = true;
     time.timeZone = sessionSettings.timeZone;
