@@ -3,6 +3,7 @@ let
 tokyo-night-sddm = pkgs.libsForQt5.callPackage ./modules/nixos-modules/ssdm-tokyonight-night/default.nix { };
 in
 {
+  home-manager.backupFileExtension = "backup";
   imports =
     [
       ./modules/nixos-modules/sound-bluetooth-configuration.nix
