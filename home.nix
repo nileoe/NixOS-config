@@ -87,12 +87,13 @@
             firefox
             chromium
             google-chrome
-# Note taking
+# Note taking and writing
             obsidian
             remnote
             anki
             zegrapher
             iotas
+	    zotero_7
 # coding
             neovim
             neovide
