@@ -13,22 +13,31 @@
       gtk = {
 	    enable = true;
 	    theme = {
-	    # package = pkgs.orchis-theme;
-	    # name = "Orchis-Grey-Dark";
-		  package = pkgs.sweet;
-		  name = "Sweet";
+		  # package = pkgs.nordic;
+		  # name = "Nordic";
+		  # WORKING OPTIONS
+		  package = pkgs.numix-gtk-theme;
+		  name = "Numix";
+		  # package = pkgs.orchis-theme;
+		  # name = "Orchis-Grey-Dark";
+		  # package = pkgs.sweet;
+		  # name = "Sweet";
 	    };
 	    iconTheme = {
+	          # TESTING 
+	          # WORKING OPTIONS
+		  # package = pkgs.beauty-line-icon-theme;
+		  # name = "BeautyLine";
 		  # package = pkgs.candy-icons;
 		  # name = "candy-icons";
-	    package = pkgs.kora-icon-theme;
-	    name = "kora";
-	    # package = pkgs.tela-icon-theme;
-	    # name = "Tela-blue-dark";
-			};
-	    #  cursorTheme = {
-	    # inherit (cfg.cursors) package;
-	    # inherit (cfg.cursors) name;
+		  package = pkgs.kora-icon-theme;
+		  name = "kora";
+		  # package = pkgs.tela-icon-theme;
+		  # name = "Tela-blue-dark";
+			      };
+		  #  cursorTheme = {
+		  # inherit (cfg.cursors) package;
+		  # inherit (cfg.cursors) name;
 	    #  };
 
 	    gtk3.extraConfig = {
