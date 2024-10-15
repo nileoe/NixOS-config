@@ -46,6 +46,7 @@ shellAliases = {
     switch = "cd ~/nixos/ && sudo nixos-rebuild switch --impure --flake .#${userSettings.hostname} && notify-send 'NixOS' 'Switch complete'";
     switcho = "switch && o";
     switchcd = "switch && cd && cl";
+    switchrel = "switch && hyprctl reload";
     gho = "Hyprland";
 
 

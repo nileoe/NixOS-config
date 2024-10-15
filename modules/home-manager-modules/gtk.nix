@@ -1,30 +1,57 @@
 {config, pkgs, inputs, ...}:
 {
-  home.pointerCursor = {
-        gtk.enable = true;
-        package = pkgs.vanilla-dmz;
-	name = "Vanilla-DMZ";
-	size = 24;
+      home.pointerCursor = {
+	    gtk.enable = true;
+	    package = pkgs.vanilla-dmz;
+	    name = "Vanilla-DMZ";
+	    size = 24;
 
 # why no work
- #        package = pkgs.graphite-cursors;
-	# name = "graphite-cursors";
-  };
-  gtk = {
-    enable = true;
- #    cursorTheme = {
- #    };
-    # iconTheme = {
-    #     name = "Adwaita";
-    #     package = pkgs.gnome.adwaita-icon-theme;
-    # };
-    # catppuccin = {
-    #   enable = true;
-    #   flavor = "mocha";
-    #   # accent: blue, flamingo, green, lavender, maroon, mauve, peach, pink, red, rosewater, saphire, sky, teal, yellow
-    #   accent = "lavender";
-    #   size = "standard";
-    #   tweaks = [ "normal" ];
-    # };
-  };
+#        package = pkgs.graphite-cursors;
+# name = "graphite-cursors";
+      };
+      gtk = {
+	    enable = true;
+	    theme = {
+	    # package = pkgs.orchis-theme;
+	    # name = "Orchis-Grey-Dark";
+		  package = pkgs.sweet;
+		  name = "Sweet";
+	    };
+	    iconTheme = {
+		  # package = pkgs.candy-icons;
+		  # name = "candy-icons";
+	    package = pkgs.kora-icon-theme;
+	    name = "kora";
+	    # package = pkgs.tela-icon-theme;
+	    # name = "Tela-blue-dark";
+			};
+	    #  cursorTheme = {
+	    # inherit (cfg.cursors) package;
+	    # inherit (cfg.cursors) name;
+	    #  };
+
+	    gtk3.extraConfig = {
+		  gtk-application-prefer-dark-theme = "1";
+	    };
+	    gtk4.extraConfig = {
+		  gtk-application-prefer-dark-theme = "1";
+	    };
+      };
 }
+
+
+#    cursorTheme = {
+#    };
+# iconTheme = {
+#     name = "Adwaita";
+#     package = pkgs.gnome.adwaita-icon-theme;
+# };
+# catppuccin = {
+#   enable = true;
+#   flavor = "mocha";
+#   # accent: blue, flamingo, green, lavender, maroon, mauve, peach, pink, red, rosewater, saphire, sky, teal, yellow
+#   accent = "lavender";
+#   size = "standard";
+#   tweaks = [ "normal" ];
+# };
