@@ -16,10 +16,10 @@
 		  # package = pkgs.nordic;
 		  # name = "Nordic";
 		  # WORKING OPTIONS
-		  package = pkgs.numix-gtk-theme;
-		  name = "Numix";
-		  # package = pkgs.orchis-theme;
-		  # name = "Orchis-Grey-Dark";
+		  # package = pkgs.numix-gtk-theme;
+		  # name = "Numix";
+		  package = pkgs.orchis-theme;
+		  name = "Orchis-Grey-Dark";
 		  # package = pkgs.sweet;
 		  # name = "Sweet";
 	    };
