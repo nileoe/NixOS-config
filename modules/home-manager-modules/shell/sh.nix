@@ -34,6 +34,7 @@ shellAliases = {
     ".3" = ".2 && cd ..";
     ".4" = ".3 && cd ..";
     ".5" = ".4 && cd ..";
+    cdl = "cd && clear";
     # fzv = "nvim $(fzf --reverse)";
     # "fi"="fzv";
     fzb = "fzf --reverse --preview 'bat --style=numbers --color=always {}'";
@@ -47,6 +48,7 @@ shellAliases = {
     switcho = "switch && o";
     switchcd = "switch && cd && cl";
     switchrel = "switch && hyprctl reload";
+    vnix = "cd ~/nixos/ && nvim .";
     gho = "Hyprland";
 
 
