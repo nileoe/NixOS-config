@@ -37,15 +37,14 @@ in
   networking.hostName = userSettings.hostname;
   networking.networkmanager.enable = true; 
 
-
-  networking.wireless.networks.eduroam = {
-	auth = ''
-	      key_mgmt=WPA-EAP
-	      eap=PWD
-	      identity="k2232947@kingston.ac.uk"
-	      password="'Si m1 la re sol do fa"
-	      '';
-  };
+ #  networking.wireless.networks.eduroam = {
+	# auth = ''
+	#       key_mgmt=WPA-EAP
+	#       eap=PWD
+	#       identity="k2232947@kingston.ac.uk"
+	#       password="'Si m1 la re sol do fa"
+	#       '';
+ #  };
 
   programs.zsh.enable = true;
   environment.shells = with pkgs; [zsh ] ; 
