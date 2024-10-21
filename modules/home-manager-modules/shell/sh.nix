@@ -109,11 +109,11 @@ in
             }
             ];
             initExtra = ''
-                bindkey '^o' autosuggest-accept
-                function mkcd() { # creates a directory and cd into it in a single command.
-                    mkdir "$1"
-                        cd "$1"
-                }
+	    bindkey '^o' autosuggest-accept
+	    function mkcd() { # creates a directory and cd into it in a single command.
+	        mkdir "$1"
+	            cd "$1"
+	    }
 
             function rpc() { # copies provided file's absolute path in clipboard (needs wl-copy)
                 realpath "$1" | wl-copy
@@ -121,6 +121,11 @@ in
 
             function v() {
                 nvim "$1" || nvim . 
+            }
+
+	    # git add && git commit
+            function gac() {
+                git add . && git commit -m "$1"
             }
 
             source ${./zellij-basic-completion.zsh}
