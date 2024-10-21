@@ -48,6 +48,7 @@ shellAliases = {
     switcho = "switch && o";
     switchcd = "switch && cd && cl";
     switchrel = "switch && hyprctl reload";
+    switchrelo = "switchrel && o";
     vnix = "cd ~/nixos/ && nvim .";
     gho = "Hyprland";
 
