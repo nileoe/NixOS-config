@@ -127,6 +127,9 @@ in
             function gac() {
                 git add . && git commit -m "$1"
             }
+            function gacp() {
+                git add . && git commit -m "$1" && git push
+            }
 
             source ${./zellij-basic-completion.zsh}
 
