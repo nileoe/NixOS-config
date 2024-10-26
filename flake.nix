@@ -1,6 +1,4 @@
 {
-  # testing commit neogit
-  # another change
   description = "Your (mostly) own NixOS configuration!";
 
   inputs = {
