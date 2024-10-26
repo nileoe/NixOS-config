@@ -1,4 +1,5 @@
 {
+  # testing commit neogit
   description = "Your (mostly) own NixOS configuration!";
 
   inputs = {
@@ -11,26 +12,30 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: let
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    ...
+  }: let
     userSettings = (import /etc/nixos/settings.nix).userSettings;
-    hardwareConfiguration = (import /etc/nixos/hardware-configuration.nix); in
-  {
-
+    hardwareConfiguration = import /etc/nixos/hardware-configuration.nix;
+  in {
     nixosConfigurations = {
-      ${userSettings.hostname} = nixpkgs.lib.nixosSystem { # hostname
+      ${userSettings.hostname} = nixpkgs.lib.nixosSystem {
+        # hostname
         system = "x86_64-linux";
-        specialArgs = { inherit inputs userSettings; };
+        specialArgs = {inherit inputs userSettings;};
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
-	  hardwareConfiguration
+          hardwareConfiguration
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.nileoe = import ./home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
-            home-manager.extraSpecialArgs = { inherit userSettings; };
+            home-manager.extraSpecialArgs = {inherit userSettings;};
             # arguments to home.nix
           }
         ];

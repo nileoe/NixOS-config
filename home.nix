@@ -1,29 +1,32 @@
-{ config, pkgs, userSettings, ... }:
-{
+{ config
+, pkgs
+, userSettings
+, ...
+}: {
   home.username = userSettings.username;
   home.homeDirectory = "/home/${userSettings.username}";
 
-    imports = [
-# If you want to use home-manager modules from other flakes (such as nix-colors):
-# inputs.nix-colors.homeManagerModule
-# You can also split up your configuration and import pieces of it here:
-        ./modules/home-manager-modules/hypr/hyprland.nix
-        ./modules/home-manager-modules/additionalBluetoothConfig.nix
-        ./modules/home-manager-modules/fuzzel/fuzzel.nix
-        ./modules/home-manager-modules/kitty.nix
-        ./modules/home-manager-modules/libreoffice.nix
-        ./modules/home-manager-modules/mako.nix
-        # ./modules/home-manager-modules/nvimModule/nvim.nix # for declarative Neovim configuration (unused)
-        ./modules/home-manager-modules/shell/sh.nix
-        ./modules/home-manager-modules/speedcrunch.nix
-        ./modules/home-manager-modules/waybar/waybar.nix
-        # ./modules/home-manager-modules/tmux.nix
-        ./modules/home-manager-modules/zellij/zellij.nix
-        ./modules/home-manager-modules/zoxide.nix
-        ./modules/home-manager-modules/gtk.nix
-        ./modules/home-manager-modules/git.nix
-        # inputs.catppuccin.homeManagerModules.catppuccin
-    ];
+  imports = [
+    # If you want to use home-manager modules from other flakes (such as nix-colors):
+    # inputs.nix-colors.homeManagerModule
+    # You can also split up your configuration and import pieces of it here:
+    ./modules/home-manager-modules/hypr/hyprland.nix
+    ./modules/home-manager-modules/additionalBluetoothConfig.nix
+    ./modules/home-manager-modules/fuzzel/fuzzel.nix
+    ./modules/home-manager-modules/kitty.nix
+    ./modules/home-manager-modules/libreoffice.nix
+    ./modules/home-manager-modules/mako.nix
+    # ./modules/home-manager-modules/nvimModule/nvim.nix # for declarative Neovim configuration (unused)
+    ./modules/home-manager-modules/shell/sh.nix
+    ./modules/home-manager-modules/speedcrunch.nix
+    ./modules/home-manager-modules/waybar/waybar.nix
+    # ./modules/home-manager-modules/tmux.nix
+    ./modules/home-manager-modules/zellij/zellij.nix
+    ./modules/home-manager-modules/zoxide.nix
+    ./modules/home-manager-modules/gtk.nix
+    ./modules/home-manager-modules/git.nix
+    # inputs.catppuccin.homeManagerModules.catppuccin
+  ];
 
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
@@ -48,138 +51,150 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-
     # SUPR testing
     warp
     zoxide
     zellij
-# feel free to add/remove/comment
-        localsend
-            _1password-gui
-            _1password
-            swww
-            networkmanagerapplet
-            alacritty
-# System helpers
-            eww
-            pamixer
-            dbus
-            pulseaudioFull
-            qpwgraph
-            exfat
-            gptfdisk
-# Social
-	    caprine-bin
-            whatsapp-for-linux
-	    zoom-us
-	    # teams # discontinued?
-            # vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
-	    discord
-# Gaming
-            prismlauncher # FOSS minecraft launcher
-            scarab        # Hollow Knight mod manager
-            sssnake
-	    lutris
-	    kmonad
-# Browsers
-            microsoft-edge
-            librewolf
-            firefox
-            chromium
-            google-chrome
-# Note taking and writing
-            obsidian
-            remnote
-            anki
-            zegrapher
-            iotas
-	    zotero_7
-# coding
-            neovim
-            neovide
-            vscode
-	    wezterm
-	    netbeans
-	    jetbrains.idea-ultimate
-# programming languages and frameworks
-	    putty
-            nodejs_22
-            php
-            clang
-            libgcc
-            rustc
-            python3
-            go
-            cargo
-            rustc
-            jdk
-            octaveFull
-	    maven
-	    lua
-	    luajitPackages.luarocks-nix
-	    typescript
-# CLI tools
-	    yt-dlp
-	    evtest
-	    lsof
-	    jq
-            wev
-            kooha
-            wget
-            eza
-            speedtest-rs
-            neofetch
-            gh
-            acpi
-            ffmpeg
-	    fzf
-            cmatrix
-            lolcat
-            playerctl
-            htop
-            tree
-            bat
-	    ripgrep
-            killall
-            speedtest-cli
-            wl-clipboard
-            zip
-            unzip
-            brightnessctl
-            file
-            unixtools.xxd
-            pkg-config
-            glib
-# File managers
-	    virtualbox
-	    yazi
-            kdePackages.dolphin
-            kdePackages.dolphin-plugins
-            pcmanfm
-            nautilus
-            nemo-with-extensions
-	    torrential
-# PDF/Image readers / graphic tools
-            zathura
-            kdePackages.okular
-            mate.atril
-            mupdf
-            eyedropper
-	    drawio
-	    # feh
-# Video and music
-            grimblast
-            obs-studio
-            wayfarer
-            vlc
-            # haruna
-            cider
-            reaper
-            musescore
-            audacity
-# check if suppr
-	    nwg-look
-            
+    nwg-look
+
+    # feel free to add/remove/comment
+    localsend
+    _1password-gui
+    _1password
+    swww
+    networkmanagerapplet
+    alacritty
+
+    # System helpers
+    eww
+    pamixer
+    dbus
+    pulseaudioFull
+    qpwgraph
+    exfat
+    gptfdisk
+
+    # Social
+    caprine-bin
+    whatsapp-for-linux
+    zoom-us
+    # vesktop # discord (vencord) wrapper that allows for screen share with audio on wayland
+    discord
+
+    # Gaming
+    prismlauncher # FOSS minecraft launcher
+    scarab # Hollow Knight mod manager
+    sssnake
+    lutris
+    kmonad
+
+    # Browsers
+    microsoft-edge
+    librewolf
+    firefox
+    chromium
+    google-chrome
+
+    # Note taking and writing
+    obsidian
+    remnote
+    anki
+    zegrapher
+    iotas
+    zotero_7
+
+    # coding
+    neovim
+    neovide
+    vscode
+    wezterm
+    netbeans
+    jetbrains.idea-ultimate
+
+    # programming languages/frameworks, LSP/Formatters
+    putty
+    nodejs_22
+    php
+    clang
+    libgcc
+    rustc
+    python3
+    go
+    cargo
+    rustc
+    jdk
+    octaveFull
+    maven
+    lua
+    luajitPackages.luarocks-nix
+    typescript
+    alejandra
+    nixd
+
+    # CLI tools
+    yt-dlp
+    evtest
+    lsof
+    jq
+    wev
+    kooha
+    wget
+    eza
+    speedtest-rs
+    neofetch
+    gh
+    acpi
+    ffmpeg
+    fzf
+    cmatrix
+    lolcat
+    playerctl
+    htop
+    tree
+    bat
+    ripgrep
+    killall
+    speedtest-cli
+    wl-clipboard
+    zip
+    unzip
+    brightnessctl
+    file
+    unixtools.xxd
+    pkg-config
+    glib
+    ventoy
+
+    # File managers
+    virtualbox
+    yazi
+    kdePackages.dolphin
+    kdePackages.dolphin-plugins
+    pcmanfm
+    nautilus
+    nemo-with-extensions
+    torrential
+
+    # PDF/Image readers / graphic tools
+    zathura
+    kdePackages.okular
+    mate.atril
+    mupdf
+    eyedropper
+    drawio
+    # feh
+
+    # Video and music
+    grimblast
+    obs-studio
+    wayfarer
+    vlc
+    # haruna
+    cider
+    reaper
+    musescore
+    audacity
+
     nnn # terminal file manager
 
     # archives
@@ -193,12 +208,12 @@
     # networking tools
     mtr # A network diagnostic tool
     iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils # `dig` + `nslookup`
     ldns # replacement of `dig`, it provide the command `drill`
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc # it is a calculator for the IPv4/v6 addresses
 
     # misc
     which
@@ -218,7 +233,7 @@
     hugo # static site generator
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
+    btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
 
