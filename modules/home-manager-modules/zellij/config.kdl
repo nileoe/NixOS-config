@@ -31,6 +31,7 @@ keybinds clear-defaults=true {
         // bind "j" "Down" { MoveFocus "Down"; }
         // bind "k" "Up" { MoveFocus "Up"; }
         // bind "p" { SwitchFocus; }
+        bind "b" { BreakPane; SwitchToMode "Normal"; }
         bind "c" { NewPane; SwitchToMode "Normal"; }
         bind "j" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "l" { NewPane "Right"; SwitchToMode "Normal"; }
@@ -69,7 +70,7 @@ keybinds clear-defaults=true {
         bind "c" { NewTab; SwitchToMode "Normal"; }
         bind "x" { CloseTab; SwitchToMode "Normal"; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
-        bind "b" { BreakPane; SwitchToMode "Normal"; }
+        // bind "b" { BreakPane; SwitchToMode "Normal"; }
         bind "]" { BreakPaneRight; SwitchToMode "Normal"; }
         bind "[" { BreakPaneLeft; SwitchToMode "Normal"; }
 
