@@ -54,6 +54,7 @@
     switchcd = "switch && cd && cl";
     switchrel = "switch && hyprctl reload";
     switchrelo = "switchrel && o";
+    switchrelcd = "switchrel && cd && cl";
     vnix = "cd ~/nixos/ && nvim .";
     gho = "Hyprland";
 
