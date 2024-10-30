@@ -11,7 +11,7 @@
   ];
 
   wayland.windowManager.hyprland = {
-    enable = true; # done from configuration.nix ################### CHECK was on but probably not needed? Yess///
+    enable = true;
     systemd.variables = ["--all"]; # try disabling: so that programs can be run outside of terminal (system needs to import environment)
 
     extraConfig = ''
@@ -19,6 +19,7 @@
       source = ~/.config/hypr/dev-specific/keyboard-specific.conf
       source = ~/.config/hypr/windowRules.conf
       source = ~/.config/hypr/binds.conf
+      source = ~/.config/hypr/input.conf
       source = ~/.config/hypr/graphics.conf
       exec-once = swww-daemon &
       exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
@@ -29,6 +30,7 @@
 
   home.file = {
     ".config/hypr/binds.conf".source = ./binds.conf;
+    ".config/hypr/input.conf".source = ./input.conf;
     ".config/hypr/graphics.conf".source = ./graphics.conf;
     ".config/hypr/startup.sh".source = ./startup.sh;
     ".config/hypr/windowRules.conf".source = ./windowRules.conf;
