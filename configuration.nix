@@ -1,14 +1,13 @@
-{ config
-, lib
-, pkgs
-, userSettings
-, inputs
-, ...
-}:
-let
-  tokyo-night-sddm = pkgs.libsForQt5.callPackage ./modules/nixos-modules/ssdm-tokyonight-night/default.nix { };
-in
 {
+  config,
+  lib,
+  pkgs,
+  userSettings,
+  inputs,
+  ...
+}: let
+  tokyo-night-sddm = pkgs.libsForQt5.callPackage ./modules/nixos-modules/ssdm-tokyonight-night/default.nix {};
+in {
   home-manager.backupFileExtension = "backup";
   imports = [
     ./modules/nixos-modules/sound-bluetooth-configuration.nix
@@ -18,7 +17,7 @@ in
   ];
 
   environment.systemPackages = lib.mkMerge [
-    (import ./modules/home-manager-modules/shell/scripts.nix { inherit pkgs; })
+    (import ./modules/home-manager-modules/shell/scripts.nix {inherit pkgs;})
     (with pkgs; [
       tokyo-night-sddm
       steam-run
@@ -26,9 +25,9 @@ in
   ];
 
   nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = ["nix-command" "flakes"];
     channel.enable = false;
-    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
 
   # Use the systemd-boot EFI boot loader.
@@ -53,7 +52,7 @@ in
   #  };
 
   programs.zsh.enable = true;
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
 
   # hyprland
@@ -109,7 +108,7 @@ in
 
   users.users.${userSettings.username} = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   #############################################################################################################
