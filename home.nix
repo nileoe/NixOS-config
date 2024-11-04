@@ -1,7 +1,8 @@
-{ config
-, pkgs
-, userSettings
-, ...
+{
+  config,
+  pkgs,
+  userSettings,
+  ...
 }: {
   home.username = userSettings.username;
   home.homeDirectory = "/home/${userSettings.username}";
@@ -130,6 +131,7 @@
     typescript
     alejandra
     nixd
+    # pkgs.python312Packages.debugpy
 
     # CLI tools
     yt-dlp
