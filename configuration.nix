@@ -106,6 +106,11 @@ in {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = _: true;
 
+  # TODO remove at some point
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-30.5.1"
+  ];
+
   users.users.${userSettings.username} = {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel"];

@@ -54,14 +54,18 @@
   home.packages = with pkgs; [
     # SUPR testing
     warp
-    zoxide
-    zellij
     nwg-look
+    morgen
+    kdePackages.korganizer
+    evolution
+    calcurse
+    osmo
+    gnome-calendar
 
     # feel free to add/remove/comment
     localsend
     _1password-gui
-    _1password
+    _1password-cli
     swww
     networkmanagerapplet
     alacritty
@@ -83,6 +87,7 @@
     discord
 
     # Gaming
+    bsdgames
     prismlauncher # FOSS minecraft launcher
     scarab # Hollow Knight mod manager
     sssnake
