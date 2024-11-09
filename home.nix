@@ -118,7 +118,7 @@
     jetbrains.idea-ultimate
 
     # programming languages/frameworks, LSP/Formatters
-    libgcc
+    libgccjit
     putty
     nodejs_22
     php
