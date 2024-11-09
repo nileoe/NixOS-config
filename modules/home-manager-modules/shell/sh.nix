@@ -70,8 +70,8 @@
     disboomo = "(disboom &) && o";
 
     ##### Git custom docs shortcuts, remove as needed
-    dpull = "cd ~/docs && git pull --rebase && cd ~";
-    dpush = "cd ~/docs && git add * ; git commit -m '${userSettings.hostname} (${userSettings.monitorType}) commit' && git push";
+    dpull = "current_dir=$(pwd) && cd ~/docs && git pull --rebase && cd $current_dir";
+    dpush = "current_dir=$(pwd) && cd ~/docs && git add * && git commit -m '${userSettings.hostname} (${userSettings.monitorType}) commit' && git push && cd $current_dir";
 
     ##### Coding shortcuts
     g = "git";
