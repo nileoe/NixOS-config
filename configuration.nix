@@ -21,6 +21,7 @@ in {
     (with pkgs; [
       tokyo-night-sddm
       steam-run
+      libstdcxx5 # REMOVE maybe was for making clangd not complain in neovim
     ])
   ];
 
@@ -94,6 +95,7 @@ in {
   programs.nix-ld.package = pkgs.nix-ld-rs;
 
   fonts.packages = with pkgs; [
+    cascadia-code
     nerdfonts
     noto-fonts
     noto-fonts-color-emoji

@@ -52,7 +52,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # SUPR testing
+    # TESTING sort/decide if keeping or not
     warp
     nwg-look
     morgen
@@ -61,6 +61,9 @@
     calcurse
     osmo
     gnome-calendar
+    # clang
+    clang-tools
+    cmake
 
     # feel free to add/remove/comment
     localsend
@@ -113,16 +116,19 @@
     neovim
     neovide
     vscode
+    jetbrains.clion
+    jetbrains.rust-rover
+    jetbrains.webstorm
+    jetbrains.webstorm
+    jetbrains.idea-ultimate
     wezterm
     netbeans
-    jetbrains.idea-ultimate
 
     # programming languages/frameworks, LSP/Formatters
     libgccjit
     putty
     nodejs_22
     php
-    clang
     libgcc
     rustc
     python3
