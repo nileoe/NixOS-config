@@ -61,7 +61,7 @@
     calcurse
     osmo
     gnome-calendar
-    # clang
+    clang
     clang-tools
     cmake
 
