@@ -8,6 +8,7 @@
     # xdg-desktop-portal-xapp #################### CHECK was activated
     # hypridle
     # hyprlock
+    hyprcursor
   ];
 
   wayland.windowManager.hyprland = {

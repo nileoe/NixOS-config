@@ -196,7 +196,7 @@
     mupdf
     eyedropper
     drawio
-    # feh
+    feh
 
     # Video and music
     grimblast
