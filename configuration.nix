@@ -43,6 +43,9 @@ in {
   networking.hostName = userSettings.hostname;
   networking.networkmanager.enable = true;
 
+  console = {
+    keyMap = "uk";
+  };
   #  networking.wireless.networks.eduroam = {
   # auth = ''
   #       key_mgmt=WPA-EAP
