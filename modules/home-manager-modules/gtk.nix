@@ -7,11 +7,11 @@
   home.pointerCursor = {
     gtk.enable = true;
     # package = pkgs.vanilla-dmz;
-    package = pkgs.catppuccin-cursors.mochaLavender;
+    package = pkgs.catppuccin-cursors.mochaDark;
     # name = "Vanilla-DMZ";
     # name = "Catppuccin Mocha Lavender";
     # name = "Yaru";
-    name = "mochaLavender";
+    name = "mochaDark";
     size = 24;
 
     # why no work
