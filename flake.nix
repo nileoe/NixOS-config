@@ -9,6 +9,7 @@
     # the `inputs.nixpkgs` of the current flake,
     # to avoid problems caused by different versions of nixpkgs.
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = inputs @ {
