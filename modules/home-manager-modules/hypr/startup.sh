@@ -4,8 +4,10 @@ exec-once = dbus-update-activation-environment --systemd --all debug:disable_log
 
 nm-applet --indicator &
 
-waybar &
+# waybar &
 
 mako &
 
 # exec-once = hypridle
+#
+# exec-once = hyprctl setcursor Vanilla-DMZ 24

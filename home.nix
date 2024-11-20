@@ -53,6 +53,8 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # TESTING sort/decide if keeping or not
+    # albert
+    # ulauncher
     warp
     nwg-look
     morgen
@@ -103,6 +105,7 @@
     firefox
     chromium
     google-chrome
+    tor-browser
 
     # Note taking and writing
     obsidian

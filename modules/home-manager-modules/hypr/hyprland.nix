@@ -22,10 +22,9 @@
       source = ~/.config/hypr/binds.conf
       source = ~/.config/hypr/input.conf
       source = ~/.config/hypr/graphics.conf
-      exec-once = swww-daemon &
       exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
+      exec-once = swww-daemon &
       exec-once = startWpRotation ${../../../data/wallpapers/selected} &
-      # exec-once = hyprctl setcursor Vanilla-DMZ 24
     '';
   };
 
