@@ -124,6 +124,7 @@
     jetbrains.webstorm
     jetbrains.webstorm
     jetbrains.idea-ultimate
+    jetbrains.pycharm-professional
     wezterm
     netbeans
 
