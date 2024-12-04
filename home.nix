@@ -53,6 +53,10 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # TESTING sort/decide if keeping or not
+    appimage-run
+    gnumake
+    juce
+    powershell
     warp
     nwg-look
     morgen

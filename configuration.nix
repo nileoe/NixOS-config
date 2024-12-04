@@ -96,7 +96,7 @@ in {
 
   # TO ENABLE APPIMAGES and other such generic dynamically linked executables
   programs.nix-ld.enable = true;
-  programs.nix-ld.package = pkgs.nix-ld-rs;
+  # programs.nix-ld.package = pkgs.nix-ld-rs;
 
   fonts.packages = with pkgs; [
     cascadia-code
