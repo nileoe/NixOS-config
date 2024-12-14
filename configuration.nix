@@ -21,7 +21,6 @@ in {
     (with pkgs; [
       tokyo-night-sddm
       steam-run
-      libstdcxx5 # REMOVE maybe was for making clangd not complain in neovim
       inputs.zen-browser.packages."${system}".specific
     ])
   ];
