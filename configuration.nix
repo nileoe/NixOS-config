@@ -21,7 +21,7 @@ in {
     (with pkgs; [
       tokyo-night-sddm
       steam-run
-      inputs.zen-browser.packages."${system}".specific
+      inputs.zen-browser.packages."${system}".default
     ])
   ];
 
