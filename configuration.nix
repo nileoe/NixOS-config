@@ -97,19 +97,21 @@ in {
   programs.nix-ld.enable = true;
   # programs.nix-ld.package = pkgs.nix-ld-rs;
 
-  fonts.packages = with pkgs; [
-    cascadia-code
-    nerdfonts
-    noto-fonts
-    noto-fonts-color-emoji
-    corefonts
-    garamond-libre
-    helvetica-neue-lt-std
-    vistafonts
-  ];
+  fonts.packages = with pkgs;
+    [
+      cascadia-code
+      # nerdfonts
+      noto-fonts
+      noto-fonts-color-emoji
+      corefonts
+      garamond-libre
+      helvetica-neue-lt-std
+      vistafonts
+    ]
+    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = _: true;
+  # nixpkgs.config.allowUnfreePredicate = _: true; # todo check if safe to remove? https://nixos.wiki/wiki/Unfree_Software
 
   # TODO remove at some point
   nixpkgs.config.permittedInsecurePackages = [
