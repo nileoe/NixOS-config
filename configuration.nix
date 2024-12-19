@@ -70,6 +70,7 @@ in {
     wayland.enable = true;
     theme = "tokyo-night-sddm";
   };
+  services.gvfs.enable = true;
 
   time.timeZone = userSettings.timeZone;
 

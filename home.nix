@@ -53,6 +53,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # TESTING sort/decide if keeping or not
+    dconf-editor
     postman
     appimage-run
     gnumake
