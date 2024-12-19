@@ -188,11 +188,9 @@
     # File managers
     virtualbox
     yazi
-    kdePackages.dolphin
-    kdePackages.dolphin-plugins
     pcmanfm
     nautilus
-    nemo-with-extensions
+    sushi
     torrential
 
     # PDF/Image readers / graphic tools
