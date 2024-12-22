@@ -1,0 +1,159 @@
+/*gaps 8/16 -> 6/12: adapt accordingly.*/
+/* from waayway originally */
+@define-color base   #1E1D24;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color accentcolor #B4BEFE;
+
+@define-color blue      #89b4fa;
+@define-color lightBlue #4974ba;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color limette   #9ECE6A;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
+
+* {
+  font-size: 16px;
+  font-family: "JetBrainsMonoNL NF";
+  border-radius: 19px;
+}
+#window {
+  /*limette*/
+  /*background-color: rgba(158, 206, 106, 0.2);*/
+  background-color: rgba(30, 29, 36, 0.2);
+  padding: 0px 18px;
+  /*mauve*/
+  border: 1px solid rgba(203, 166, 247, 0.9);
+  color: @text;
+}
+
+window#waybar.empty #window {
+  opacity: 0;
+}
+
+window#waybar {
+  /*background: @base;*/
+  background-color: rgba(30, 29, 36, 0.5);
+  color: @text;
+}
+
+#custom-right-arrow-workspace {
+  font-size: 24px;
+  color: @surface0;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+  font-size: 24px;
+  color: @mantle;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+  color: @base;
+  font-size: 24px;
+  background: @mantle;
+  background: red;
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk,
+#tray {
+  /* background: @mantle; */ /* same background */
+}
+
+#tray * {
+  padding: 0 10px;
+}
+
+#workspaces {
+  font-weight: normal;
+  font-style: normal;
+}
+#workspaces * {
+  font-family: "JetBrainsMonoNL NFM";
+}
+#workspaces button {
+  padding: 0px 10px;
+  margin: 8px 0px 8px 10px;
+  /*border-radius: 1px;*/
+  background-color: @base;
+  color: @text;
+}
+
+#workspaces button.active {
+  background-color: @limette;
+  color: @base;
+}
+
+#pulseaudio {
+  color: @blue;
+}
+#memory {
+  color: @green;
+}
+#cpu {
+  color: @sapphire;
+}
+#battery {
+  color: @green;
+}
+#disk {
+  color: @peach;
+}
+#clock {
+  /*color: @mauve;*/
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#network,
+#disk,
+#tray {
+  padding: 2px 20px;
+  background-color: @mantle;
+  margin: 8px 0px;
+}
+
+#custom-notification {
+  padding: 0 10px;
+  background-color: @mantle;
+  font-family: "JetBrainsMonoNL NFM";
+}
+
+#custom-launcher {
+  padding: 0 20px 0 10px;
+  background-color: @blue;
+  border-right: 0px @surface0 solid;
+  color: @base;
+}

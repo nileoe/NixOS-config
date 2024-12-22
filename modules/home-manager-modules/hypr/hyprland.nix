@@ -22,6 +22,7 @@
       source = ~/.config/hypr/binds.conf
       source = ~/.config/hypr/input.conf
       source = ~/.config/hypr/graphics.conf
+      source = ~/.config/hypr/animations.conf
       exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
       exec-once = swww-daemon &
       exec-once = startWpRotation ${../../../data/wallpapers/selected} &
@@ -34,6 +35,7 @@
     ".config/hypr/graphics.conf".source = ./graphics.conf;
     ".config/hypr/startup.sh".source = ./startup.sh;
     ".config/hypr/windowRules.conf".source = ./windowRules.conf;
+    ".config/hypr/animations.conf".source = ./animations.conf;
     # ".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
     # ".config/hypr/hyprlockWallpaper.png".source = ./hyprlockWallpaper.png;
     # ".config/hypr/hypridle.conf".source = ./hypridle.conf;
