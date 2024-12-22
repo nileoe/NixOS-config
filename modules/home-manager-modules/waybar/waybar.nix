@@ -21,7 +21,5 @@
       else ./laptop-config-riced.jsonc
     else if userSettings.style == "minimal"
     then ./desktop-config-minimal.jsonc
-    else
-      ./desktop-config-riced.jsonc
-      ./desktop-config.jsonc;
+    else ./desktop-config-riced.jsonc;
 }
