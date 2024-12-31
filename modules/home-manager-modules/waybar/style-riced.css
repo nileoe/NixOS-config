@@ -36,7 +36,8 @@
 @define-color rosewater #f5e0dc;
 
 * {
-  font-size: 16px;
+  /* 16 for desktop */
+  font-size: 15px;
   font-family: "JetBrainsMonoNL NF";
   border-radius: 19px;
 }
