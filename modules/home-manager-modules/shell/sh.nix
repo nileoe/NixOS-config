@@ -72,7 +72,7 @@
     ##### Git custom docs shortcuts, remove as needed
     dpull = "current_dir=$(pwd) && cd ~/docs && git pull --rebase && cd $current_dir";
     dpush = "current_dir=$(pwd) && cd ~/docs && git add * && git commit -m '${userSettings.hostname} (${userSettings.monitorType}) commit' && git push && cd $current_dir";
-    pullAll = "current_dir=$(pwd) && cd ~/.config/nvim && git pull && cd ~/nixos && git pull && cd ~/docs && git pull && cd ~/docs/ku/mad/crudly/ && git pull && switchrel && cd $current_dir";
+    pullAll = "current_dir=$(pwd) && cd ~/.config/nvim && git pull && cd ~/nixos && git pull && cd ~/docs && git pull && switchrel && cd $current_dir";
 
     ##### Coding shortcuts
     g = "git";
