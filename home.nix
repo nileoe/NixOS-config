@@ -53,6 +53,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # TESTING sort/decide if keeping or not
+    fontconfig
     dconf-editor
     postman
     appimage-run
