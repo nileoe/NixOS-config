@@ -132,6 +132,9 @@ window#waybar {
 #clock {
   /*color: @mauve;*/
 }
+#backlight {
+  color: @text;
+}
 
 #clock,
 #pulseaudio,
@@ -140,6 +143,7 @@ window#waybar {
 #battery,
 #network,
 #disk,
+#backlight,
 #tray {
   padding: 2px 20px;
   background-color: @mantle;
