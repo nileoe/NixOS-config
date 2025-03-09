@@ -94,7 +94,7 @@ in {
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-  # TO ENABLE APPIMAGES and other such generic dynamically linked executables
+  # TO ENABLE APPIMAGES and other similar generic dynamically linked executables
   programs.nix-ld.enable = true;
   # programs.nix-ld.package = pkgs.nix-ld-rs;
 
@@ -117,6 +117,7 @@ in {
   # TODO remove at some point
   nixpkgs.config.permittedInsecurePackages = [
     "electron-30.5.1"
+    "electron-32.3.3"
   ];
 
   users.users.${userSettings.username} = {

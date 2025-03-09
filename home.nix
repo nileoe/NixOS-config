@@ -122,7 +122,7 @@
     obsidian
     remnote
     anki
-    zegrapher
+    # zegrapher
     iotas
     zotero_7
 
