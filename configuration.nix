@@ -64,7 +64,7 @@ in {
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   # WLR_NO_HARDWARE_CURSORS = "1"; # avoid invisible cursor # CHECK if needed
   # gtk.iconCache.enable = true; # ????
-
+  hardware.keyboard.zsa.enable = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;

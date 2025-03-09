@@ -71,6 +71,13 @@
     clang-tools
     cmake
 
+    # necessary for flashing voyager apparently
+    # gtk3
+    # libwebkit2gtk
+    # libusb1
+    keymapp
+    eudev
+
     # feel free to add/remove/comment
     localsend
     _1password-gui
