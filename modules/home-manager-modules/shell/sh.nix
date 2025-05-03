@@ -114,7 +114,7 @@ in {
           file = "p10k.zsh";
         }
       ];
-      initExtra = ''
+      initContent = ''
         bindkey '^o' autosuggest-accept
         function mkcd() { # creates a directory and cd into it in a single command.
             mkdir "$1"
