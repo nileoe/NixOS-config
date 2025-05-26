@@ -111,7 +111,7 @@
     kmonad
 
     # Browsers
-    microsoft-edge
+    # microsoft-edge
     librewolf
     firefox
     chromium
@@ -192,7 +192,7 @@
     unixtools.xxd
     pkg-config
     glib
-    ventoy
+    # ventoy
 
     # File managers
     virtualbox
