@@ -46,14 +46,6 @@ in {
   console = {
     keyMap = "uk";
   };
-  #  networking.wireless.networks.eduroam = {
-  # auth = ''
-  #       key_mgmt=WPA-EAP
-  #       eap=PWD
-  #       identity="k2232947@kingston.ac.uk"
-  #       password="'Si m1 la re sol do fa"
-  #       '';
-  #  };
 
   programs.zsh.enable = true;
   environment.shells = with pkgs; [zsh];
@@ -62,8 +54,6 @@ in {
   # hyprland
   programs.hyprland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  # WLR_NO_HARDWARE_CURSORS = "1"; # avoid invisible cursor # CHECK if needed
-  # gtk.iconCache.enable = true; # ????
   hardware.keyboard.zsa.enable = true;
   services.displayManager.sddm = {
     enable = true;
