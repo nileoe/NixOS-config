@@ -210,6 +210,7 @@
     eyedropper
     drawio
     feh
+    masterpdfeditor
 
     # Video and music
     grimblast
