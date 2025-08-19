@@ -13,6 +13,7 @@
     # You can also split up your configuration and import pieces of it here:
     ./modules/home-manager-modules/hypr/hyprland.nix
     ./modules/home-manager-modules/additionalBluetoothConfig.nix
+    ./modules/home-manager-modules/desktopEntries.nix
     ./modules/home-manager-modules/fuzzel/fuzzel.nix
     ./modules/home-manager-modules/kitty.nix
     ./modules/home-manager-modules/libreoffice.nix
