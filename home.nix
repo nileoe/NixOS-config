@@ -220,6 +220,7 @@
     vlc
     # haruna
     cider
+    spotify
     reaper
     musescore
     audacity
