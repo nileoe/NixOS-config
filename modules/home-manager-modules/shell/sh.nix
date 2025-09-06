@@ -85,7 +85,7 @@
 
     no = "cl && node *.js";
 
-    mdb = "mariadb -u lino -p";
+    mdb = "mariadb -u ${userSettings.dbUsername} -p";
   };
 in {
   programs = {

@@ -1,15 +1,21 @@
-userSettings = {
-      hostname = "";
-      username = "";
-      fullName = "";
-      timeZone = "";
-      email = ""; # used by git and such
-      theme = {
-	    isDark = true;
-	    name = "";
-      };
-      # so the same config can be use for laptop and desktop. Change the following
-      # fields to dictate which settings (e.g. in hyprland, waybar etc.) should be used (minor differences).
-      keyboard = ""; # fullSize | laptop
-      monitorType = ""; # desktop | laptop
-};
+# To use this config: fill in and copy in /etc/nixos
+
+{
+  userSettings = {
+    theme = {
+      isDark = True # or False
+      name = "tokyonight-night";
+    };
+    timeZone = "";
+    style = ""; # riced | minimal
+    monospaceFont = "";
+    username = "";
+    fullName = "";
+    email = "";
+    dbUsername = "";
+    hostname = "";
+    keyboard = ""; # fullSize | laptop
+    monitorType = ""; # desktop | laptop
+    documentsDirectory = ""; # 
+  };
+}

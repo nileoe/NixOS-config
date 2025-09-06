@@ -33,11 +33,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.nileoe = import ./home.nix;
+            home-manager.users.${userSettings.username} = import ./home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
-            home-manager.extraSpecialArgs = {inherit userSettings;};
             # arguments to home.nix
+            home-manager.extraSpecialArgs = {inherit userSettings;};
           }
         ];
       };

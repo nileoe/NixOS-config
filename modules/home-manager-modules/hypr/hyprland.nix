@@ -5,15 +5,12 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # xdg-desktop-portal-xapp #################### CHECK was activated
-    # hypridle
-    # hyprlock
     hyprcursor
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.variables = ["--all"]; # try disabling: so that programs can be run outside of terminal (system needs to import environment)
+    # systemd.variables = ["--all"]; # try disabling: so that programs can be run outside of terminal (system needs to import environment)
 
     extraConfig = ''
       source = ~/.config/hypr/dev-specific/monitor-specific.conf
@@ -36,9 +33,6 @@
     ".config/hypr/startup.sh".source = ./startup.sh;
     ".config/hypr/windowRules.conf".source = ./windowRules.conf;
     ".config/hypr/animations.conf".source = ./animations.conf;
-    # ".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
-    # ".config/hypr/hyprlockWallpaper.png".source = ./hyprlockWallpaper.png;
-    # ".config/hypr/hypridle.conf".source = ./hypridle.conf;
     ".config/hypr/dev-specific/monitor-specific.conf".source =
       if userSettings.monitorType == "desktop"
       then ./dev-specific/monitor-desktop.conf
@@ -49,39 +43,36 @@
       else ./dev-specific/binds-laptop-specific.conf;
   };
 
-  # swrvices.hypridle.enable = true; # try it some time!
-  # programs.hyprlock.enable = true; # try it some time!
-
-  ############################### CHECK try nuking all of this more or less
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      # xdg-desktop-portal-kde
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-wlr
-    ];
-    config = {
-      common = {
-        default = [
-          "gtk"
-        ];
-      };
-      pantheon = {
-        default = [
-          "pantheon"
-          "gtk"
-        ];
-        "org.freedesktop.impl.portal.Secret" = [
-          "gnome-keyring"
-        ];
-      };
-      x-cinnamon = {
-        default = [
-          "xapp"
-          "gtk"
-        ];
-      };
-    };
-  };
+  #   ############################### CHECK try nuking all of this more or less
+  #   xdg.portal = {
+  #     enable = true;
+  #     extraPortals = with pkgs; [
+  #       xdg-desktop-portal-gtk
+  #       # xdg-desktop-portal-kde
+  #       xdg-desktop-portal-gnome
+  #       xdg-desktop-portal-wlr
+  #     ];
+  #     config = {
+  #       common = {
+  #         default = [
+  #           "gtk"
+  #         ];
+  #       };
+  #       pantheon = {
+  #         default = [
+  #           "pantheon"
+  #           "gtk"
+  #         ];
+  #         "org.freedesktop.impl.portal.Secret" = [
+  #           "gnome-keyring"
+  #         ];
+  #       };
+  #       x-cinnamon = {
+  #         default = [
+  #           "xapp"
+  #           "gtk"
+  #         ];
+  #       };
+  #     };
+  #   };
 }
