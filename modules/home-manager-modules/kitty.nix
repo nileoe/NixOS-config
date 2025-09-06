@@ -1,5 +1,4 @@
-# more complex config: seel
-# https://haseebmajid.dev/posts/2023-07-10-setting-up-tmux-with-nix-home-manager/
+# more complex config: see https://haseebmajid.dev/posts/2023-07-10-setting-up-tmux-with-nix-home-manager/
 {
   config,
   pkgs,

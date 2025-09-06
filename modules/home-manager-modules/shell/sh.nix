@@ -32,7 +32,7 @@
     sl = "sl -e"; # :)
 
     ##### Navigation and fzbvvbvbbvvv
-    cd = "z"; # zzzzzzzoxide
+    cd = "z"; # zoxide
     ".1" = "cd ..";
     ".2" = ".1 && cd ..";
     ".3" = ".2 && cd ..";
@@ -47,8 +47,6 @@
     va = "nvim suppr.md"; # go into a temporary buffer to delete later
 
     ##### NixOS
-    #   hswitch= "cd ~/nix-config && home-manager switch --flake .#${userSettings.username}@${userSettings.hostname} --impure && notify-send 'home-manager switch complete.'";
-    #   nswitch = "cd ~/nix-config && sudo nixos-rebuild switch --flake .#${userSettings.hostname} --impure && notify-send 'nixos-rebuilt switch complete'";
     switch = "cd ~/nixos/ && sudo nixos-rebuild switch --impure --flake .#${userSettings.hostname} && notify-send 'NixOS' 'Switch complete'";
     switcho = "switch && o";
     switchcd = "switch && cd && cl";
@@ -70,9 +68,8 @@
     disboomo = "(disboom &) && o";
 
     ##### Git custom docs shortcuts, remove as needed
-    dpull = "current_dir=$(pwd) && cd ~/docs && git pull --rebase && cd $current_dir";
-    dpush = "current_dir=$(pwd) && cd ~/docs && git add * && git commit -m '${userSettings.hostname} (${userSettings.monitorType}) commit' && git push && cd $current_dir";
-    pullAll = "current_dir=$(pwd) && cd ~/.config/nvim && git pull && cd ~/nixos && git pull && cd ~/docs && git pull && switchrel && cd $current_dir";
+    dpull = "current_dir=$(pwd) && cd ${userSettings.documentsDirectory} && git pull --rebase && cd $current_dir";
+    dpush = "current_dir=$(pwd) && cd ${userSettings.documentsDirectory} && git add * && git commit -m '${userSettings.hostname} (${userSettings.monitorType}) commit' && git push && cd $current_dir";
 
     ##### Coding shortcuts
     g = "git";
@@ -89,8 +86,6 @@
     no = "cl && node *.js";
 
     mdb = "mariadb -u lino -p";
-    ##### temp
-    clicker = "sudo /home/nileoe/.cargo/bin/theclicker -l 274 --no-grab";
   };
 in {
   programs = {

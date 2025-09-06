@@ -1,4 +1,4 @@
 {pkgs}:
 pkgs.writeShellScriptBin "toggleWaybar" ''
-kill $(pidof waybar) || waybar &
+  kill $(pidof waybar) || waybar &
 ''
