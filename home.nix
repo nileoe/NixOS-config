@@ -35,7 +35,6 @@
     # TESTING sort/decide if keeping or not
     # fontconfig
     # dconf-editor
-    # postman
     # appimage-run
     # gnumake
     # powershell
@@ -100,13 +99,14 @@
     # coding
     neovim
     neovide
+    postman
     vscode
-    jetbrains.clion
-    jetbrains.rust-rover
-    jetbrains.webstorm
-    jetbrains.webstorm
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
+    # jetbrains.clion
+    # jetbrains.rust-rover
+    # jetbrains.webstorm
+    # jetbrains.webstorm
+    # jetbrains.idea-ultimate
+    # jetbrains.pycharm-professional
     wezterm
     netbeans
 

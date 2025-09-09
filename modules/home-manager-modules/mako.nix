@@ -10,6 +10,7 @@
       border-radius = 2;
       border-color = "#FBFBFE";
       border-size = 1;
+      padding = 12;
       background-color = "#2B2A33";
       text-color = "#FBFBFE";
     };
