@@ -91,7 +91,7 @@
     # Note taking and writing
     obsidian
     remnote
-    anki
+    anki-bin
     # zegrapher
     iotas
     zotero_7
