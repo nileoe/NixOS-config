@@ -114,7 +114,7 @@
     clang
     clang-tools
     cmake
-    libgccjit
+    # libgccjit
     putty
     nodejs_22
     php
