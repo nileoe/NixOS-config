@@ -42,6 +42,9 @@
             "unlocked": ""
         }
     },
+    "hyprland/window": {
+        "on-click": "hyprctl dispatch fullscreen"
+    },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },

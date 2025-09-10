@@ -11,7 +11,6 @@
     cl = "clear";
     o = "exit";
     ":q" = "exit";
-    # tl = "tree -L";# TODO remove if eza is kept
     gf = "fg";
     gr = "grep --colour=auto";
     gri = "grep -i --colour=auto";

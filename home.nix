@@ -193,7 +193,7 @@
     wayfarer
     vlc
     # haruna
-    cider
+    cider-2
     spotify
     reaper
     musescore
