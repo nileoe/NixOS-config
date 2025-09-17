@@ -45,6 +45,7 @@
     # calcurse
     # osmo
     # gnome-calendar
+    hplip
 
     # ZSA Voyager
     keymapp
