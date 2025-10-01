@@ -46,6 +46,8 @@
     # osmo
     # gnome-calendar
     hplip
+    docker-compose
+    mongodb-compass
 
     # ZSA Voyager
     keymapp
@@ -137,6 +139,7 @@
     # pkgs.python312Packages.debugpy
 
     # CLI tools
+    # docker
     yt-dlp
     evtest
     lsof

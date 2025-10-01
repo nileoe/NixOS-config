@@ -22,7 +22,7 @@
       source = ~/.config/hypr/animations.conf
       exec-once = /usr/bin/env bash ~/.config/hypr/startup.sh
       exec-once = swww-daemon &
-      exec-once = startWpRotation ${../../../data/wallpapers/selected} &
+      exec-once = startWpRotation ${/etc/nixos/data/wallpapers/selected} &
     '';
   };
 
@@ -42,37 +42,4 @@
       then ./dev-specific/binds-fullSize-specific.conf
       else ./dev-specific/binds-laptop-specific.conf;
   };
-
-  #   ############################### CHECK try nuking all of this more or less
-  #   xdg.portal = {
-  #     enable = true;
-  #     extraPortals = with pkgs; [
-  #       xdg-desktop-portal-gtk
-  #       # xdg-desktop-portal-kde
-  #       xdg-desktop-portal-gnome
-  #       xdg-desktop-portal-wlr
-  #     ];
-  #     config = {
-  #       common = {
-  #         default = [
-  #           "gtk"
-  #         ];
-  #       };
-  #       pantheon = {
-  #         default = [
-  #           "pantheon"
-  #           "gtk"
-  #         ];
-  #         "org.freedesktop.impl.portal.Secret" = [
-  #           "gnome-keyring"
-  #         ];
-  #       };
-  #       x-cinnamon = {
-  #         default = [
-  #           "xapp"
-  #           "gtk"
-  #         ];
-  #       };
-  #     };
-  #   };
 }

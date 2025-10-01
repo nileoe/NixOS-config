@@ -6,7 +6,7 @@ pkgs.writeShellScriptBin "changeWallpaper" ''
   export SWWW_TRANSITION_STEP=2
 
 
-  WPDIR=${../../../../data/wallpapers/selected}
+  WPDIR=${/etc/nixos/data/wallpapers/selected}
   echo "found wpdir: $WPDIR"
 
   read -r wp < <(find $WPDIR -type f \
