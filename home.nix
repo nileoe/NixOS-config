@@ -33,11 +33,12 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # TESTING sort/decide if keeping or not
+    gsettings-desktop-schemas
     # fontconfig
     # dconf-editor
     # appimage-run
     # gnumake
-    # powershell
+    powershell
     # warp
     # morgen
     # kdePackages.korganizer
@@ -104,6 +105,7 @@
     neovide
     postman
     vscode
+    bootdev-cli
     # jetbrains.clion
     # jetbrains.rust-rover
     # jetbrains.webstorm
@@ -117,11 +119,11 @@
     clang
     clang-tools
     cmake
-    # libgccjit
+    libgccjit # switch to libgcc if encountering issues
+    # libgcc
     putty
     nodejs_22
     php
-    libgcc
     rustc
     python3
     go

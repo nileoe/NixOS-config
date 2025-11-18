@@ -47,7 +47,7 @@
         }
     },
     "hyprland/window": {
-        "on-click": "hyprctl dispatch fullscreen"
+        // "on-click": "hyprctl dispatch fullscreen"
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
