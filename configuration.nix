@@ -93,6 +93,8 @@ in {
       garamond-libre
       helvetica-neue-lt-std
       vistafonts
+      open-sans
+      lora
     ]
     ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
