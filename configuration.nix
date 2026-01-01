@@ -22,6 +22,7 @@ in {
       tokyo-night-sddm
       steam-run
       inputs.zen-browser.packages."${system}".default
+      qmk
     ])
   ];
 
@@ -53,7 +54,12 @@ in {
   # hyprland
   programs.hyprland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  hardware.keyboard.zsa.enable = true;
+
+  # keyboard
+  hardware.keyboard = {
+    zsa.enable = true;
+    qmk.enable = true;
+  };
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
