@@ -133,7 +133,7 @@ keybinds clear-defaults=true {
         bind "m" { SwitchToMode "Move"; }
     }
     shared_except "locked" {
-        bind "Alt n" { NewPane; }
+        bind "Alt m" { NewPane; }
 
         bind "Alt h" { GoToPreviousTab; }
         bind "Alt l" { GoToNextTab; }
@@ -293,7 +293,8 @@ themes {
     }
 }
 
-theme "tokyoBonsy"
+// theme "tokyoBonsy"
+theme "tokyo-night-dark"
 // Choose the theme that is specified in the themes section.
 // Default: default
 //

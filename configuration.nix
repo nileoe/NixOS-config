@@ -22,7 +22,7 @@ in {
       tokyo-night-sddm
       steam-run
       inputs.zen-browser.packages."${system}".default
-      qmk
+      # qmk
     ])
   ];
 
@@ -58,7 +58,7 @@ in {
   # keyboard
   hardware.keyboard = {
     zsa.enable = true;
-    qmk.enable = true;
+    # qmk.enable = true;
   };
   services.displayManager.sddm = {
     enable = true;
@@ -98,7 +98,7 @@ in {
       corefonts
       garamond-libre
       helvetica-neue-lt-std
-      vistafonts
+      vista-fonts
       open-sans
       lora
     ]
@@ -106,15 +106,13 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  # TODO remove when not necessary anymore
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-30.5.1"
-    "electron-32.3.3"
-  ];
+  # remove array content when not needed anymore
+  nixpkgs.config.permittedInsecurePackages = [];
 
   users.users.${userSettings.username} = {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel"];
   };
+  # stdenv.hostPlatform.system.stateVersion = "24.11"; # nope?
   system.stateVersion = "24.11";
 }

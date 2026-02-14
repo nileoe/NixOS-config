@@ -73,7 +73,7 @@
 
     # Social
     caprine-bin
-    whatsapp-for-linux
+    wasistlos
     zoom-us
     discord
 
@@ -98,7 +98,7 @@
     anki-bin
     # zegrapher
     iotas
-    zotero_7
+    zotero
 
     # coding
     neovim
@@ -181,7 +181,6 @@
     pcmanfm
     nautilus
     sushi
-    torrential
 
     # PDF/Image readers / graphic tools
     zathura
