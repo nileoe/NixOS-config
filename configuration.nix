@@ -30,6 +30,10 @@ in {
     settings.experimental-features = ["nix-command" "flakes"];
     channel.enable = false;
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    gc = {
+      dates = "weekly";
+      automatic = true;
+    };
   };
 
   virtualisation.docker = {
