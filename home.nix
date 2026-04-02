@@ -49,6 +49,7 @@
     hplip
     docker-compose
     mongodb-compass
+    google-fonts
 
     # ZSA Voyager
     keymapp
