@@ -152,7 +152,7 @@
     wget
     eza
     speedtest-rs
-    neofetch
+    fastfetch
     gh
     acpi
     ffmpeg
@@ -261,7 +261,7 @@
 
   systemd.user.startServices = "sd-switch";
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
 }

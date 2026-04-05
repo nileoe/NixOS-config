@@ -16,7 +16,7 @@
   environment.systemPackages = with pkgs; [
     bluez
     pavucontrol
-    helvum
+    crosspipe
   ];
 
   services.pulseaudio.enable = false; # mutually exclusive with pipewire
