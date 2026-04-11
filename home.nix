@@ -34,19 +34,8 @@
   home.packages = with pkgs; [
     # TESTING sort/decide if keeping or not
     gsettings-desktop-schemas
-    # fontconfig
-    # dconf-editor
-    # appimage-run
-    # gnumake
-    powershell
-    # warp
-    # morgen
-    # kdePackages.korganizer
-    # evolution
-    # calcurse
-    # osmo
-    # gnome-calendar
-    hplip
+    # powershell
+    # hplip
     docker-compose
     mongodb-compass
     google-fonts
@@ -57,11 +46,11 @@
 
     # feel free to add/remove/comment out
     localsend
-    _1password-gui
-    _1password-cli
+    # _1password-gui
+    # _1password-cli
     swww
     networkmanagerapplet
-    alacritty
+    # alacritty
 
     # System helpers
     eww
@@ -73,7 +62,7 @@
     gptfdisk
 
     # Social
-    caprine-bin
+    # caprine-bin
     wasistlos
     zoom-us
     discord
@@ -82,31 +71,30 @@
     prismlauncher # FOSS minecraft launcher
     scarab # Hollow Knight mod manager
     bsdgames
-    sssnake
+    # sssnake
     lutris # Battlenet and more
 
     # Browsers
-    # microsoft-edge
-    librewolf
     firefox
     chromium
     google-chrome
-    tor-browser
+    # tor-browser
 
     # Note taking and writing
     obsidian
     remnote
     anki-bin
     # zegrapher
-    iotas
-    zotero
+    # zotero
 
     # coding
     neovim
-    neovide
+    # neovide
     postman
-    vscode
+    # vscode
     bootdev-cli
+    cursor-cli
+    code-cursor
     # jetbrains.clion
     # jetbrains.rust-rover
     # jetbrains.webstorm
@@ -122,8 +110,8 @@
     cmake
     libgccjit # switch to libgcc if encountering issues
     # libgcc
-    putty
-    nodejs_22
+    # putty
+    nodejs_24
     php
     rustc
     python3
@@ -138,7 +126,6 @@
     typescript
     alejandra
     nixd
-    juce
     # pkgs.python312Packages.debugpy
 
     # CLI tools
@@ -178,25 +165,24 @@
 
     # File managers
     virtualbox
-    yazi
-    pcmanfm
-    nautilus
-    sushi
+    # yazi
+    # pcmanfm
+    # nautilus
+    # sushi
 
     # PDF/Image readers / graphic tools
-    zathura
+    # zathura
     kdePackages.okular
-    mate.atril
-    mupdf
-    eyedropper
+    # mate.atril
+    # mupdf
+    # eyedropper
     drawio
-    feh
     masterpdfeditor
 
     # Video and music
     grimblast
     obs-studio
-    wayfarer
+    # wayfarer
     vlc
     # haruna
     cider-2
@@ -204,8 +190,6 @@
     reaper
     musescore
     audacity
-
-    nnn # terminal file manager
 
     # archives
     xz
@@ -240,7 +224,6 @@
     nix-output-monitor
 
     # productivity
-    hugo # static site generator
     glow # markdown previewer in terminal
 
     btop # replacement of htop/nmon
